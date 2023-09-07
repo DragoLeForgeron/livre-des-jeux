@@ -14,6 +14,50 @@ body {
   background-color: #fff;
 }
 
+a {
+  color: #000;
+}
+
+header#navigation {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  padding: 0 10%;
+  color: #000;
+  background-color: #eee;
+}
+header#navigation > div {
+  width: 20%;
+  text-align: center;
+}
+header#navigation > div > img {
+  width: 80%;
+}
+header#navigation > nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 30%;
+}
+header#navigation > nav > a {
+  padding: 24px 20px 20px 20px;
+  text-decoration: none;
+}
+header#navigation > nav > a:hover {
+  border-bottom: solid 4px #ff2323;
+}
+header#navigation > nav > a:focus {
+  border-bottom: solid 4px #ac0000;
+}
+header#navigation > nav a[selected] {
+  border-bottom: solid 4px #db0000;
+}
+
 /* to delete */
 #alpha {
   position: absolute;
