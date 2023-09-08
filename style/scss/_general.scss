@@ -17,21 +17,26 @@ a {
 }
 
 header#navigation {
+    position: relative;
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     width: 100%;
-    padding: 0 10%;
+    height: 70px;
     color: $l-b-t-color;
     background-color: $l-bg-lightGray-color;
 
     >div {
+        position: absolute;
+        top: 50%;
+        left: 1%;
+        transform: translate(0, -50%);
         width: 20%;
-        text-align: center;
 
         >img {
-            width: 80%;
+            display: block;
+            width: 100%;
         }
     }
 
@@ -40,9 +45,8 @@ header#navigation {
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        width: 80%;
-        padding-left: 10%;
-        padding-right: 30%;
+        width: 100%;
+        height: 100%;
 
         >a {
             padding: 24px 20px 20px 20px;
