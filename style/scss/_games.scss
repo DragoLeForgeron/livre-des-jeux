@@ -1,0 +1,74 @@
+main#games {
+    >h1 {
+        text-align: center;
+    }
+
+    >input {
+        display: block;
+        margin: auto;
+        padding: 10px 20px;
+        width: 220px;
+        background-color: $l-bg-lightGray-color;
+        border: none;
+        border-radius: 50px;
+        outline: none;
+
+        &::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+        }
+    }
+
+    >#gamesList {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-top: 50px;
+
+        >article {
+            >a {
+                box-sizing: border-box;
+                display: flex;
+                flex-flow: row wrap;
+                position: relative;
+                width: 500px;
+                text-decoration: none;
+                background-color: $l-bg-lightGray-color;
+
+                >div#picture {
+                    width: 30%;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                >div#informations {
+                    box-sizing: border-box;
+                    width: 70%;
+                    padding-left: 20px;
+
+                    >h2 {
+                        width: 100%;
+                    }
+
+                    >div {
+                        display: flex;
+                        flex-flow: row wrap;
+                        align-items: center;
+                        width: 100%;
+
+                        >p {
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: $l-bg-shadow-color 0 0 10px;
+            }
+        }
+    }
+}
