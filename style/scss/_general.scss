@@ -73,7 +73,7 @@ main {
     width: 60%;
 }
 
-.nbPlayers::before, .materials::before, .duration::before, .drunking::before {
+.nbPlayers::before, .material::before, .duration::before, .drunking::before {
     content: "";
     display: inline-block;
     position: relative;
@@ -83,13 +83,14 @@ main {
     height: 25px;
     background-size: contain;
     vertical-align: bottom;
+    opacity: 0.6;
 }
 
 .nbPlayers::before {
     background-image: url(../img/pictos/users_group.svg);
 }
 
-.materials::before {
+.material::before {
     background-image: url(../img/pictos/dice.svg);
 }
 
@@ -97,7 +98,7 @@ main {
     background-image: url(../img/pictos/clock.svg);
     width: 21px;
     height: 21px;
-    top: 1px;
+    margin: 2px 7px 2px 2px;
 }
 
 .drunking::before {

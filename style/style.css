@@ -68,7 +68,7 @@ main {
   width: 60%;
 }
 
-.nbPlayers::before, .materials::before, .duration::before, .drunking::before {
+.nbPlayers::before, .material::before, .duration::before, .drunking::before {
   content: "";
   display: inline-block;
   position: relative;
@@ -78,13 +78,14 @@ main {
   height: 25px;
   background-size: contain;
   vertical-align: bottom;
+  opacity: 0.6;
 }
 
 .nbPlayers::before {
   background-image: url(../img/pictos/users_group.svg);
 }
 
-.materials::before {
+.material::before {
   background-image: url(../img/pictos/dice.svg);
 }
 
@@ -92,7 +93,7 @@ main {
   background-image: url(../img/pictos/clock.svg);
   width: 21px;
   height: 21px;
-  top: 1px;
+  margin: 2px 7px 2px 2px;
 }
 
 .drunking::before {
@@ -136,23 +137,28 @@ main#games > input::-webkit-search-cancel-button {
 }
 main#games > #gamesList {
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
   margin-top: 50px;
 }
-main#games > #gamesList > article > a {
+main#games > #gamesList > article {
   box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  position: relative;
-  width: 500px;
-  text-decoration: none;
+  margin: 0 20px;
+  width: 275px;
+  height: 325px;
   background-color: #eee;
 }
+main#games > #gamesList > article > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
 main#games > #gamesList > article > a > div#picture {
-  width: 30%;
+  width: 100%;
 }
 main#games > #gamesList > article > a > div#picture > img {
+  display: block;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -160,21 +166,46 @@ main#games > #gamesList > article > a > div#picture > img {
 }
 main#games > #gamesList > article > a > div#informations {
   box-sizing: border-box;
-  width: 70%;
-  padding-left: 20px;
+  width: 100%;
+  padding: 10px;
 }
 main#games > #gamesList > article > a > div#informations > h2 {
+  margin: 0;
+  margin-bottom: 8px;
   width: 100%;
+  text-align: center;
 }
 main#games > #gamesList > article > a > div#informations > div {
   display: flex;
-  flex-flow: row wrap;
-  align-items: center;
+  flex-flow: row nowrap;
   width: 100%;
 }
-main#games > #gamesList > article > a > div#informations > div > p {
-  width: 25%;
+main#games > #gamesList > article > a > div#informations > div > div > p {
+  margin: 0;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col1 {
+  width: 40%;
+  border-right: solid 2px #bbb;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col1 > p {
+  padding: 2px 0;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 {
+  width: 60%;
+  padding-left: 10px;
+  text-align: center;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 > p {
+  line-height: 1.2em;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 > p.material::before {
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
 }
 main#games > #gamesList > article:hover {
   box-shadow: #bbb 0 0 10px;
+}
+main#games > #gamesList > article > a:focus {
+  opacity: 0.8;
 }/*# sourceMappingURL=style.css.map */
