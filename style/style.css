@@ -143,7 +143,7 @@ main#games > #gamesList {
 }
 main#games > #gamesList > article {
   box-sizing: border-box;
-  margin: 0 20px;
+  margin: 0 20px 20px 20px;
   width: 275px;
   height: 325px;
   background-color: #eee;
