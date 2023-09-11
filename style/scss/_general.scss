@@ -1,14 +1,11 @@
 body {
-    height: 100%;
-}
-
-body {
     position: relative;
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: $l-bg-color;
+    min-height: 100vh;
 }
 
 a {
@@ -26,6 +23,7 @@ header#navigation {
     height: 70px;
     color: $l-base-color;
     background-color: $l-bg-lightGray-color;
+    z-index: 1;
 
     >div {
         position: absolute;
@@ -33,6 +31,7 @@ header#navigation {
         left: 1%;
         transform: translate(0, -50%);
         width: 20%;
+        max-width: 350px;
 
         >img {
             display: block;
@@ -69,6 +68,7 @@ header#navigation {
 
 main {
     margin: auto;
+    padding-bottom: $footer-height;
     width: 60%;
 }
 
@@ -109,10 +109,16 @@ strong {
 }
 
 footer {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    // transform: translate(0, 100%);
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: $footer-height;
     padding: 40px 10%;
     color: $l-footer-text-color;
     background-color: $l-bg-footer-color;
@@ -120,21 +126,26 @@ footer {
     >div#QRCode {
         position: relative;
         width: 25%;
+        height: 100%;
         border-right: solid 1px $l-bg-f-lighter-color;
-        cursor: pointer;
 
-        >img {
-            display: block;
+        >div {
+            cursor: pointer;
             margin: auto;
-            width: 80%;
-        }
-
-        >p {
-            position: relative;
-            margin: 0;
-            margin-top: 5px;
-            font-size: small;
-            text-align: center;
+            width: fit-content;
+            height: inherit;
+    
+            >img {
+                display: block;
+                height: 90%;
+            }
+    
+            >p {
+                position: relative;
+                margin-top: 5px;
+                font-size: small;
+                text-align: center;
+            }
         }
     }
 
