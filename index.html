@@ -4,6 +4,8 @@
 <head>
     <title>Livre des jeux - Les jeux</title>
 
+    <link rel="icon" href="./img/logo/picto-noir-transparent.png" />
+
     <meta name="subject" content="Jeux d'alcool">
     <meta name="description" content="Ce site est une liste de jeux d'alcool.">
     <meta name="keywords" content="Livre, Ivre, Jeux, Alcool, Jeu d'alcool, Jeux d'alcool, Livre d'alcool, Ivre d'alcool">
@@ -22,6 +24,8 @@
     <meta name="category" content="games">
 
     <link rel="stylesheet" href="./style/style.css">
+
+    <script src="./src/toast.js"></script>
 </head>
 
 <body>
@@ -60,36 +64,17 @@
                     </div>
                 </a>
             </article>
-
-            <article>
-                <a href="./Snake.html" title="Détails du jeu Snake">
-                    <div id="picture">
-                        <img src="./img/games/Snake/presentation.jpg">
-                    </div>
-                    <div id="informations">
-                        <h2>Snake</h2>
-                        <div>
-                            <div id="col1">
-                                <p class="nbPlayers" title="Nombre de joueur">2+</p>
-                                <p class="duration" title="Durée">45 min.</p>
-                                <p class="drunking" title="Alcoolomètre">8/10</p>
-                            </div>
-                            <div id="col2">
-                                <p class="material" title="Materiel">
-                                    1 jeu de 54 cartes<br>
-                                    Des pions uniques<br>
-                                    1 dé
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </article>
         </section>
     </main>
 
     <footer>
-        <a href="/MentionsLegales">Mentions légales</a>
+        <div id="QRCode" title="Copier le lien" onclick="navigator.clipboard.writeText('https://dragoleforgeron.github.io/livre-des-jeux/'); toastMe(this, 'Lien copié')">
+            <img src="./img/QRCode_Games.png" alt="QRCode de la page">
+            <p><i>Lien vers cette page</i></p>
+        </div>
+        <div id="others">
+            <a href="/MentionsLegales">Mentions légales</a>
+        </div>
     </footer>
 </body>
 </html>

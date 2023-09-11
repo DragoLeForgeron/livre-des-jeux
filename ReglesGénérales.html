@@ -4,6 +4,8 @@
 <head>
     <title>Livre des jeux - Règles générales</title>
 
+    <link rel="icon" href="./img/logo/picto-noir-transparent.png" />
+
     <meta name="subject" content="Règles générales de jeux d'alcool">
     <meta name="description" content="Liste de toutes les règles générales inérante aux jeux d'alcool">
     <meta name="keywords" content="Livre, Ivre, Jeux, Alcool, Jeu d'alcool, Jeux d'alcool, Livre d'alcool, Ivre d'alcool, règles, générales, règles générales">
@@ -22,6 +24,8 @@
     <meta name="category" content="games">
 
     <link rel="stylesheet" href="./style/style.css">
+
+    <script src="./src/toast.js"></script>
 </head>
 
 <body>
@@ -69,7 +73,13 @@
     </main>
 
     <footer>
-        <a href="/MentionsLegales">Mentions légales</a>
+        <div id="QRCode" title="Copier le lien" onclick="navigator.clipboard.writeText('https://dragoleforgeron.github.io/livre-des-jeux/ReglesGénérales.html'); toastMe(this, 'Lien copié')">
+            <img src="./img/QRCode_General_Rules.png" alt="QRCode de la page">
+            <p><i>Lien vers cette page</i></p>
+        </div>
+        <div id="others">
+            <a href="/MentionsLegales">Mentions légales</a>
+        </div>
     </footer>
 </body>
 </html>
