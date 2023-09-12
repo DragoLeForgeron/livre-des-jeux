@@ -1,3 +1,7 @@
+html {
+    scroll-padding-top: $navigation-height + 20px;
+}
+
 body {
     position: relative;
     width: 100%;
@@ -20,7 +24,7 @@ header#navigation {
     flex-flow: row wrap;
     align-items: center;
     width: 100%;
-    height: 70px;
+    height: $navigation-height;
     color: $l-base-color;
     background-color: $l-bg-lightGray-color;
     z-index: 1;
@@ -70,42 +74,14 @@ main {
     margin: auto;
     padding-bottom: $footer-height;
     width: 60%;
+
+    >h1 {
+        text-align: center;
+    }
 }
 
 strong {
     color: $l-p-color;
-}
-
-.nbPlayers::before, .material::before, .duration::before, .drunking::before {
-    content: "";
-    display: inline-block;
-    position: relative;
-    top: 2px;
-    margin-right: 5px;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    vertical-align: bottom;
-    opacity: 0.6;
-}
-
-.nbPlayers::before {
-    background-image: url(../img/pictos/users_group.svg);
-}
-
-.material::before {
-    background-image: url(../img/pictos/dice.svg);
-}
-
-.duration::before {
-    background-image: url(../img/pictos/clock.svg);
-    width: 21px;
-    height: 21px;
-    margin: 2px 7px 2px 2px;
-}
-
-.drunking::before {
-    background-image: url(../img/pictos/beer.svg);
 }
 
 footer {
@@ -134,12 +110,12 @@ footer {
             margin: auto;
             width: fit-content;
             height: inherit;
-    
+
             >img {
                 display: block;
                 height: 90%;
             }
-    
+
             >p {
                 position: relative;
                 margin-top: 5px;
@@ -169,6 +145,132 @@ footer {
         }
     }
 }
+
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before {
+    width: 25px;
+    height: 25px;
+}
+
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before {
+    top: 2px;
+    background-size: contain;
+    vertical-align: bottom;
+    opacity: 0.6;
+}
+
+.nbPlayers::before {
+    background-image: url(../img/pictos/users_group.svg);
+}
+
+.duration::before {
+    background-image: url(../img/pictos/clock.svg);
+    width: 21px;
+    height: 21px;
+    margin: 2px 7px 2px 2px;
+}
+
+.drunking::before {
+    background-image: url(../img/pictos/beer.svg);
+}
+
+.material::before {
+    background-image: url(../img/pictos/dice.svg);
+}
+
+
+.right::before,
+.wrong::before,
+.joker::before {
+    top: -3px;
+    vertical-align: middle;
+}
+
+.right::before {
+    background-image: url(../img/pictos/right.svg);
+}
+
+.wrong::before {
+    background-image: url(../img/pictos/wrong.svg);
+}
+
+.joker::before {
+    background-image: url(../img/logo/picto-noir-transparent.png);
+    background-size: 25px 25px;
+}
+
+
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+    width: 30px;
+    height: 40px;
+    background-size: 30px 40px;
+    vertical-align: middle;
+}
+
+.card-A::before {
+    background-image: url(../img/pictos/cards/A.png);
+}
+
+.card-3::before{
+    background-image: url(../img/pictos/cards/3.png);
+}
+
+.card-6::before {
+    background-image: url(../img/pictos/cards/6.png);
+}
+
+.card-9::before {
+    background-image: url(../img/pictos/cards/9.png);
+}
+
+.card-V::before {
+    background-image: url(../img/pictos/cards/V.png);
+}
+
+.card-D::before {
+    background-image: url(../img/pictos/cards/D.png);
+}
+
+.card-R::before {
+    background-image: url(../img/pictos/cards/R.png);
+}
+
 
 
 

@@ -40,153 +40,165 @@
         </nav>
     </header>
 
-    <main>
-        <header>
-            <img src="./img/games/IndinaJones/presentation">
-            <h1>Indiana Jones</h1>
-            <ol class="summary">
-                <li><a href="#presentation">Présentation</a></li>
-                <li><a href="#preparation">Préparation</a></li>
-                <li><a href="#regles">Règles</a></li>
-                <li>
-                    <ol>
-                        <li><a href="#preparationAventuriers">Préparation des aventuriers</a></li>
-                        <li><a href="#traverseDesert">Traversé du désert</a></li>
-                        <li><a href="#explorationPyramide">Exploration de la pyramide</a></li>
-                    </ol>
-                </li>
-                <li><a href="#variantes">Variantes</a></li>
-                <li><a href="#anecdotes">Anecdotes</a></li>
-            </ol>
-        </header>
+    <main id="game">
+        <h1>Indiana Jones</h1>
 
         <section>
-            <h2 id="presentation">Présentation</h2>
-            <p>Nombre de joueurs : 2 ou plus</p>
-            <p>Durée : 30 min.</p>
-            <p>Alcoolomètre : 4.5/10</p>
-            <p>Matériel : un paquet de 54 cartes.</p>
+            <div id="picture">
+                <img src="./img/games/IndianaJones/presentation.jpg">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#PréparationDesAventuriers" title="Raccourcis vers l'étape préparation des aventuriers">Préparation des aventuriers</a></li>
+                        <li><a href="#TraverséeDuDésert" title="Raccourcis vers l'étape traversée du désert">Traversée du désert</a></li>
+                        <li><a href="#ExplorationDeLaPyramide" title="Raccourcis vers l'étape exploration de la pyramide">Exploration de la pyramide</a></li>
+                    </ol>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers">Nombre de joueurs : 2 ou plus.</p>
+                <p class="duration">Durée : 30 minutes.</p>
+                <p class="drunking">Alcoolomètre : 4,5/10.</p>
+                <p class="material">Matériel : 1 paquet de 54 cartes. <i>(Prévoir 1 paquet supplémentaire tous les 8 joueurs.)</i></p>
+            </div>
             <p>
-                Inidana Jones est un jeu qui se déroule en 3 étapes, préparation des aventuriers, traversé du désert et exploration de la pyramide,
-                et dans lequel il vous faudra faire preuve de logique, de chance et de courage afin de parvenir à survivre à cette expédition.
+                Inidana Jones est un jeu qui se déroule en 3 étapes, préparation des aventuriers, traversée du désert et exploration de la pyramide,
+                durant lequel il vous faudra faire preuve de logique, de chance et de courage afin de parvenir à survivre à cette expédition.
             </p>
         </section>
 
         <section>
-            <h2 id="preparation">Préparation</h2>
+            <h2 id="Préparation">Préparation</h2>
             <ol>
-                <li>Désignez un joueur qui sera le maître du jeu (MJ) et qui sera en charge du bon déroulement du jeu.</li>
-                <li>Le MJ mélange toutes les cartes.</li>
+                <li><strong>Désignez un joueur</strong> qui sera <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">le RJ</a>.</li>
+                <li>Le RJ <strong>mélange toutes les cartes</strong> et forme une pile face caché qu'il garde avec lui.</li>
                 <li>Vous êtes prêt à jouer.</li>
             </ol>
         </section>
 
         <section>
-            <h2 id="regles">Règles</h2>
-            <p>La <a href="./ReglesGénérales.html#TentativeDePin">règle des tentatives de pin</a> n'est pas mise en place.</p>
+            <h2 id="Règles">Règles</h2>
+            <p>La <a href="./RèglesGénérales.html#TentativeDePin" title="Lien vers la règles des tentatives de pin">règle des tentatives de pin</a> n'est pas mise en place.</p>
             <section>
-                <h3 id="preparationAventuriers">Préparation des aventuriers</h3>
+                <h3 id="PréparationDesAventuriers">Préparation des aventuriers</h3>
                 <p>
-                    Cette étape se déroule en 4 tours.<br>
-                    À chaque tour le MJ demande à tour de rôle à chaque joueur (y-compris lui) de devinner la spécificité de la carte du dessus de la pile puis donnera cette carte au joueur qui la gardera face visible devant lui.
+                    Cette étape se déroule en 4 tours. Pour cette étape, l'As vaut 1 et est donc la plus petite carte.<br>
+                    À chaque tour le RJ <strong>demande à tour de rôle à chaque joueur</strong> (y-compris lui) de devinner la spécificité de la carte du dessus de la pile.
                 </p>
                 <p>
-                    Au tour 1, la spécificité spécifité est, est-ce que la carte est de couleur rouge ou de couleur noir.<br>
-                    Au tour 2, la spécificité est, est-ce que la carte est de valeur inférieur, supérieur ou égale à la carte déjà possédé par le joueur. Ici l'as vaut 1 et est donc la plus petite carte.<br>
-                    Au tour 3, la spécificité est, est-ce que la valeur de la carte de trouve strictement à l'intérieur ou strictement à l'extérieur des 2 cartes déjà possédé par le joueur ou bien égales à l'une des 2.<br>
-                    Au tour 4, la spécificité est, quel est le signe de la carte (Pique, Trèfle, Carreau ou Coeur).
+                    Au tour 1, la spécificité est, <strong>est-ce que la carte est de couleur rouge ou de couleur noir</strong>.<br>
+                    Au tour 2, la spécificité est, <strong>est-ce que la carte est de valeur inférieur, supérieur ou égale</strong> à la carte déjà possédé par le joueur.<br>
+                    Au tour 3, la spécificité est, <strong>est-ce que la carte est de valeur intérieur, extérieur ou égale</strong> aux 2 cartes déjà possédé par le joueur.<br>
+                    Au tour 4, la spécificité est, <strong>est-ce que la carte est de signe pique, trèfle, carreau ou coeur</strong>.
                 </p>
                 <p>
-                    À chaque fois qu'un joueur a raison, il distribue 1 gorgée au joueur de son choix.<br>
-                    À chaque fois qu'un joueur se trompe, il boit 1 gorgée.
+                    <span class="right">À chaque fois qu'un joueur a raison, il <strong>distribue 1 gorgée</strong> au joueur de son choix.</span><br>
+                    <span class="wrong">À chaque fois qu'un joueur se trompe, il <strong>boit 1 gorgée</strong>.</span>
                 </p>
-                <p>
-                    Lorsqu'un joker est retourné, donnez le au joueur et donnez lui aussi la carte suivante (si c'est encore un joker, réappliquer cette règle), il gagne forcément et distribue donc 1 gorgée.<br>
-                    De plus le joueur invente une règle qui durera jusqu'à la fin du jeu.
+                <p>Le RJ <strong>donne la carte au joueur qui la conserve face visible devant lui.</strong></p>
+                <p class="joker">
+                    Lorsqu'un <strong>joker est retourné le joueur invente une règle</strong> qui durera jusqu'à la fin du jeu.<br>
+                    Le RJ donne le joker ainsi que la 1ère carte de la pile au joueur, <strong>il gagne forcément et distribue donc 1 gorgée</strong>.<br>
                 </p>
                 <p>Toutes les cartes sont conservés par les joueurs pour l'étape 2.</p>
             </section>
 
             <section>
-                <h3 id="traverseDesert">Traversé du désert</h3>
-                <p>Au préalable retirez de la pile tous les joker restants.</p>
-                <p>En fonction de la dernière carte retourné, 2 figures possible :</p>
-                <div id="shapes">
-                    <div>
-                        <p>La carte est de valeur pair.</p>
-                        <p>Réalisez 2 petites pyramides qui se rejoigne par un sommet.</p>
-                        <img src="./img/games/IndianaJones/oddShape" alt="Figure si la dernière carte retourné est de valeur pair">
+                <h3 id="TraverséeDuDésert">Traversée du désert</h3>
+                <p>Au préalable <strong>retirez de la pile tous les joker restants</strong>.</p>
+                <div class="col-2">
+                    <div id="even">
+                        <p class="shapeTitle">Si la dernière carte retournée est de <strong>valeur pair</strong></p>
+                        <p><strong>Réalisez 2 petites pyramides qui se rejoigne par un sommet.</strong></p>
+                        <img src="./img/games/IndianaJones/evenShape.jpg" alt="Figure si la dernière carte retourné est de valeur pair">
                     </div>
-                    <div>
-                        <p>La carte est de valeur impair.</p>
-                        <p>Réalisez 2 petites pyramides qui se rejoigne par une base.</p>
-                        <img src="./img/games/IndianaJones/evenShape" alt="Figure si la dernière carte retourné est de valeur impair">
+                    <div id="odd">
+                        <p class="shapeTitle">Si la dernière carte retournée est de <strong>valeur impair</strong></p>
+                        <p><strong>Réalisez 2 petites pyramides qui se rejoigne par une base.</strong></p>
+                        <img src="./img/games/IndianaJones/oddShape.jpg" alt="Figure si la dernière carte retourné est de valeur impair">
                     </div>
                 </div>
                 <p>Mettez autant de ligne que vous le souhaitez mais il faut toujours qu'il y ai un nombre égale de carte sur chacune des petites pyramide.</p>
-                <p>Définissez une direction qui indiquera dans quel sens les cartes seront retournées.</p>
-                <p>La 1ère ligne vaut 1 gorgée, la 2ème en vaut 2, la 3ème en vaut 3 et ainsi de suite.</p>
+                <p>Le RJ <strong>définit une direction</strong> qui indiquera dans quel sens les cartes seront retournées.</p>
+                <p>La 1ère ligne vaut <strong>1 gorgée</strong>, la 2ème vaut <strong>2 gorgées</strong>, la 3ème vaut <strong>3 gorgées</strong> et ainsi de suite.</strong></p>
+                <div class="col-2">
+                    <div id="red">
+                        <p class="colorTitle">Si la dernière carte retournée est de <strong>couleur rouge</strong></p>
+                        <p>La 1ère ligne fait <strong>distribuer</strong>, la 2ème ligne fait <strong>boire</strong> et ainsi de suite 1 ligne sur 2.</p>
+                    </div>
+                    <div id="black">
+                        <p class="colorTitle">Si la dernière carte retournée est de <strong>couleur noir</strong></p>
+                        <p>La 1ère ligne fait <strong>boire</strong>, la 2ème ligne fait <strong>distribuer</strong> et ainsi de suite 1 ligne sur 2.</p>
+                    </div>
+                </div>
                 <p>
-                    La couleur de la dernière carte indique les lignes qui font distribuer et lignes qui font boire :
-                    <ul>
-                        <li>Rouge : la 1ère ligne fait distribuer, la 2ème ligne fait boire, la 3ème ligne fait distribuer et ainsi de suite.</li>
-                        <li>Noir : la 1ère ligne fait boire, la 2ème ligne fait distribuer, la 3ème ligne fait boire et ainsi de suite.</li>
-                    </ul>
+                    Le RJ <strong>retourne les cartes les unes après les autres</strong>, en commençant par la 1ère ligne, et annonçe les valeurs.<br>
+                    Les joueurs possèdant au moins une carte de même valeur que la carte retourné doivent <strong>se prononcer et appliquer les spécificités</strong> de la ligne pour chacunes de ses cartes correpondantes.<br>
+                    Vous pouvez appliquez <a href="./RèglesGénérales.html#Der" title="Lien vers la règle générale du der">la règle du "der"</a>.<br>
+                    Si un joueur oublie de se prononcer et qu'une autre carte et retourné, tant pis pour lui.
                 </p>
-                <p>Commmencez par retourner les cartes de la 1ère ligne les unes après les autres en annonçant les valeurs.</p>
-                <p>
-                    À chaque fois qu'un joueur possède une carte de même valeur que la carte retourné il à le droit de se prononcer afin de distribuer ou de boire un nombre de gorgée en fonction des spécificités de la lignes.<br>
-                    Si un joueur possède plusieurs cartes de même valaur alors il réalise les actions pour chacunes d'elles.<br>
-                    En cas de litige, si plusieurs joueurs possèdent des cartes de la même valeur que la carte retourner, appliquez <a href="./ReglesGénérales.html#Der">la règle du "der"</a>.
+                <p class="joker">
+                    <strong>Un joker vaut n'importe quel valeur 1 fois</strong> dans l'étape.<br>
+                    Une fois le joker utilisé, le joueur doit le redonner au RJ qui le mettra de côté.
                 </p>
                 <p>
-                    Un joueur qui possède un joker à le droit de l'utiliser comme n'importe quel valeur 1 fois dans l'étape.<br>
-                    Une fois le joker utilisé, le joueur doit le redonner au MJ ui l'écartera de l'étape.
-                </p>
-                <p>
-                    Si aucun joueur n'a de carte de même valeur que la carte retourné, recouvrez la par la 1ère carte de la pile.<br>
-                    Si il n'y a plus de carte dans le pile, c'est tant pis.
+                    Si aucun joueur n'a de carte de même valeur que la carte retourné, le RJ la recouvre par la 1ère carte de la pile.<br>
+                    Si il n'y a plus de carte dans la pile, c'est tant pis.
                 </p>
             </section>
 
             <section>
-                <h3 id="explorationPyramide">Exploration de la pyramide</h3>
-                <p>Reprennez toutes les cartes et mélanger le packet.</p>
-                <p>Placer les cartes face cachée de telle sorte à réaliser une pyramide de 6 lignes qui representent des étages</p>
+                <h3 id="ExplorationDeLaPyramide">Exploration de la pyramide</h3>
+                <img class="preview" src="./img/games/IndianaJones/pyramid.jpg" alt="Image de la pyramide de carte">
                 <p>
-                    Le joueur qui a été le dernier à boire à la fin de l'étape 2 est désigner comme l'explorateur.<br>
-                    Si plusieurs joueurs ont lors de la fin de l'étape 2, faite un <a href="./ReglesGénérales.html#Toss">Toss</a> pour désigner l'explorateur.
+                    Le RJ <strong>reprend toutes les cartes et les mélanges</strong>, joker compris.<br>
+                    Ensuite, ll <strong>place des cartes face cachés sur la table de tel sorte à former une pyramide de 6 étages</strong>.
                 </p>
                 <p>
-                    L'explorateur commence à la base de la pyramide, c'est dire l'étage 1, et doit retourner une carte.<br>
-                    Si ce n'est pas une carte piège, il passe à l'étage suivante, doit retourner une carte et ainsi de suite.<br>
-                    Si c'est une carte piège, il applique l'effet du piège, le MJ remet une carte face caché de la pile sur chacune des cartes face visble et l'explorateur repart à l'étage 1.<br>
-                    Si il n'y a plus de pile, retirez les cartes face visible du jeu.<br>
-                    Si un explorateur parvient à retourner la carte du sommet, il "termine la pyramide" et ne pourra plus être choisi comme explorateur, de plus il donne un cul sec au joueur de son choix qui devient le nouvel explorateur et recommence à l'étage 1. (le MJ doit tout de même remettre des cartes sur celles face visible)<br>
-                    Si la dernière carte retourné est une carte piège, l'explorateur doit l'appliquer avant.<br>
-                    Si la dernière carte retourné est une carte piège qui fait un changement d'explorateur, l'ancien explorateur n'a pas "terminé la pyramide" mais le nouvelle explorateur si.<br>
-                    Lorsque la dernière carte est retourné, le joueur qui est l'explorateur bois cul sec.
+                    Le joueur qui a été <strong>le dernier à boire à la fin de l'étape 2 est désigné comme étant l'explorateur</strong>.<br>
+                    Si plusieurs joueurs ont bu lors de la fin de l'étape 2, faite un <a href="./RèglesGénérales.html#Toss" title="Lien vers la règle du toss">Toss</a> pour désigner l'explorateur.
                 </p>
                 <p>
-                    Les cartes pièges sont :
-                    <ul>
-                        <li class="A-before">Le joueur de son choix boit 1 gorgée et devient le nouvelle explorateur.</li>
-                        <li class="6-before">Le joueur à sa droite boit 1 gorgée et devient le nouvelle explorateur.</li>
-                        <li class="9-before">Le joueur à sa gauche boit 1 gorgée et devient le nouvelle explorateur.</li>
-                        <li class="V-before">L'explorateur boit 1 gorgée.</li>
-                        <li class="D-before">L'explorateur boit 1 gorgée.</li>
-                        <li class="R-before">L'explorateur boit 1 gorgée.</li>
-                    </ul>
+                    L'explorateur commence à la base de la pyramide et doit <strong>retourner une carte de l'étage 1</strong>.<br>
+                    Si ce n'est pas une carte piège, il <strong>passe à l'étage suivant</strong>, doit retourner une carte et ainsi de suite.<br>
+                    Si c'est une carte piège, il <strong>applique l'effet du piège</strong>, le RJ <strong>remet une carte face caché de la pile sur chacune des cartes face visble</strong> et l'explorateur repart à l'étage 1.<br>
+                    Si il n'y a plus de pile, retirez les cartes face visible du jeu.
                 </p>
-                <p>
-                    Si un joker est retourné, l'explorateur invente une règle et passe à l'étage suivant.<br>
+                <p>Les cartes pièges sont :</p>
+                <ul class="cards">
+                    <li><span class="card-A" title="As"></span>As : <strong>le joueur de son choix boit 1 gorgée et devient le nouvel explorateur</strong>.</li>
+                    <li><span class="card-6" title="6"></span>6 : <strong>le joueur à sa droite boit 1 gorgée et devient le nouvel explorateur</strong>.</li>
+                    <li><span class="card-9" title="9"></span>9 : <strong>le joueur à sa gauche boit 1 gorgée et devient le nouvel explorateur</strong>.</li>
+                    <li><span class="card-V" title="Valet"></span><span class="card-D" title="Dame"></span><span class="card-R" title="Roi"></span>Têtes : <strong>l'explorateur boit 1 gorgée</strong>.</li>
+                </ul>
+                <p class="joker">
+                    Lorsqu'un <strong>joker est retourné, l'explorateur invente une règle et passe à l'étage suivant</strong>.<br>
                     Si une règle implique une carte, cette carte peu être définit comme carte piège.
+                </p>
+                <p>
+                    <strong>Si l'explorateur parvient à retourner la carte du sommet, il termine son expédition et ne pourra plus devenir explorateur</strong>.<br>
+                    De plus il <strong>donne un cul sec au joueur de son choix qui devient le nouvel explorateur</strong> et recommence à l'étage 1 (le RJ doit tout de même remettre des cartes sur celles face visible).
+                </p>
+                <p>
+                    Si la dernière carte retourné est une carte piège, l'explorateur doit l'appliquer avant.<br>
+                    Lorsque qu'un explorateur, le joueur qui est l'explorateur bois cul sec.
                 </p>
             </section>
         </section>
 
         <section>
-            <h2 id="variantes">Variantes</h2>
+            <h2 id="Variantes">Variantes</h2>
             <p>Il est possible de na pas faire les 3 étapes, vous pouvez décider de jouer la 1 et 2 ou bien la 3 indépendament.</p>
             <p>
                 À l'étape 1 vous pouvez changer le nombre de gorgées en fonction du tour.<br>
@@ -202,18 +214,19 @@
                 <i>(Pour rappelle, un joker offre une réussite)</i>
             </p>
             <p>
-                À l'étape 2 vous pouvez jouer avec les cartes des joueurs face cachés à la façon <a href="./Pyramide.html">pyramide</a>
+                À l'étape 3 vous pouvez ajouter une carte piège :<br>
+                <span class="card-3" title="3"></span>3 : l'explorateur boit cul sec.
             </p>
             <p>
-                À l'étape 3 vous pouvez ajouter une carte piège :<br>
-                <span class="3-before">L'explorateur boit cul sec.</span>
+                À l'étape 3 vous pouvez faire en sorte de faire boire tous les explorateurs qui n'ont pas terminé l'expédition.<br>
+                Il est préférable de jouer avec un étage de moins pour cette variante.
             </p>
         </section>
         
         <section>
-            <h2>Anecdotes</h2>
-            <p>Selon ses souvenirs, ce jeu est le 1er auqeul le fou a joué, c'était en lendemain de 1ère cuite... au bar, avec des amis de ses cousins... loin dans le sud...</p>
-            <p>À l'origine, le jeu se joue avec la carte 3 comme piège, mais comme c'était souvent le 1er de la soirée, la règle était trop brut et était tout simplement retiré.</p>
+            <h2 id="Anecdotes">Anecdotes</h2>
+            <p>Selon ses souvenirs, ce jeu est le 1er auqeul le fou ai joué, c'était en lendemain de 1ère cuite... au bar, avec des amis de ses cousins... loin dans le sud...</p>
+            <p>À l'origine, le jeu se joue avec la carte 3 comme piège, mais comme c'était souvent le 1er de la soirée, la règle était trop brut et était retiré.</p>
         </section>
     </main>
 
