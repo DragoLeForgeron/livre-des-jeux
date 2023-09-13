@@ -411,19 +411,25 @@ main#game ol {
 }
 main#game .preview {
   float: right;
-  width: 30%;
-  min-width: 200px;
-  margin-left: 10px;
+  width: 25%;
+  max-width: 600px;
+  height: 25%;
+  max-height: 400px;
+  margin-left: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top right;
+     object-position: top right;
 }
 main#game .col-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  grid-template-rows: repeat(2, auto);
+  display: flex;
+  flex-flow: row wrap;
 }
 main#game .col-2 > div {
   box-sizing: border-box;
-  text-align: center;
+  width: 50%;
   padding: 10px;
+  text-align: center;
   border-left: solid 2px #fff;
   border-right: solid 2px #fff;
   background-color: #eee;
@@ -461,18 +467,16 @@ main#game > section:has(h2#Sommaire) h2 {
 }
 main#game > section:has(h2#Sommaire) > div {
   box-sizing: border-box;
-  width: 50%;
 }
 main#game > section:has(h2#Sommaire) > div#picture {
-  height: 100%;
+  width: 40%;
 }
 main#game > section:has(h2#Sommaire) > div#picture > img {
   display: block;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  max-width: 100%;
 }
 main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+  width: 60%;
   padding-left: 20px;
 }
 main#game > section:has(> h2#Présentation) > div {
