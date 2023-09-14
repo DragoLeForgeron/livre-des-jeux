@@ -25,7 +25,7 @@ main#games {
             box-sizing: border-box;
             margin: 0 20px 20px 20px;
             width: 275px;
-            height: 325px;
+            height: fit-content;
             background-color: $l-bg-lightGray-color;
 
             >a {

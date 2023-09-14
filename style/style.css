@@ -319,7 +319,8 @@ main#games > #gamesList > article {
   box-sizing: border-box;
   margin: 0 20px 20px 20px;
   width: 275px;
-  height: 325px;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: #eee;
 }
 main#games > #gamesList > article > a {
