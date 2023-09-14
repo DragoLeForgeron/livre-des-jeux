@@ -97,11 +97,12 @@ footer > div#QRCode {
   position: relative;
   width: 25%;
   height: 100%;
+  padding-right: 25px;
   border-right: solid 1px #333;
 }
 footer > div#QRCode > div {
   cursor: pointer;
-  margin: auto;
+  margin-left: auto;
   width: -moz-fit-content;
   width: fit-content;
   height: inherit;
@@ -273,6 +274,22 @@ footer > div#others > a:focus {
 }
 
 /* --- */
+main#legalNotice {
+  padding-bottom: 20px;
+}
+main#legalNotice a:hover {
+  color: #ff0000;
+}
+main#legalNotice a:focus {
+  color: #be0000;
+}
+main#legalNotice > article {
+  margin-top: 40px;
+}
+main#legalNotice > article > section {
+  margin-left: 20px;
+}
+
 .toast {
   position: absolute;
   bottom: -30px;

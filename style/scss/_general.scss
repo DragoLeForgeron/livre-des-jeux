@@ -103,11 +103,12 @@ footer {
         position: relative;
         width: 25%;
         height: 100%;
+        padding-right: 25px;
         border-right: solid 1px $l-bg-f-lighter-color;
 
         >div {
             cursor: pointer;
-            margin: auto;
+            margin-left: auto;
             width: fit-content;
             height: inherit;
 
