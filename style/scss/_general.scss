@@ -25,14 +25,21 @@ main {
     margin: auto;
     width: 70%;
     padding-bottom: $footer-height;
-    // background-color: antiquewhite; // temp
 
     @media screen and (max-width: 640px) {
-        width: 90%;
+        padding-bottom: $footer-height-640;
     }
 
     @media screen and (min-width: 641px) and (max-width: 1200px) {
-        width: 80%;
+        padding-bottom: $footer-height-1200;
+    }
+
+    @media screen and (max-width: 640px) {
+        width: 85%;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+        width: 77.5%;
     }
 
     >h1 {
@@ -65,8 +72,6 @@ header#navigation {
         width: 240px;
 
         @media screen and (max-width: 640px) {
-            // position: relative;
-            // margin: auto;
             width: 200px;
         }
 
@@ -140,11 +145,12 @@ header#navigation {
         }
 
         @media screen and (max-width: 640px) {
+            // For "auto" hide on blur + js : this.checked = false
             // >input {
             //     display: block;
             //     opacity: 0;
             // }
-            
+
             >label {
                 display: block;
             }
@@ -153,9 +159,24 @@ header#navigation {
                 justify-content: center;
                 width: 100%;
                 background-color: $l-bg-lightGray-color;
+                border-bottom: none;
+                text-decoration: underline transparent;
+                text-decoration-thickness: 2px;
+                text-underline-offset: 3px;
 
                 &:first-of-type {
                     box-shadow: inset 0px 10px 10px -15px black;
+                }
+
+                &[selected],
+                &:hover {
+                    border-bottom: none;
+                    text-decoration-color: $l-p-color;
+                }
+
+                &:focus {
+                    border-bottom: none;
+                    text-decoration-color: $l-p-darker-color;
                 }
             }
 
@@ -170,20 +191,30 @@ footer {
     box-sizing: border-box;
     position: absolute;
     bottom: 0;
-    // transform: translate(0, 100%);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: $footer-height;
-    padding: 40px 10%;
+    padding: 30px 5%;
     color: $l-footer-text-color;
     background-color: $l-bg-footer-color;
 
+    @media screen and (max-width: 640px) {
+        height: $footer-height-640;
+        padding-top: 20px;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+        height: $footer-height-1200;
+        padding-top: 25px;
+    }
+
     >div#QRCode {
+        box-sizing: border-box;
         position: relative;
-        width: 25%;
+        width: 50%;
         height: 100%;
         padding-right: 25px;
         border-right: solid 1px $l-bg-f-lighter-color;
@@ -196,7 +227,8 @@ footer {
 
             >img {
                 display: block;
-                height: 90%;
+                margin: auto;
+                height: 100%;
             }
 
             >p {
@@ -210,7 +242,7 @@ footer {
 
     >div#others {
         box-sizing: border-box;
-        width: 25%;
+        width: 50%;
         padding-left: 25px;
 
         >a {

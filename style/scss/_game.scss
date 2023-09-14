@@ -1,6 +1,14 @@
 main#game {
     padding-bottom: $footer-height + 50px;
 
+    @media screen and (max-width: 640px) {
+        padding-bottom: $footer-height-640 + 40px;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+        padding-bottom: $footer-height-1200 + 30px;
+    }
+
     h2 {
         border-bottom: solid 1px $l-base-color;
     }
