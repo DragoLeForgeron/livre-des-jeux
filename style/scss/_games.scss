@@ -1,4 +1,5 @@
 main#games {
+    width: 100%;
 
     >input {
         display: block;
@@ -16,14 +17,29 @@ main#games {
     }
 
     >#gamesList {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        margin: 50px 0;
+        width: fit-content;
+        margin: 30px auto;
+        column-count: 4;
+        column-gap: 20px;
+        
+        @media screen and (min-width: 931px) and (max-width: 1270px) {
+            column-count: 3;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 930px) {
+            column-count: 2;
+        }
+
+        @media screen and (max-width: 640px) {
+            column-count: 1;
+        }
+
+
 
         >article {
             box-sizing: border-box;
-            margin: 0 20px 20px 20px;
+            break-inside: avoid;
+            margin-bottom: 20px;
             width: 275px;
             height: fit-content;
             background-color: $l-bg-lightGray-color;
@@ -68,6 +84,7 @@ main#games {
 
                         >div#col1 {
                             width: 40%;
+                            padding-right: 10px;
                             border-right: solid 2px $l-bg-darkerLightGray-color;
 
                             >p {

@@ -70,6 +70,11 @@ header#navigation {
     height: 50px;
   }
 }
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation {
+    height: 60px;
+  }
+}
 header#navigation > div#logo {
   position: absolute;
   top: 50%;
@@ -80,6 +85,11 @@ header#navigation > div#logo {
 @media screen and (max-width: 640px) {
   header#navigation > div#logo {
     width: 200px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation > div#logo {
+    width: 220px;
   }
 }
 header#navigation > div#logo > img {
@@ -421,6 +431,9 @@ main#legalNotice > article > section {
     opacity: 1;
   }
 }
+main#games {
+  width: 100%;
+}
 main#games > input {
   display: block;
   margin: auto;
@@ -435,14 +448,37 @@ main#games > input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 main#games > #gamesList {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 50px 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 30px auto;
+  -moz-column-count: 4;
+       column-count: 4;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media screen and (min-width: 931px) and (max-width: 1270px) {
+  main#games > #gamesList {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 930px) {
+  main#games > #gamesList {
+    -moz-column-count: 2;
+         column-count: 2;
+  }
+}
+@media screen and (max-width: 640px) {
+  main#games > #gamesList {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
 }
 main#games > #gamesList > article {
   box-sizing: border-box;
-  margin: 0 20px 20px 20px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: 20px;
   width: 275px;
   height: -moz-fit-content;
   height: fit-content;
@@ -485,6 +521,7 @@ main#games > #gamesList > article > a > div#informations > div > div > p {
 }
 main#games > #gamesList > article > a > div#informations > div > div#col1 {
   width: 40%;
+  padding-right: 10px;
   border-right: solid 2px #bbb;
 }
 main#games > #gamesList > article > a > div#informations > div > div#col1 > p {

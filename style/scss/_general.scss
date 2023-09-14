@@ -64,6 +64,10 @@ header#navigation {
         height: $navigation-height-640;
     }
 
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+        height: $navigation-height-1200;
+    }
+
     >div#logo {
         position: absolute;
         top: 50%;
@@ -73,6 +77,10 @@ header#navigation {
 
         @media screen and (max-width: 640px) {
             width: 200px;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 1200px) {
+            width: 220px;
         }
 
         >img {
