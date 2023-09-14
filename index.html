@@ -2,10 +2,12 @@
 <html lang="FR">
 
 <head>
-    <title>LIvre des jeux</title>
+    <title>Livre des jeux - Les jeux</title>
+
+    <link rel="icon" href="./img/logo/picto-noir-transparent.png" />
 
     <meta name="subject" content="Jeux d'alcool">
-    <meta name="description" content="Ce site est un livre de jeux d'alcool.">
+    <meta name="description" content="Ce site est une liste de jeux d'alcool.">
     <meta name="keywords" content="Livre, Ivre, Jeux, Alcool, Jeu d'alcool, Jeux d'alcool, Livre d'alcool, Ivre d'alcool">
     <meta name="creator" content="LEMASSON Louis">
     <meta name="author" content="LEMASSON Louis">
@@ -23,15 +25,58 @@
 
     <link rel="stylesheet" href="./style/style.css">
 
+    <script src="./src/toast.js"></script>
 </head>
 
 <body>
-    <div id="alpha">
-        <h1>Bienvenu l'ivrogne !</h1>
-        <p>Ici se prépare à être rédigé le livre d'alcool du fou.</p>
-        <p>Pour l'instant il n'y a rien, mais revient voir plus tard et peut être que certaine page te seront révélé.</p>
-        <p>En attendant tu peux tout de même partager le site avec tes plus fières compagons de beuverie.</p>
-        <img src="img/QR_Code_Livre.png" alt="QR code de la page">
-    </div>
+    <header id="navigation">
+        <div id="logo">
+            <img src="./img/logo/complet-noir-transparent.png">
+        </div>
+        <nav>
+            <a href="./index.html" title="Lien vers la page des jeux" selected>Jeux</a>
+            <a href="./RèglesGénérales.html" title="Lien vers la page des règles générales">Règles générales</a>
+            <!-- <a href="./Suggestions.html">Suggestions</a> -->
+        </nav>
+    </header>
+
+    <main id="games">
+        <h1>Les jeux</h1>
+        <!-- <input type="search" placeholder="Rechercher" title="Recherche de jeux"> -->
+        <section id="gamesList">
+            <article>
+                <a href="./IndianaJones.html" title="Détails du jeu Indiana Jones">
+                    <div id="picture">
+                        <img src="./img/games/IndianaJones/presentation.png">
+                    </div>
+                    <div id="informations">
+                        <h2>Indiana Jones</h2>
+                        <div>
+                            <div id="col1">
+                                <p class="nbPlayers" title="Nombre de joueur">2+</p>
+                                <p class="duration" title="Durée">40 min.</p>
+                                <p class="drunking" title="Alcoolomètre">4,5/10</p>
+                            </div>
+                            <div id="col2">
+                                <p class="material" title="Materiel">1 jeu de 54 cartes</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div id="QRCode">
+            <div title="Copier le lien" onclick="navigator.clipboard.writeText('https://dragoleforgeron.github.io/livre-des-jeux/'); toastMe(this, 'Lien copié')">
+                <img src="./img/QRCode_Games.png" alt="QRCode de la page">
+                <p><i>Lien vers cette page</i></p>
+            </div>
+        </div>
+        <div id="others">
+            <a href="./MentionsLégales.html" title="Lien vers la page des mentions légales">Mentions légales</a>
+        </div>
+    </footer>
 </body>
 </html>

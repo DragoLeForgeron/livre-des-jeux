@@ -1,0 +1,140 @@
+main#game {
+    padding-bottom: $footer-height + 50px;
+
+    h2 {
+        border-bottom: solid 1px $l-base-color;
+    }
+
+    h3 {
+        margin-top: 30px;
+        margin-left: 10px;
+        padding: 5px 0 5px 10px;
+        border-bottom: solid 1px $l-base-color;
+        border-left: solid 1px $l-base-color;
+    }
+
+    p {
+        line-height: 1.25em;
+    }
+
+    a {
+        &:hover {
+            color: $l-p-color;
+        }
+
+        &:focus {
+            color: $l-p-darker-color;
+        }
+    }
+
+    ol {
+        line-height: 1.5em;
+    }
+
+
+    .preview {
+        float: right;
+        width: 25%;
+        max-width: 600px;
+        height: 25%;
+        max-height: 400px;
+        margin-left: 20px;
+        object-fit: contain;
+        object-position: top right;
+    }
+
+    .col-2 {
+        display: flex;
+        flex-flow: row wrap;
+
+        >div {
+            box-sizing: border-box;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            border-left: solid 2px $l-bg-color;
+            border-right: solid 2px $l-bg-color;
+            background-color: $l-bg-lightGray-color;
+
+            >.shapeTitle,
+            >.colorTitle {
+                margin-top: 0;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+
+            >img {
+                display: block;
+                margin: auto;
+                width: 80%;
+            }
+
+            >p:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .cards {
+        list-style: none;
+        margin-top: 2px;
+
+        >li {
+            line-height: 3em;
+        }
+    }
+
+
+    >section {
+        margin-top: 50px;
+
+        &:has(h2#Sommaire) {
+            display: flex;
+            flex-flow: row wrap;
+
+            h2 {
+                margin-top: 0;
+            }
+
+            >div {
+                box-sizing: border-box;
+
+                &#picture {
+                    width: 40%;
+
+                    >img {
+                        display: block;
+                        max-width: 100%;
+                    }
+                }
+
+                &:has(h2#Sommaire) {
+                    width: 60%;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        &:has(>h2#Présentation) {
+            >div {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+
+                >p {
+                    box-sizing: border-box;
+                    margin: 0;
+                    width: 25%;
+                    min-width: 135px;
+                    padding: 0 10px;
+                    text-align: center;
+
+                    >i {
+                        font-size: smaller;
+                    }
+                }
+            }
+        }
+
+    }
+}

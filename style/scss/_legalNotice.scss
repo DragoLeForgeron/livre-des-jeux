@@ -1,0 +1,21 @@
+main#legalNotice {
+    padding-bottom: 20px;
+
+    a {
+        &:hover {
+            color: $l-p-color;
+        }
+
+        &:focus {
+            color: $l-p-darker-color;
+        }
+    }
+
+    >article{
+        margin-top: 40px;
+
+        >section {
+            margin-left: 20px;
+        }
+    }
+}

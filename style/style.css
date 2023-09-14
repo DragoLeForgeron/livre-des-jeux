@@ -1,29 +1,520 @@
-html, body {
-    height: 100%;
+@charset "UTF-8";
+/* LIGHT */
+/* DARK */
+html {
+  scroll-padding-top: 90px;
 }
 
 body {
-    position: relative;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #222;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
 }
 
+a {
+  color: #000;
+}
+
+header#navigation {
+  position: sticky;
+  top: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  color: #000;
+  background-color: #eee;
+  z-index: 1;
+}
+header#navigation > div {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(0, -50%);
+  width: 20%;
+  max-width: 350px;
+}
+header#navigation > div > img {
+  display: block;
+  width: 100%;
+}
+header#navigation > nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+header#navigation > nav > a {
+  padding: 24px 20px 20px 20px;
+  text-decoration: none;
+}
+header#navigation > nav > a:hover {
+  border-bottom: solid 4px #ff0000;
+}
+header#navigation > nav > a:focus {
+  border-bottom: solid 4px #be0000;
+}
+header#navigation > nav > a[selected] {
+  border-bottom: solid 4px #ff0000;
+}
+
+main {
+  margin: auto;
+  padding-bottom: 250px;
+  width: 60%;
+}
+main > h1 {
+  text-align: center;
+}
+
+strong {
+  color: #ff0000;
+}
+
+footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250px;
+  padding: 40px 10%;
+  color: #fff;
+  background-color: #111;
+}
+footer > div#QRCode {
+  position: relative;
+  width: 25%;
+  height: 100%;
+  padding-right: 25px;
+  border-right: solid 1px #333;
+}
+footer > div#QRCode > div {
+  cursor: pointer;
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: inherit;
+}
+footer > div#QRCode > div > img {
+  display: block;
+  height: 90%;
+}
+footer > div#QRCode > div > p {
+  position: relative;
+  margin-top: 5px;
+  font-size: small;
+  text-align: center;
+}
+footer > div#others {
+  box-sizing: border-box;
+  width: 25%;
+  padding-left: 25px;
+}
+footer > div#others > a {
+  color: #fff;
+  text-decoration: none;
+}
+footer > div#others > a:hover {
+  text-decoration: underline;
+}
+footer > div#others > a:focus {
+  text-decoration: underline;
+  color: #ff0000;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  margin-right: 5px;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before {
+  width: 25px;
+  height: 25px;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before {
+  top: 2px;
+  background-size: contain;
+  vertical-align: bottom;
+  opacity: 0.6;
+}
+
+.nbPlayers::before {
+  background-image: url(../img/pictos/users_group.svg);
+}
+
+.duration::before {
+  background-image: url(../img/pictos/clock.svg);
+  width: 21px;
+  height: 21px;
+  margin: 2px 7px 2px 2px;
+}
+
+.drunking::before {
+  background-image: url(../img/pictos/beer.svg);
+}
+
+.material::before {
+  background-image: url(../img/pictos/dice.svg);
+}
+
+.right::before,
+.wrong::before,
+.joker::before {
+  top: -3px;
+  vertical-align: middle;
+}
+
+.right::before {
+  background-image: url(../img/pictos/right.svg);
+}
+
+.wrong::before {
+  background-image: url(../img/pictos/wrong.svg);
+}
+
+.joker::before {
+  background-image: url(../img/logo/picto-noir-transparent.png);
+  background-size: 25px 25px;
+}
+
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+  width: 30px;
+  height: 40px;
+  background-size: 30px 40px;
+  vertical-align: middle;
+}
+
+.card-A::before {
+  background-image: url(../img/pictos/cards/A.png);
+}
+
+.card-3::before {
+  background-image: url(../img/pictos/cards/3.png);
+}
+
+.card-6::before {
+  background-image: url(../img/pictos/cards/6.png);
+}
+
+.card-9::before {
+  background-image: url(../img/pictos/cards/9.png);
+}
+
+.card-V::before {
+  background-image: url(../img/pictos/cards/V.png);
+}
+
+.card-D::before {
+  background-image: url(../img/pictos/cards/D.png);
+}
+
+.card-R::before {
+  background-image: url(../img/pictos/cards/R.png);
+}
+
+/* to delete */
 #alpha {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 890px;
-    padding: 50px;
-    color: #fff;
-    text-align: center;
-    background-color: #333;
-    border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 890px;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #333;
+  border-radius: 20px;
 }
 
-#alpha>img {
-    width: 200px;
+#alpha > img {
+  width: 200px;
 }
+
+/* --- */
+main#legalNotice {
+  padding-bottom: 20px;
+}
+main#legalNotice a:hover {
+  color: #ff0000;
+}
+main#legalNotice a:focus {
+  color: #be0000;
+}
+main#legalNotice > article {
+  margin-top: 40px;
+}
+main#legalNotice > article > section {
+  margin-left: 20px;
+}
+
+.toast {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 5px 8px;
+  background-color: #080808;
+  border-radius: 5px;
+  box-shadow: #000 0 0 5px;
+}
+
+.toastLoad {
+  animation: fadeinout 4s linear forwards;
+}
+
+@keyframes fadeinout {
+  0%, 100% {
+    opacity: 0;
+  }
+  10%, 80% {
+    opacity: 1;
+  }
+}
+main#games > input {
+  display: block;
+  margin: auto;
+  padding: 10px 20px;
+  width: 220px;
+  background-color: #eee;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+main#games > input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+main#games > #gamesList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 50px 0;
+}
+main#games > #gamesList > article {
+  box-sizing: border-box;
+  margin: 0 20px 20px 20px;
+  width: 275px;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #eee;
+}
+main#games > #gamesList > article > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+main#games > #gamesList > article > a > div#picture {
+  width: 100%;
+}
+main#games > #gamesList > article > a > div#picture > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main#games > #gamesList > article > a > div#informations {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+main#games > #gamesList > article > a > div#informations > h2 {
+  margin: 0;
+  margin-bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+main#games > #gamesList > article > a > div#informations > div {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+main#games > #gamesList > article > a > div#informations > div > div > p {
+  margin: 0;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col1 {
+  width: 40%;
+  border-right: solid 2px #bbb;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col1 > p {
+  padding: 2px 0;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 {
+  width: 60%;
+  padding-left: 10px;
+  text-align: center;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 > p {
+  line-height: 1.2em;
+}
+main#games > #gamesList > article > a > div#informations > div > div#col2 > p.material::before {
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
+}
+main#games > #gamesList > article:hover {
+  box-shadow: #bbb 0 0 10px;
+}
+main#games > #gamesList > article > a:focus {
+  opacity: 0.8;
+}
+
+main#game {
+  padding-bottom: 300px;
+}
+main#game h2 {
+  border-bottom: solid 1px #000;
+}
+main#game h3 {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px #000;
+  border-left: solid 1px #000;
+}
+main#game p {
+  line-height: 1.25em;
+}
+main#game a:hover {
+  color: #ff0000;
+}
+main#game a:focus {
+  color: #be0000;
+}
+main#game ol {
+  line-height: 1.5em;
+}
+main#game .preview {
+  float: right;
+  width: 25%;
+  max-width: 600px;
+  height: 25%;
+  max-height: 400px;
+  margin-left: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top right;
+     object-position: top right;
+}
+main#game .col-2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+main#game .col-2 > div {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  border-left: solid 2px #fff;
+  border-right: solid 2px #fff;
+  background-color: #eee;
+}
+main#game .col-2 > div > .shapeTitle,
+main#game .col-2 > div > .colorTitle {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main#game .col-2 > div > img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+main#game .col-2 > div > p:last-child {
+  margin-bottom: 0;
+}
+main#game .cards {
+  list-style: none;
+  margin-top: 2px;
+}
+main#game .cards > li {
+  line-height: 3em;
+}
+main#game > section {
+  margin-top: 50px;
+}
+main#game > section:has(h2#Sommaire) {
+  display: flex;
+  flex-flow: row wrap;
+}
+main#game > section:has(h2#Sommaire) h2 {
+  margin-top: 0;
+}
+main#game > section:has(h2#Sommaire) > div {
+  box-sizing: border-box;
+}
+main#game > section:has(h2#Sommaire) > div#picture {
+  width: 40%;
+}
+main#game > section:has(h2#Sommaire) > div#picture > img {
+  display: block;
+  max-width: 100%;
+}
+main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+  width: 60%;
+  padding-left: 20px;
+}
+main#game > section:has(> h2#Présentation) > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main#game > section:has(> h2#Présentation) > div > p {
+  box-sizing: border-box;
+  margin: 0;
+  width: 25%;
+  min-width: 135px;
+  padding: 0 10px;
+  text-align: center;
+}
+main#game > section:has(> h2#Présentation) > div > p > i {
+  font-size: smaller;
+}
+
+/* Games specificities */
+section:has(h3#ExplorationDeLaPyramide) > p:has(+ .cards) {
+  margin-bottom: 0;
+}/*# sourceMappingURL=style.css.map */
