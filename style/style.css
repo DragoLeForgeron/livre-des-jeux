@@ -251,6 +251,25 @@ footer > div#others > a:focus {
   color: #ff0000;
 }
 
+/* to delete */
+#alpha {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 890px;
+  padding: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: #333;
+  border-radius: 20px;
+}
+
+#alpha > img {
+  width: 200px;
+}
+
+/* --- */
 .nbPlayers::before,
 .material::before,
 .duration::before,
@@ -269,6 +288,25 @@ footer > div#others > a:focus {
   display: inline-block;
   position: relative;
   margin-right: 5px;
+}
+.nbPlayers.top::before,
+.material.top::before,
+.duration.top::before,
+.drunking.top::before,
+.right.top::before,
+.wrong.top::before,
+.joker.top::before,
+.card-A.top::before,
+.card-3.top::before,
+.card-6.top::before,
+.card-9.top::before,
+.card-V.top::before,
+.card-D.top::before,
+.card-R.top::before {
+  position: unset;
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
 }
 
 .nbPlayers::before,
@@ -298,17 +336,17 @@ footer > div#others > a:focus {
 
 .duration::before {
   background-image: url(../img/pictos/clock.svg);
-  width: 21px;
-  height: 21px;
-  margin: 2px 7px 2px 2px;
+  scale: 0.8;
 }
 
 .drunking::before {
   background-image: url(../img/pictos/beer.svg);
+  scale: 1.05;
 }
 
 .material::before {
   background-image: url(../img/pictos/dice.svg);
+  scale: 1.2;
 }
 
 .right::before,
@@ -372,25 +410,6 @@ footer > div#others > a:focus {
   background-image: url(../img/pictos/cards/R.png);
 }
 
-/* to delete */
-#alpha {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 890px;
-  padding: 50px;
-  color: #fff;
-  text-align: center;
-  background-color: #333;
-  border-radius: 20px;
-}
-
-#alpha > img {
-  width: 200px;
-}
-
-/* --- */
 main#legalNotice {
   padding-bottom: 20px;
 }
@@ -522,7 +541,7 @@ main#games > #gamesList > article > a > div#informations > div > div > p {
 main#games > #gamesList > article > a > div#informations > div > div#col1 {
   width: 40%;
   padding-right: 10px;
-  border-right: solid 2px #bbb;
+  border-right: solid 1px #ccc;
 }
 main#games > #gamesList > article > a > div#informations > div > div#col1 > p {
   padding: 2px 0;
@@ -532,13 +551,8 @@ main#games > #gamesList > article > a > div#informations > div > div#col2 {
   padding-left: 10px;
   text-align: center;
 }
-main#games > #gamesList > article > a > div#informations > div > div#col2 > p {
-  line-height: 1.2em;
-}
-main#games > #gamesList > article > a > div#informations > div > div#col2 > p.material::before {
-  display: block;
-  margin: auto;
-  margin-bottom: 2px;
+main#games > #gamesList > article > a > div#informations > div > div#col2 > ul {
+  margin: 0;
 }
 main#games > #gamesList > article:hover {
   box-shadow: #bbb 0 0 10px;
@@ -629,11 +643,18 @@ main#game .cards > li {
   line-height: 3em;
 }
 main#game > section {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 main#game > section:has(h2#Sommaire) {
   display: flex;
   flex-flow: row wrap;
+}
+@media screen and (max-width: 840px) {
+  main#game > section:has(h2#Sommaire) {
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
 }
 main#game > section:has(h2#Sommaire) h2 {
   margin-top: 0;
@@ -644,28 +665,54 @@ main#game > section:has(h2#Sommaire) > div {
 main#game > section:has(h2#Sommaire) > div#picture {
   width: 40%;
 }
+@media screen and (max-width: 840px) {
+  main#game > section:has(h2#Sommaire) > div#picture {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 main#game > section:has(h2#Sommaire) > div#picture > img {
   display: block;
-  max-width: 100%;
+  width: 100%;
+  min-width: 260px;
+  max-width: 450px;
+}
+@media screen and (max-width: 840px) {
+  main#game > section:has(h2#Sommaire) > div#picture > img {
+    margin: auto;
+    min-width: unset;
+    max-width: 350px;
+  }
 }
 main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
   width: 60%;
   padding-left: 20px;
+}
+@media screen and (max-width: 840px) {
+  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+    width: 100%;
+    padding-left: 0;
+  }
 }
 main#game > section:has(> h2#Présentation) > div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-main#game > section:has(> h2#Présentation) > div > p {
+main#game > section:has(> h2#Présentation) > div > * {
   box-sizing: border-box;
   margin: 0;
-  width: 25%;
-  min-width: 135px;
+  margin-bottom: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 0 10px;
   text-align: center;
 }
-main#game > section:has(> h2#Présentation) > div > p > i {
+main#game > section:has(> h2#Présentation) > div > ul {
+  width: auto;
+  list-style: none;
+}
+main#game > section:has(> h2#Présentation) > div i {
   font-size: smaller;
 }
 

@@ -62,7 +62,7 @@ main#game {
             text-align: center;
             border-left: solid 2px $l-bg-color;
             border-right: solid 2px $l-bg-color;
-            background-color: $l-bg-lightGray-color;
+            background-color: $l-bg-lightGray1-color;
 
             >.shapeTitle,
             >.colorTitle {
@@ -94,11 +94,17 @@ main#game {
 
 
     >section {
-        margin-top: 50px;
+        margin-top: 30px;
 
         &:has(h2#Sommaire) {
             display: flex;
             flex-flow: row wrap;
+
+            @media screen and (max-width: 840px) {
+                flex-flow: column nowrap;
+                margin-top: 20px;
+                margin-bottom: -20px;
+            }
 
             h2 {
                 margin-top: 0;
@@ -110,15 +116,33 @@ main#game {
                 &#picture {
                     width: 40%;
 
+                    @media screen and (max-width: 840px) {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+
                     >img {
                         display: block;
-                        max-width: 100%;
+                        width: 100%;
+                        min-width: 260px;
+                        max-width: 450px;
+
+                        @media screen and (max-width: 840px) {
+                            margin: auto;
+                            min-width: unset;
+                            max-width: 350px;
+                        }
                     }
                 }
 
                 &:has(h2#Sommaire) {
                     width: 60%;
                     padding-left: 20px;
+
+                    @media screen and (max-width: 840px) {
+                        width: 100%;
+                        padding-left: 0;
+                    }
                 }
             }
         }
@@ -129,17 +153,23 @@ main#game {
                 flex-flow: row wrap;
                 justify-content: center;
 
-                >p {
+                >* {
                     box-sizing: border-box;
                     margin: 0;
-                    width: 25%;
-                    min-width: 135px;
+                    margin-bottom: 5px;
+                    width: fit-content;
                     padding: 0 10px;
                     text-align: center;
 
-                    >i {
-                        font-size: smaller;
-                    }
+                }
+
+                >ul {
+                    width: auto;
+                    list-style: none;
+                }
+
+                i {
+                    font-size: smaller;
                 }
             }
         }
