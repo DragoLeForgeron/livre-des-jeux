@@ -23,6 +23,46 @@ strong {
   color: #ff0000;
 }
 
+p.close {
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+@media screen and (max-width: 640px) {
+  p.close {
+    margin-top: 8px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  p.close {
+    margin-top: 6px;
+  }
+}
+p.far {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+@media screen and (max-width: 640px) {
+  p.far {
+    margin-top: 24px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  p.far {
+    margin-top: 22px;
+  }
+}
+p.collapse {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+p:has(+ *:not(p)) {
+  margin-bottom: revert !important;
+}
+
+.small {
+  font-size: small;
+}
+
 main {
   margin: auto;
   width: 70%;
@@ -270,6 +310,22 @@ footer > div#others > a:focus {
 }
 
 /* --- */
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.card-A,
+.card-3,
+.card-6,
+.card-9,
+.card-V,
+.card-D,
+.card-R {
+  position: relative;
+}
 .nbPlayers::before,
 .material::before,
 .duration::before,
@@ -285,9 +341,22 @@ footer > div#others > a:focus {
 .card-D::before,
 .card-R::before {
   content: "";
-  display: inline-block;
-  position: relative;
-  margin-right: 5px;
+}
+.nbPlayers.top,
+.material.top,
+.duration.top,
+.drunking.top,
+.right.top,
+.wrong.top,
+.joker.top,
+.card-A.top,
+.card-3.top,
+.card-6.top,
+.card-9.top,
+.card-V.top,
+.card-D.top,
+.card-R.top {
+  margin-left: unset;
 }
 .nbPlayers.top::before,
 .material.top::before,
@@ -307,6 +376,50 @@ footer > div#others > a:focus {
   display: block;
   margin: auto;
   margin-bottom: 2px;
+  translate: unset;
+}
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker {
+  margin-left: 30px;
+}
+
+.card-A,
+.card-3,
+.card-6,
+.card-9,
+.card-V,
+.card-D,
+.card-R {
+  margin-left: 35px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: calc(-100% - 5px) -50%;
 }
 
 .nbPlayers::before,
@@ -318,15 +431,25 @@ footer > div#others > a:focus {
 .joker::before {
   width: 25px;
   height: 25px;
+  background-size: 25px 25px;
+}
+
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+  width: 30px;
+  height: 40px;
+  background-size: 30px 40px;
 }
 
 .nbPlayers::before,
 .material::before,
 .duration::before,
 .drunking::before {
-  top: 2px;
-  background-size: contain;
-  vertical-align: bottom;
   opacity: 0.6;
 }
 
@@ -349,13 +472,6 @@ footer > div#others > a:focus {
   scale: 1.2;
 }
 
-.right::before,
-.wrong::before,
-.joker::before {
-  top: -3px;
-  vertical-align: middle;
-}
-
 .right::before {
   background-image: url(../img/pictos/right.svg);
 }
@@ -366,20 +482,6 @@ footer > div#others > a:focus {
 
 .joker::before {
   background-image: url(../img/logo/picto-noir-transparent.png);
-  background-size: 25px 25px;
-}
-
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
-  width: 30px;
-  height: 40px;
-  background-size: 30px 40px;
-  vertical-align: middle;
 }
 
 .card-A::before {
@@ -536,7 +638,8 @@ main#games > #gamesList > article > a > div#informations > div {
   width: 100%;
 }
 main#games > #gamesList > article > a > div#informations > div > div > p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 main#games > #gamesList > article > a > div#informations > div > div#col1 {
   width: 40%;
@@ -544,7 +647,7 @@ main#games > #gamesList > article > a > div#informations > div > div#col1 {
   border-right: solid 1px #ccc;
 }
 main#games > #gamesList > article > a > div#informations > div > div#col1 > p {
-  padding: 2px 0;
+  padding: 5px 0;
 }
 main#games > #gamesList > article > a > div#informations > div > div#col2 {
   width: 60%;
@@ -584,17 +687,14 @@ main#game h3 {
   border-bottom: solid 1px #000;
   border-left: solid 1px #000;
 }
-main#game p {
-  line-height: 1.25em;
-}
 main#game a:hover {
   color: #ff0000;
 }
 main#game a:focus {
   color: #be0000;
 }
-main#game ol {
-  line-height: 1.5em;
+main#game ol > li {
+  margin: 7px 0;
 }
 main#game .preview {
   float: right;
@@ -608,9 +708,27 @@ main#game .preview {
   -o-object-position: top right;
      object-position: top right;
 }
+@media screen and (max-width: 640px) {
+  main#game .preview {
+    display: block;
+    float: unset;
+    width: 60%;
+    max-width: unset;
+    height: unset;
+    margin-left: unset;
+    margin: auto;
+    -o-object-position: unset;
+       object-position: unset;
+  }
+}
 main#game .col-2 {
   display: flex;
   flex-flow: row wrap;
+}
+@media screen and (max-width: 640px) {
+  main#game .col-2 {
+    flex-flow: column nowrap;
+  }
 }
 main#game .col-2 > div {
   box-sizing: border-box;
@@ -620,6 +738,15 @@ main#game .col-2 > div {
   border-left: solid 2px #fff;
   border-right: solid 2px #fff;
   background-color: #eee;
+}
+@media screen and (max-width: 640px) {
+  main#game .col-2 > div {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+  }
 }
 main#game .col-2 > div > .shapeTitle,
 main#game .col-2 > div > .colorTitle {
@@ -634,13 +761,6 @@ main#game .col-2 > div > img {
 }
 main#game .col-2 > div > p:last-child {
   margin-bottom: 0;
-}
-main#game .cards {
-  list-style: none;
-  margin-top: 2px;
-}
-main#game .cards > li {
-  line-height: 3em;
 }
 main#game > section {
   margin-top: 30px;
@@ -712,11 +832,5 @@ main#game > section:has(> h2#Présentation) > div > ul {
   width: auto;
   list-style: none;
 }
-main#game > section:has(> h2#Présentation) > div i {
-  font-size: smaller;
-}
 
-/* Games specificities */
-section:has(h3#ExplorationDeLaPyramide) > p:has(+ .cards) {
-  margin-bottom: 0;
-}/*# sourceMappingURL=style.css.map */
+/* Games specificities *//*# sourceMappingURL=style.css.map */

@@ -1,3 +1,9 @@
+$margin-right: 5px;
+$mini-size: 25px;
+$card-width: 30px;
+$card-height: 40px;
+
+
 .nbPlayers,
 .material,
 .duration,
@@ -12,20 +18,66 @@
 .card-V,
 .card-D,
 .card-R {
+    position: relative;
 
     &::before {
         content: "";
-        display: inline-block;
-        position: relative;
-        margin-right: 5px;
     }
 
-    &.top::before {
-        position: unset;
-        display: block;
-        margin: auto;
-        margin-bottom: 2px;
+    &.top {
+        margin-left: unset;
+        
+        &::before {
+            position: unset;
+            display: block;
+            margin: auto;
+            margin-bottom: 2px;
+            translate: unset;
+        }
     }
+}
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker {
+    margin-left: calc($mini-size + $margin-right);
+}
+
+.card-A,
+.card-3,
+.card-6,
+.card-9,
+.card-V,
+.card-D,
+.card-R {
+    margin-left: calc($card-width + $margin-right);
+    min-height: $card-height;
+    display: flex;
+    align-items: center;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: calc(-100% - $margin-right) -50%;
 }
 
 .nbPlayers::before,
@@ -35,18 +87,27 @@
 .right::before,
 .wrong::before,
 .joker::before {
-    width: 25px;
-    height: 25px;
+    width: $mini-size;
+    height: $mini-size;
+    background-size: $mini-size $mini-size;
 }
 
+.card-A::before,
+.card-3::before,
+.card-6::before,
+.card-9::before,
+.card-V::before,
+.card-D::before,
+.card-R::before {
+    width: $card-width;
+    height: $card-height;
+    background-size: $card-width $card-height;
+}
 
 .nbPlayers::before,
 .material::before,
 .duration::before,
 .drunking::before {
-    top: 2px;
-    background-size: contain;
-    vertical-align: bottom;
     opacity: 0.6;
 }
 
@@ -69,14 +130,6 @@
     scale: 1.2;
 }
 
-
-.right::before,
-.wrong::before,
-.joker::before {
-    top: -3px;
-    vertical-align: middle;
-}
-
 .right::before {
     background-image: url(../img/pictos/right.svg);
 }
@@ -87,21 +140,6 @@
 
 .joker::before {
     background-image: url(../img/logo/picto-noir-transparent.png);
-    background-size: 25px 25px;
-}
-
-
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
-    width: 30px;
-    height: 40px;
-    background-size: 30px 40px;
-    vertical-align: middle;
 }
 
 .card-A::before {

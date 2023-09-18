@@ -79,7 +79,8 @@ main#games {
                         width: 100%;
 
                         >div>p {
-                            margin: 0;
+                            margin-top: 0;
+                            margin-bottom: 0;
                         }
 
                         >div#col1 {
@@ -88,7 +89,7 @@ main#games {
                             border-right: solid 1px $l-bg-lightGray3-color;
 
                             >p {
-                                padding: 2px 0;
+                                padding: 5px 0;
                             }
                         }
 

@@ -21,10 +21,6 @@ main#game {
         border-left: solid 1px $l-base-color;
     }
 
-    p {
-        line-height: 1.25em;
-    }
-
     a {
         &:hover {
             color: $l-p-color;
@@ -35,8 +31,8 @@ main#game {
         }
     }
 
-    ol {
-        line-height: 1.5em;
+    ol>li {
+        margin: 7px 0;
     }
 
 
@@ -49,11 +45,26 @@ main#game {
         margin-left: 20px;
         object-fit: contain;
         object-position: top right;
+
+        @media screen and (max-width: 640px) {
+            display: block;
+            float: unset;
+            width: 60%;
+            max-width: unset;
+            height: unset;
+            margin-left: unset;
+            margin: auto;
+            object-position: unset;
+        }
     }
 
     .col-2 {
         display: flex;
         flex-flow: row wrap;
+
+        @media screen and (max-width: 640px) {
+            flex-flow: column nowrap;
+        }
 
         >div {
             box-sizing: border-box;
@@ -63,6 +74,14 @@ main#game {
             border-left: solid 2px $l-bg-color;
             border-right: solid 2px $l-bg-color;
             background-color: $l-bg-lightGray1-color;
+
+            @media screen and (max-width: 640px) {
+                width: 100%;
+                border-left: none;
+                border-right: none;
+                border-top: solid 2px $l-bg-color;
+                border-bottom: solid 2px $l-bg-color;
+            }
 
             >.shapeTitle,
             >.colorTitle {
@@ -80,15 +99,6 @@ main#game {
             >p:last-child {
                 margin-bottom: 0;
             }
-        }
-    }
-
-    .cards {
-        list-style: none;
-        margin-top: 2px;
-
-        >li {
-            line-height: 3em;
         }
     }
 
@@ -166,10 +176,6 @@ main#game {
                 >ul {
                     width: auto;
                     list-style: none;
-                }
-
-                i {
-                    font-size: smaller;
                 }
             }
         }
