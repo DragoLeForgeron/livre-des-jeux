@@ -4,8 +4,8 @@ main#games {
     >input {
         display: block;
         margin: auto;
-        padding: 10px 20px;
-        width: 220px;
+        width: 300px;
+        padding: 14px 28px;
         background-color: $l-bg-lightGray1-color;
         border: none;
         border-radius: 50px;
@@ -13,6 +13,16 @@ main#games {
 
         &::-webkit-search-cancel-button {
             -webkit-appearance: none;
+        }
+
+        @media screen and (max-width: 640px) {
+            width: 220px;
+            padding: 10px 20px;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 1200px) {
+            width: 260px;
+            padding: 12px 24px;
         }
     }
 
