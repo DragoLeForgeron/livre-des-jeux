@@ -1,5 +1,6 @@
 $margin-right: 5px;
-$mini-size: 25px;
+$online-size: 22px;
+$info-size: 25px;
 $card-width: 30px;
 $card-height: 40px;
 
@@ -26,7 +27,7 @@ $card-height: 40px;
 
     &.top {
         margin-left: unset;
-        
+
         &::before {
             position: unset;
             display: block;
@@ -44,7 +45,7 @@ $card-height: 40px;
 .right,
 .wrong,
 .joker {
-    margin-left: calc($mini-size + $margin-right);
+    margin-left: calc($info-size + $margin-right);
 }
 
 .card-A,
@@ -83,13 +84,20 @@ $card-height: 40px;
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before,
+.drunking::before {
+    width: $info-size;
+    height: $info-size;
+    background-size: $info-size $info-size;
+    margin-top: -1px;
+}
+
 .right::before,
 .wrong::before,
 .joker::before {
-    width: $mini-size;
-    height: $mini-size;
-    background-size: $mini-size $mini-size;
+    width: $online-size;
+    height: $online-size;
+    background-size: $online-size $online-size;
+    margin-top: -2px;
 }
 
 .card-A::before,

@@ -291,22 +291,13 @@ footer > div#others > a:focus {
   color: #ff0000;
 }
 
-/* to delete */
-#alpha {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 890px;
-  padding: 50px;
-  color: #fff;
+/* temp */
+.indisponible {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  color: #ff0000;
   text-align: center;
-  background-color: #333;
-  border-radius: 20px;
-}
-
-#alpha > img {
-  width: 200px;
 }
 
 /* --- */
@@ -425,13 +416,20 @@ footer > div#others > a:focus {
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before {
+.drunking::before {
   width: 25px;
   height: 25px;
   background-size: 25px 25px;
+  margin-top: -1px;
+}
+
+.right::before,
+.wrong::before,
+.joker::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+  margin-top: -2px;
 }
 
 .card-A::before,
@@ -659,6 +657,7 @@ main#games > #gamesList > article > a > div#informations > div > div#col2 > ul {
 }
 main#games > #gamesList > article:hover {
   box-shadow: #bbb 0 0 10px;
+  scale: 1.02;
 }
 main#games > #gamesList > article > a:focus {
   opacity: 0.8;
@@ -833,4 +832,14 @@ main#game > section:has(> h2#Présentation) > div > ul {
   list-style: none;
 }
 
-/* Games specificities *//*# sourceMappingURL=style.css.map */
+/* Games specificities */
+@media screen and (max-width: 786px) {
+  .right::before {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 493px) {
+  .wrong::before {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

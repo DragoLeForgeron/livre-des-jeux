@@ -34,8 +34,6 @@ main#games {
             column-count: 1;
         }
 
-
-
         >article {
             box-sizing: border-box;
             break-inside: avoid;
@@ -108,6 +106,7 @@ main#games {
 
             &:hover {
                 box-shadow: $l-bg-LightGray4-color 0 0 10px;
+                scale: 1.02;
             }
 
             >a:focus {

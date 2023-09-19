@@ -316,22 +316,13 @@ footer {
 
 
 
-/* to delete */
-#alpha {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 890px;
-    padding: 50px;
-    color: #fff;
-    text-align: center;
-    background-color: #333;
-    border-radius: 20px;
-}
+/* temp */
 
-#alpha>img {
-    width: 200px;
+.indisponible {
+    width: fit-content;
+    margin: auto;
+    color: #ff0000;
+    text-align: center;
 }
 
 /* --- */
