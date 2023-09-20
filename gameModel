@@ -29,22 +29,32 @@
                     <i class="small">(+1 tous les 8 joueurs)</i>
                 </li>
             </ul>
+
+            <p class="far">Petite description du jeu</p>
         </div>
     </section>
 
     <section>
         <h2 id="Préparation">Préparation</h2>
+
+        <p class="far">Aucune préparation pour ce jeu...</p>
     </section>
 
     <section>
         <h2 id="Règles">Règles</h2>
+
+        <p class="far">Aucune règle pour ce jeu...</p>
     </section>
 
     <section>
         <h2 id="Variantes">Variantes</h2>
+
+        <p class="far">Aucune variante pour ce jeu...</p>
     </section>
     
     <section>
         <h2 id="Anecdotes">Anecdotes</h2>
+
+        <p class="far">Aucune anecdote pour ce jeu...</p>
     </section>
 </main>
