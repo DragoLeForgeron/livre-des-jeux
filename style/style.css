@@ -1,8 +1,8 @@
-@charset "UTF-8";
 /* LIGHT */
 /* DARK */
 html {
   scroll-padding-top: 90px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -61,234 +61,6 @@ p:has(+ *:not(p)) {
 
 .small {
   font-size: small;
-}
-
-main {
-  margin: auto;
-  width: 70%;
-  padding-bottom: 200px;
-}
-@media screen and (max-width: 640px) {
-  main {
-    padding-bottom: 150px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  main {
-    padding-bottom: 175px;
-  }
-}
-@media screen and (max-width: 640px) {
-  main {
-    width: 85%;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  main {
-    width: 77.5%;
-  }
-}
-main > h1 {
-  text-align: center;
-}
-
-header#navigation {
-  position: sticky;
-  top: 0px;
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  width: 100%;
-  height: 70px;
-  color: #000;
-  background-color: #eee;
-  z-index: 1;
-}
-@media screen and (max-width: 640px) {
-  header#navigation {
-    height: 50px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  header#navigation {
-    height: 60px;
-  }
-}
-header#navigation > div#logo {
-  position: absolute;
-  top: 50%;
-  left: 1%;
-  transform: translate(0, -50%);
-  width: 240px;
-}
-@media screen and (max-width: 640px) {
-  header#navigation > div#logo {
-    width: 200px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  header#navigation > div#logo {
-    width: 220px;
-  }
-}
-header#navigation > div#logo > img {
-  display: block;
-  width: 100%;
-}
-header#navigation > nav {
-  box-sizing: border-box;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-@media screen and (max-width: 640px) {
-  header#navigation > nav {
-    justify-content: flex-end;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  header#navigation > nav {
-    justify-content: flex-end;
-  }
-}
-header#navigation > nav > input {
-  display: none;
-}
-header#navigation > nav > input:checked ~ label::before {
-  background-image: url(../img/pictos/cross.svg);
-}
-header#navigation > nav > label {
-  box-sizing: border-box;
-  display: none;
-  padding: 10px;
-  cursor: pointer;
-}
-header#navigation > nav > label::before {
-  content: "";
-  display: block;
-  width: 30px;
-  height: 30px;
-  background-image: url(../img/pictos/bars.svg);
-}
-header#navigation > nav > a {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 20px;
-  text-decoration: none;
-  border-bottom: solid 4px transparent;
-}
-header#navigation > nav > a:hover {
-  border-bottom: solid 4px #ff0000;
-}
-header#navigation > nav > a:focus {
-  border-bottom: solid 4px #be0000;
-}
-header#navigation > nav > a[selected] {
-  border-bottom: solid 4px #ff0000;
-}
-@media screen and (max-width: 640px) {
-  header#navigation > nav > label {
-    display: block;
-  }
-  header#navigation > nav > a {
-    justify-content: center;
-    width: 100%;
-    background-color: #eee;
-    border-bottom: none;
-    -webkit-text-decoration: underline transparent;
-            text-decoration: underline transparent;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 3px;
-  }
-  header#navigation > nav > a:first-of-type {
-    box-shadow: inset 0px 10px 10px -15px black;
-  }
-  header#navigation > nav > a[selected], header#navigation > nav > a:hover {
-    border-bottom: none;
-    text-decoration-color: #ff0000;
-  }
-  header#navigation > nav > a:focus {
-    border-bottom: none;
-    text-decoration-color: #be0000;
-  }
-  header#navigation > nav:has(> input:not(:checked)) > a {
-    display: none;
-  }
-}
-
-footer {
-  box-sizing: border-box;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 200px;
-  padding: 30px 5%;
-  color: #fff;
-  background-color: #111;
-}
-@media screen and (max-width: 640px) {
-  footer {
-    height: 150px;
-    padding-top: 20px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  footer {
-    height: 175px;
-    padding-top: 25px;
-  }
-}
-footer > div#QRCode {
-  box-sizing: border-box;
-  position: relative;
-  width: 50%;
-  height: 100%;
-  padding-right: 25px;
-  border-right: solid 1px #333;
-}
-footer > div#QRCode > div {
-  cursor: pointer;
-  margin-left: auto;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: inherit;
-}
-footer > div#QRCode > div > img {
-  display: block;
-  margin: auto;
-  height: 100%;
-}
-footer > div#QRCode > div > p {
-  position: relative;
-  margin-top: 5px;
-  font-size: small;
-  text-align: center;
-}
-footer > div#others {
-  box-sizing: border-box;
-  width: 50%;
-  padding-left: 25px;
-}
-footer > div#others > a {
-  color: #fff;
-  text-decoration: none;
-}
-footer > div#others > a:hover {
-  text-decoration: underline;
-}
-footer > div#others > a:focus {
-  text-decoration: underline;
-  color: #ff0000;
 }
 
 /* temp */
@@ -510,22 +282,6 @@ footer > div#others > a:focus {
   background-image: url(../img/pictos/cards/R.png);
 }
 
-main#legalNotice {
-  padding-bottom: 20px;
-}
-main#legalNotice a:hover {
-  color: #ff0000;
-}
-main#legalNotice a:focus {
-  color: #be0000;
-}
-main#legalNotice > article {
-  margin-top: 40px;
-}
-main#legalNotice > article > section {
-  margin-left: 20px;
-}
-
 .toast {
   position: fixed;
   bottom: 20px;
@@ -550,308 +306,230 @@ main#legalNotice > article > section {
     opacity: 1;
   }
 }
-main#games {
+header#navigation {
+  position: sticky;
+  top: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
   width: 100%;
-}
-main#games > input {
-  display: block;
-  margin: auto;
-  width: 300px;
-  padding: 14px 28px;
+  height: 70px;
+  color: #000;
   background-color: #eee;
-  border: none;
-  border-radius: 50px;
-  outline: none;
-}
-main#games > input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+  z-index: 1;
 }
 @media screen and (max-width: 640px) {
-  main#games > input {
+  header#navigation {
+    height: 50px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation {
+    height: 60px;
+  }
+}
+header#navigation > div#logo {
+  position: absolute;
+  top: 50%;
+  left: 1%;
+  transform: translate(0, -50%);
+  width: 240px;
+}
+@media screen and (max-width: 640px) {
+  header#navigation > div#logo {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation > div#logo {
     width: 220px;
-    padding: 10px 20px;
   }
 }
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  main#games > input {
-    width: 260px;
-    padding: 12px 24px;
-  }
-}
-main#games > #gamesList {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 30px auto;
-  -moz-column-count: 4;
-       column-count: 4;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
-}
-@media screen and (min-width: 931px) and (max-width: 1270px) {
-  main#games > #gamesList {
-    -moz-column-count: 3;
-         column-count: 3;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 930px) {
-  main#games > #gamesList {
-    -moz-column-count: 2;
-         column-count: 2;
-  }
-}
-@media screen and (max-width: 640px) {
-  main#games > #gamesList {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
-}
-main#games > #gamesList > article {
-  box-sizing: border-box;
-  -moz-column-break-inside: avoid;
-       break-inside: avoid;
-  margin-bottom: 20px;
-  width: 275px;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: #eee;
-}
-main#games > #gamesList > article > a {
+header#navigation > div#logo > img {
   display: block;
   width: 100%;
-  height: 100%;
-  text-decoration: none;
 }
-main#games > #gamesList > article > a > div#picture {
-  width: 100%;
-}
-main#games > #gamesList > article > a > div#picture > img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main#games > #gamesList > article > a > div#informations {
+header#navigation > nav {
   box-sizing: border-box;
-  width: 100%;
-  padding: 10px;
-}
-main#games > #gamesList > article > a > div#informations > h2 {
-  margin: 0;
-  margin-bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-main#games > #gamesList > article > a > div#informations > div {
-  display: flex;
-  flex-flow: row nowrap;
-  width: 100%;
-}
-main#games > #gamesList > article > a > div#informations > div > div > p {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-main#games > #gamesList > article > a > div#informations > div > div#col1 {
-  width: 40%;
-  padding-right: 10px;
-  border-right: solid 1px #ccc;
-}
-main#games > #gamesList > article > a > div#informations > div > div#col1 > p {
-  padding: 5px 0;
-}
-main#games > #gamesList > article > a > div#informations > div > div#col2 {
-  width: 60%;
-  padding-left: 10px;
-  text-align: center;
-}
-main#games > #gamesList > article > a > div#informations > div > div#col2 > ul {
-  margin: 0;
-}
-main#games > #gamesList > article:hover {
-  box-shadow: #bbb 0 0 10px;
-  scale: 1.02;
-}
-main#games > #gamesList > article > a:focus {
-  opacity: 0.8;
-}
-
-main#game {
-  padding-bottom: 250px;
-}
-@media screen and (max-width: 640px) {
-  main#game {
-    padding-bottom: 190px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  main#game {
-    padding-bottom: 205px;
-  }
-}
-main#game h2 {
-  border-bottom: solid 1px #000;
-}
-main#game h3 {
-  margin-top: 30px;
-  margin-left: 10px;
-  padding: 5px 0 5px 10px;
-  border-bottom: solid 1px #000;
-  border-left: solid 1px #000;
-}
-main#game a:hover {
-  color: #ff0000;
-}
-main#game a:focus {
-  color: #be0000;
-}
-main#game ol > li {
-  margin: 7px 0;
-}
-main#game .preview {
-  float: right;
-  width: 25%;
-  max-width: 600px;
-  height: 25%;
-  max-height: 400px;
-  margin-left: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: top right;
-     object-position: top right;
-}
-@media screen and (max-width: 640px) {
-  main#game .preview {
-    display: block;
-    float: unset;
-    width: 60%;
-    max-width: unset;
-    height: unset;
-    margin-left: unset;
-    margin: auto;
-    -o-object-position: unset;
-       object-position: unset;
-  }
-}
-main#game .col-2 {
-  display: flex;
-  flex-flow: row wrap;
-}
-@media screen and (max-width: 640px) {
-  main#game .col-2 {
-    flex-flow: column nowrap;
-  }
-}
-main#game .col-2 > div {
-  box-sizing: border-box;
-  width: 50%;
-  padding: 10px;
-  text-align: center;
-  border-left: solid 2px #fff;
-  border-right: solid 2px #fff;
-  background-color: #eee;
-}
-@media screen and (max-width: 640px) {
-  main#game .col-2 > div {
-    width: 100%;
-    border-left: none;
-    border-right: none;
-    border-top: solid 2px #fff;
-    border-bottom: solid 2px #fff;
-  }
-}
-main#game .col-2 > div > .shapeTitle,
-main#game .col-2 > div > .colorTitle {
-  margin-top: 0;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-main#game .col-2 > div > img {
-  display: block;
-  margin: auto;
-  width: 80%;
-}
-main#game .col-2 > div > p:last-child {
-  margin-bottom: 0;
-}
-main#game > section {
-  margin-top: 30px;
-}
-main#game > section:has(h2#Sommaire) {
-  display: flex;
-  flex-flow: row wrap;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) {
-    flex-flow: column nowrap;
-    margin-top: 20px;
-    margin-bottom: -20px;
-  }
-}
-main#game > section:has(h2#Sommaire) h2 {
-  margin-top: 0;
-}
-main#game > section:has(h2#Sommaire) > div {
-  box-sizing: border-box;
-}
-main#game > section:has(h2#Sommaire) > div#picture {
-  width: 40%;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture {
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-main#game > section:has(h2#Sommaire) > div#picture > img {
-  display: block;
-  width: 100%;
-  min-width: 260px;
-  max-width: 450px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture > img {
-    margin: auto;
-    min-width: unset;
-    max-width: 350px;
-  }
-}
-main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
-  width: 60%;
-  padding-left: 20px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
-    width: 100%;
-    padding-left: 0;
-  }
-}
-main#game > section:has(> h2#Présentation) > div {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
-main#game > section:has(> h2#Présentation) > div > * {
+@media screen and (max-width: 640px) {
+  header#navigation > nav {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation > nav {
+    justify-content: flex-end;
+  }
+}
+header#navigation > nav > input {
+  display: none;
+}
+header#navigation > nav > input:checked ~ label::before {
+  background-image: url(../img/pictos/cross.svg);
+}
+header#navigation > nav > label {
   box-sizing: border-box;
-  margin: 0;
-  margin-bottom: 5px;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 10px;
-  text-align: center;
+  display: none;
+  padding: 10px;
+  cursor: pointer;
 }
-main#game > section:has(> h2#Présentation) > div > ul {
-  width: auto;
-  list-style: none;
+header#navigation > nav > label::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/pictos/bars.svg);
+}
+header#navigation > nav > a {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  border-bottom: solid 4px transparent;
+}
+header#navigation > nav > a:hover {
+  border-bottom: solid 4px #ff0000;
+}
+header#navigation > nav > a:focus {
+  border-bottom: solid 4px #be0000;
+}
+header#navigation > nav > a[selected] {
+  border-bottom: solid 4px #ff0000;
+}
+@media screen and (max-width: 640px) {
+  header#navigation > nav > label {
+    display: block;
+  }
+  header#navigation > nav > a {
+    justify-content: center;
+    width: 100%;
+    background-color: #eee;
+    border-bottom: none;
+    -webkit-text-decoration: underline transparent;
+            text-decoration: underline transparent;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+  }
+  header#navigation > nav > a:first-of-type {
+    box-shadow: inset 0px 10px 10px -15px black;
+  }
+  header#navigation > nav > a[selected], header#navigation > nav > a:hover {
+    border-bottom: none;
+    text-decoration-color: #ff0000;
+  }
+  header#navigation > nav > a:focus {
+    border-bottom: none;
+    text-decoration-color: #be0000;
+  }
+  header#navigation > nav:has(> input:not(:checked)) > a {
+    display: none;
+  }
 }
 
-/* Games specificities */
-@media screen and (max-width: 786px) {
-  .right::before {
-    margin-top: 0;
+main {
+  margin: auto;
+  width: 70%;
+  padding-bottom: 200px;
+}
+@media screen and (max-width: 640px) {
+  main {
+    padding-bottom: 150px;
   }
 }
-@media screen and (max-width: 493px) {
-  .wrong::before {
-    margin-top: 0;
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  main {
+    padding-bottom: 175px;
   }
+}
+@media screen and (max-width: 640px) {
+  main {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  main {
+    width: 77.5%;
+  }
+}
+main > h1 {
+  text-align: center;
+}
+
+footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  padding: 30px 5%;
+  color: #fff;
+  background-color: #111;
+}
+@media screen and (max-width: 640px) {
+  footer {
+    height: 150px;
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  footer {
+    height: 175px;
+    padding-top: 25px;
+  }
+}
+footer > div#QRCode {
+  box-sizing: border-box;
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding-right: 25px;
+  border-right: solid 1px #333;
+}
+footer > div#QRCode > div {
+  cursor: pointer;
+  margin-left: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: inherit;
+}
+footer > div#QRCode > div > img {
+  display: block;
+  margin: auto;
+  height: 100%;
+}
+footer > div#QRCode > div > p {
+  position: relative;
+  margin-top: 5px;
+  font-size: small;
+  text-align: center;
+}
+footer > div#others {
+  box-sizing: border-box;
+  width: 50%;
+  padding-left: 25px;
+}
+footer > div#others > a {
+  color: #fff;
+  text-decoration: none;
+}
+footer > div#others > a:hover {
+  text-decoration: underline;
+}
+footer > div#others > a:focus {
+  text-decoration: underline;
+  color: #ff0000;
 }/*# sourceMappingURL=style.css.map */
