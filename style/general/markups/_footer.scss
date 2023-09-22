@@ -1,0 +1,73 @@
+footer {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $footer-height;
+    padding: 30px 5%;
+    color: $l-footer-text-color;
+    background-color: $l-bg-footer-color;
+
+    @media screen and (max-width: 640px) {
+        height: $footer-height-640;
+        padding-top: 20px;
+    }
+
+    @media screen and (min-width: 641px) and (max-width: 1200px) {
+        height: $footer-height-1200;
+        padding-top: 25px;
+    }
+
+    >div#QRCode {
+        box-sizing: border-box;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        padding-right: 25px;
+        border-right: solid 1px $l-bg-f-lighter-color;
+
+        >div {
+            cursor: pointer;
+            margin-left: auto;
+            width: fit-content;
+            height: inherit;
+
+            >img {
+                display: block;
+                margin: auto;
+                height: 100%;
+            }
+
+            >p {
+                position: relative;
+                margin-top: 5px;
+                font-size: small;
+                text-align: center;
+            }
+        }
+    }
+
+    >div#others {
+        box-sizing: border-box;
+        width: 50%;
+        padding-left: 25px;
+
+        >a {
+            color: $l-footer-text-color;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:focus {
+                text-decoration: underline;
+                color: $l-p-color;
+            }
+        }
+    }
+}

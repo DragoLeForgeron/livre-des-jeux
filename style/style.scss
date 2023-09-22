@@ -1,14 +1,10 @@
-@import "./scss/fonts";
-@import "./scss/variables";
-@import "./scss/general";
-@import "./scss/pictos";
+@import "./general/variables";
+@import "./general/general";
+@import "./general/pictos";
+@import "./general/toast";
 
-@import "./scss/legalNotice";
+@import "./general/fonts/fonts";
 
-@import "./scss/toast";
-
-@import "./scss/gameList";
-@import "./scss/game";
-
-/* Games specificities */
-@import "./scss/games/IndianaJones";
+@import "./general/markups/header";
+@import "./general/markups/main";
+@import "./general/markups/footer";
