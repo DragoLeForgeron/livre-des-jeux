@@ -1,0 +1,17 @@
+.right::before {
+  margin-top: -1px;
+}
+@media screen and (max-width: 794px) {
+  .right::before {
+    margin-top: 0;
+  }
+}
+
+.wrong::before {
+  margin-top: -1px;
+}
+@media screen and (max-width: 808px) {
+  .wrong::before {
+    margin-top: 0;
+  }
+}/*# sourceMappingURL=5Temps.css.map */
