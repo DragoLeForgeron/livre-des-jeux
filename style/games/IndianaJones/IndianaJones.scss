@@ -1,11 +1,18 @@
-@media screen and (max-width: 786px) {
-    .right::before {
+$mt-base: -2px;
+
+
+.right::before {
+    margin-top: $mt-base;
+
+    @media screen and (max-width: 786px) {
         margin-top: 0;
     }
 }
 
-@media screen and (max-width: 493px) {
-    .wrong::before {
+.wrong::before {
+    margin-top: $mt-base;
+
+    @media screen and (max-width: 493px) {
         margin-top: 0;
     }
 }

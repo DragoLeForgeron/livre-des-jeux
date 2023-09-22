@@ -1,7 +1,14 @@
+.right::before {
+  margin-top: -2px;
+}
 @media screen and (max-width: 786px) {
   .right::before {
     margin-top: 0;
   }
+}
+
+.wrong::before {
+  margin-top: -2px;
 }
 @media screen and (max-width: 493px) {
   .wrong::before {
