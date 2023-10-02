@@ -125,16 +125,19 @@ main#game {
                 box-sizing: border-box;
 
                 &#picture {
-                    width: 40%; /* To redefine in a sub folder game */
-                    min-width: 260px; /* To redefine in a sub folder game */
-                    max-width: 450px; /* To redefine in a sub folder game */
+                    /* To redefine in a sub folder game */
+                    width: 40%;
+                    min-width: 260px;
+                    max-width: 450px;
 
                     @media screen and (max-width: 840px) {
                         margin: auto;
                         margin-bottom: 20px;
-                        width: 100%; /* To redefine in a sub folder game */
-                        min-width: unset; /* To redefine in a sub folder game */
-                        max-width: 350px; /* To redefine in a sub folder game */
+
+                        /* To redefine in a sub folder game */
+                        width: 100%;
+                        min-width: unset;
+                        max-width: 350px;
                     }
 
                     >img {
@@ -179,5 +182,8 @@ main#game {
             }
         }
 
+        &:has(>h2#Règles) {
+            clear: both;
+        }
     }
 }

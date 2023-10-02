@@ -119,17 +119,19 @@ main#game > section:has(h2#Sommaire) > div {
   box-sizing: border-box;
 }
 main#game > section:has(h2#Sommaire) > div#picture {
-  width: 40%; /* To redefine in a sub folder game */
-  min-width: 260px; /* To redefine in a sub folder game */
-  max-width: 450px; /* To redefine in a sub folder game */
+  /* To redefine in a sub folder game */
+  width: 40%;
+  min-width: 260px;
+  max-width: 450px;
 }
 @media screen and (max-width: 840px) {
   main#game > section:has(h2#Sommaire) > div#picture {
     margin: auto;
     margin-bottom: 20px;
-    width: 100%; /* To redefine in a sub folder game */
-    min-width: unset; /* To redefine in a sub folder game */
-    max-width: 350px; /* To redefine in a sub folder game */
+    /* To redefine in a sub folder game */
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
   }
 }
 main#game > section:has(h2#Sommaire) > div#picture > img {
@@ -164,4 +166,7 @@ main#game > section:has(> h2#Présentation) > div > * {
 main#game > section:has(> h2#Présentation) > div > ul {
   width: auto;
   list-style: none;
+}
+main#game > section:has(> h2#Règles) {
+  clear: both;
 }/*# sourceMappingURL=game.css.map */
