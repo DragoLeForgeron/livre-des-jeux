@@ -1,3 +1,16 @@
+> section:has(h2#Sommaire) > div#picture {
+  width: 40%;
+  min-width: 260px;
+  max-width: 450px;
+}
+@media screen and (max-width: 840px) {
+  > section:has(h2#Sommaire) > div#picture {
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
+  }
+}
+
 @media screen and (max-width: 786px) {
   .right::before {
     margin-top: 0;
