@@ -1,0 +1,35 @@
+main#game {
+
+    // .preview {
+    //     float: right;
+    //     width: 25%;
+    //     max-width: 600px;
+    //     height: 25%;
+    //     max-height: 400px;
+    //     margin-left: 20px;
+    //     object-fit: contain;
+    //     object-position: top right;
+
+    //     @media screen and (max-width: 640px) {
+    //         display: block;
+    //         float: unset;
+    //         width: 60%;
+    //         max-width: unset;
+    //         height: unset;
+    //         margin-left: unset;
+    //         margin: auto;
+    //         object-position: unset;
+    //     }
+    // }
+
+    >section:has(h2#Sommaire)>div#picture {
+        width: 20%;
+        min-width: 200px;
+        max-width: 300px;
+
+        @media screen and (max-width: 840px) {
+            width: 100%;
+            max-width: 250px;
+        }
+    }
+}
