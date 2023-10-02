@@ -16,3 +16,16 @@ $mt-base: -2px;
         margin-top: 0;
     }
 }
+
+
+>section:has(h2#Sommaire)>div#picture {
+    width: 40%;
+    min-width: 260px;
+    max-width: 450px;
+
+    @media screen and (max-width: 840px) {
+        width: 100%;
+        min-width: unset;
+        max-width: 350px;
+    }
+}

@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../general/variables";
 
 main#game {
     padding-bottom: $footer-height + 50px;
@@ -125,28 +125,26 @@ main#game {
                 box-sizing: border-box;
 
                 &#picture {
-                    width: 40%;
+                    width: 40%; /* To redefine in a sub folder game */
+                    min-width: 260px; /* To redefine in a sub folder game */
+                    max-width: 450px; /* To redefine in a sub folder game */
 
                     @media screen and (max-width: 840px) {
-                        width: 100%;
+                        margin: auto;
                         margin-bottom: 20px;
+                        width: 100%; /* To redefine in a sub folder game */
+                        min-width: unset; /* To redefine in a sub folder game */
+                        max-width: 350px; /* To redefine in a sub folder game */
                     }
 
                     >img {
                         display: block;
                         width: 100%;
-                        min-width: 260px;
-                        max-width: 450px;
-
-                        @media screen and (max-width: 840px) {
-                            margin: auto;
-                            min-width: unset;
-                            max-width: 350px;
-                        }
                     }
                 }
 
                 &:has(h2#Sommaire) {
+                    flex-grow: 1;
                     width: 60%;
                     padding-left: 20px;
 
