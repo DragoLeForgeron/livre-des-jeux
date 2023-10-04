@@ -104,13 +104,7 @@ main#game > section {
 main#game > section:has(h2#Sommaire) {
   display: flex;
   flex-flow: row wrap;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) {
-    flex-flow: column nowrap;
-    margin-top: 20px;
-    margin-bottom: -20px;
-  }
+  /* To define in a sub folder game */
 }
 main#game > section:has(h2#Sommaire) h2 {
   margin-top: 0;
@@ -124,30 +118,13 @@ main#game > section:has(h2#Sommaire) > div#picture {
   min-width: 260px;
   max-width: 450px;
 }
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture {
-    margin: auto;
-    margin-bottom: 20px;
-    /* To redefine in a sub folder game */
-    width: 100%;
-    min-width: unset;
-    max-width: 350px;
-  }
-}
 main#game > section:has(h2#Sommaire) > div#picture > img {
   display: block;
   width: 100%;
 }
 main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
   flex-grow: 1;
-  width: 60%;
   padding-left: 20px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
-    width: 100%;
-    padding-left: 0;
-  }
 }
 main#game > section:has(> h2#Présentation) > div {
   display: flex;

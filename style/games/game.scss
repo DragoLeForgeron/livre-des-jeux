@@ -111,12 +111,6 @@ main#game {
             display: flex;
             flex-flow: row wrap;
 
-            @media screen and (max-width: 840px) {
-                flex-flow: column nowrap;
-                margin-top: 20px;
-                margin-bottom: -20px;
-            }
-
             h2 {
                 margin-top: 0;
             }
@@ -130,16 +124,6 @@ main#game {
                     min-width: 260px;
                     max-width: 450px;
 
-                    @media screen and (max-width: 840px) {
-                        margin: auto;
-                        margin-bottom: 20px;
-
-                        /* To redefine in a sub folder game */
-                        width: 100%;
-                        min-width: unset;
-                        max-width: 350px;
-                    }
-
                     >img {
                         display: block;
                         width: 100%;
@@ -148,15 +132,32 @@ main#game {
 
                 &:has(h2#Sommaire) {
                     flex-grow: 1;
-                    width: 60%;
                     padding-left: 20px;
-
-                    @media screen and (max-width: 840px) {
-                        width: 100%;
-                        padding-left: 0;
-                    }
                 }
             }
+
+            /* To define in a sub folder game */
+            // @media screen and (max-width: 840px) {  // <-- (max-width : depend of the presentation picture)
+            //     flex-flow: column nowrap;
+            //     margin-top: 20px;
+            //     margin-bottom: -20px;
+
+            //     >div {
+            //         &#picture {
+            //             margin: auto;
+            //             margin-bottom: 20px;
+                        
+            //             width: 100%; // <--
+            //             min-width: unset; // <--
+            //             max-width: 350px; // <--
+            //         }
+                    
+            //         &:has(h2#Sommaire) {
+            //             width: 100%;
+            //             padding-left: 0;
+            //         }
+            //     }
+            // }
         }
 
         &:has(>h2#Présentation) {
