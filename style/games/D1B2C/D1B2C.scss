@@ -1,31 +1,12 @@
-$mt-base: -2px;
-
 main#game {
-    .right::before {
-        margin-top: $mt-base;
-    
-        @media screen and (max-width: 786px) {
-            margin-top: 0;
-        }
-    }
-    
-    .wrong::before {
-        margin-top: $mt-base;
-    
-        @media screen and (max-width: 493px) {
-            margin-top: 0;
-        }
-    }
-
-
     >section:has(h2#Sommaire) {
         >div#picture {
             width: 40%;
-            min-width: 260px;
-            max-width: 450px;
+            min-width: 240px;
+            max-width: 300px;
         }
 
-        @media screen and (max-width: 840px) {
+        @media screen and (max-width: 640px) {
             flex-flow: column nowrap;
             margin-top: 20px;
             margin-bottom: -20px;
@@ -37,7 +18,7 @@ main#game {
 
                     width: 100%;
                     min-width: unset;
-                    max-width: 350px;
+                    max-width: 300px;
                 }
 
                 &:has(h2#Sommaire) {
