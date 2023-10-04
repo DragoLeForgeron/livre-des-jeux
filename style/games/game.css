@@ -119,28 +119,27 @@ main#game > section:has(h2#Sommaire) > div {
   box-sizing: border-box;
 }
 main#game > section:has(h2#Sommaire) > div#picture {
+  /* To redefine in a sub folder game */
   width: 40%;
+  min-width: 260px;
+  max-width: 450px;
 }
 @media screen and (max-width: 840px) {
   main#game > section:has(h2#Sommaire) > div#picture {
-    width: 100%;
+    margin: auto;
     margin-bottom: 20px;
+    /* To redefine in a sub folder game */
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
   }
 }
 main#game > section:has(h2#Sommaire) > div#picture > img {
   display: block;
   width: 100%;
-  min-width: 260px;
-  max-width: 450px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture > img {
-    margin: auto;
-    min-width: unset;
-    max-width: 350px;
-  }
 }
 main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+  flex-grow: 1;
   width: 60%;
   padding-left: 20px;
 }
@@ -167,4 +166,7 @@ main#game > section:has(> h2#Présentation) > div > * {
 main#game > section:has(> h2#Présentation) > div > ul {
   width: auto;
   list-style: none;
+}
+main#game > section:has(> h2#Règles) {
+  clear: both;
 }/*# sourceMappingURL=game.css.map */
