@@ -88,7 +88,13 @@ p:has(+ *:not(p)) {
 .card-9,
 .card-V,
 .card-D,
-.card-R {
+.card-R,
+.die-1,
+.die-2,
+.die-3,
+.die-4,
+.die-5,
+.die-6 {
   position: relative;
 }
 .nbPlayers::before,
@@ -106,7 +112,13 @@ p:has(+ *:not(p)) {
 .card-9::before,
 .card-V::before,
 .card-D::before,
-.card-R::before {
+.card-R::before,
+.die-1::before,
+.die-2::before,
+.die-3::before,
+.die-4::before,
+.die-5::before,
+.die-6::before {
   content: "";
 }
 .nbPlayers.top,
@@ -124,7 +136,13 @@ p:has(+ *:not(p)) {
 .card-9.top,
 .card-V.top,
 .card-D.top,
-.card-R.top {
+.card-R.top,
+.die-1.top,
+.die-2.top,
+.die-3.top,
+.die-4.top,
+.die-5.top,
+.die-6.top {
   margin-left: unset;
 }
 .nbPlayers.top::before,
@@ -142,7 +160,13 @@ p:has(+ *:not(p)) {
 .card-9.top::before,
 .card-V.top::before,
 .card-D.top::before,
-.card-R.top::before {
+.card-R.top::before,
+.die-1.top::before,
+.die-2.top::before,
+.die-3.top::before,
+.die-4.top::before,
+.die-5.top::before,
+.die-6.top::before {
   position: unset;
   display: block;
   margin: auto;
@@ -201,6 +225,17 @@ p:has(+ *:not(p)) {
   margin-top: -4px;
 }
 
+.die-1::before,
+.die-2::before,
+.die-3::before,
+.die-4::before,
+.die-5::before,
+.die-6::before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
 .nbPlayers::before,
 .material::before,
 .duration::before,
@@ -214,7 +249,13 @@ p:has(+ *:not(p)) {
 
 .right::before,
 .wrong::before,
-.joker::before {
+.joker::before,
+.die-1::before,
+.die-2::before,
+.die-3::before,
+.die-4::before,
+.die-5::before,
+.die-6::before {
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
@@ -313,6 +354,39 @@ p:has(+ *:not(p)) {
 
 .card-R::before {
   background-image: url(../img/pictos/cards/R.png);
+}
+
+.die-1::before,
+.die-2::before,
+.die-3::before,
+.die-4::before,
+.die-5::before,
+.die-6::before {
+  scale: 0.8;
+}
+
+.die-1::before {
+  background-image: url(../img/pictos/dice/1.svg);
+}
+
+.die-2::before {
+  background-image: url(../img/pictos/dice/2.svg);
+}
+
+.die-3::before {
+  background-image: url(../img/pictos/dice/3.svg);
+}
+
+.die-4::before {
+  background-image: url(../img/pictos/dice/4.svg);
+}
+
+.die-5::before {
+  background-image: url(../img/pictos/dice/5.svg);
+}
+
+.die-6::before {
+  background-image: url(../img/pictos/dice/6.svg);
 }
 
 .toast {
