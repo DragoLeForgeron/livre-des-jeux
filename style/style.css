@@ -80,6 +80,8 @@ p:has(+ *:not(p)) {
 .right,
 .wrong,
 .joker,
+.infinity,
+.infinity-light,
 .card-A,
 .card-3,
 .card-6,
@@ -96,6 +98,8 @@ p:has(+ *:not(p)) {
 .right::before,
 .wrong::before,
 .joker::before,
+.infinity::before,
+.infinity-light::before,
 .card-A::before,
 .card-3::before,
 .card-6::before,
@@ -112,6 +116,8 @@ p:has(+ *:not(p)) {
 .right.top,
 .wrong.top,
 .joker.top,
+.infinity.top,
+.infinity-light.top,
 .card-A.top,
 .card-3.top,
 .card-6.top,
@@ -128,6 +134,8 @@ p:has(+ *:not(p)) {
 .right.top::before,
 .wrong.top::before,
 .joker.top::before,
+.infinity.top::before,
+.infinity-light.top::before,
 .card-A.top::before,
 .card-3.top::before,
 .card-6.top::before,
@@ -148,7 +156,8 @@ p:has(+ *:not(p)) {
 .drunking,
 .right,
 .wrong,
-.joker {
+.joker,
+.infinity {
   margin-left: 30px;
 }
 
@@ -172,6 +181,7 @@ p:has(+ *:not(p)) {
 .right::before,
 .wrong::before,
 .joker::before,
+.infinity::before,
 .card-A::before,
 .card-3::before,
 .card-6::before,
@@ -185,10 +195,17 @@ p:has(+ *:not(p)) {
   translate: calc(-100% - 5px) -50%;
 }
 
+.infinity-light::before {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+}
+
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
+.drunking::before,
+.infinity::before {
   width: 25px;
   height: 25px;
   background-size: 25px 25px;
@@ -201,6 +218,12 @@ p:has(+ *:not(p)) {
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
+}
+
+.infinity-light::before {
+  width: 22px;
+  height: 14px;
+  background-size: 22px 14px;
 }
 
 .card-A::before,
@@ -218,7 +241,8 @@ p:has(+ *:not(p)) {
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
+.drunking::before,
+.infinity::before {
   opacity: 0.6;
 }
 
@@ -251,6 +275,16 @@ p:has(+ *:not(p)) {
 
 .joker::before {
   background-image: url(../img/logo/picto-noir-transparent.png);
+}
+
+.infinity::before {
+  background-image: url(../img/pictos/infinity.svg);
+  scale: 0.9;
+}
+
+.infinity-light::before {
+  background-image: url(../img/pictos/infinity-light.svg);
+  scale: 1.5;
 }
 
 .card-A::before {

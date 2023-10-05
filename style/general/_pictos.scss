@@ -1,8 +1,9 @@
 $margin-right: 5px;
-$online-size: 22px;
+$onLine-size: 22px;
 $info-size: 25px;
 $card-width: 30px;
 $card-height: 40px;
+$inf-lig-height: 14px;
 
 
 .nbPlayers,
@@ -12,6 +13,8 @@ $card-height: 40px;
 .right,
 .wrong,
 .joker,
+.infinity,
+.infinity-light,
 .card-A,
 .card-3,
 .card-6,
@@ -44,7 +47,8 @@ $card-height: 40px;
 .drunking,
 .right,
 .wrong,
-.joker {
+.joker,
+.infinity {
     margin-left: calc($info-size + $margin-right);
 }
 
@@ -68,6 +72,7 @@ $card-height: 40px;
 .right::before,
 .wrong::before,
 .joker::before,
+.infinity::before,
 .card-A::before,
 .card-3::before,
 .card-6::before,
@@ -81,10 +86,17 @@ $card-height: 40px;
     translate: calc(-100% - $margin-right) -50%;
 }
 
+.infinity-light::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
+.drunking::before,
+.infinity::before {
     width: $info-size;
     height: $info-size;
     background-size: $info-size $info-size;
@@ -94,9 +106,15 @@ $card-height: 40px;
 .right::before,
 .wrong::before,
 .joker::before {
-    width: $online-size;
-    height: $online-size;
-    background-size: $online-size $online-size;
+    width: $onLine-size;
+    height: $onLine-size;
+    background-size: $onLine-size $onLine-size;
+}
+
+.infinity-light::before {
+    width: $onLine-size;
+    height: $inf-lig-height;
+    background-size: $onLine-size $inf-lig-height;
 }
 
 .card-A::before,
@@ -114,7 +132,8 @@ $card-height: 40px;
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
+.drunking::before,
+.infinity::before {
     opacity: 0.6;
 }
 
@@ -147,6 +166,16 @@ $card-height: 40px;
 
 .joker::before {
     background-image: url(../img/logo/picto-noir-transparent.png);
+}
+
+.infinity::before {
+    background-image: url(../img/pictos/infinity.svg);
+    scale: 0.9;
+}
+
+.infinity-light::before {
+    background-image: url(../img/pictos/infinity-light.svg);
+    scale: 1.5;
 }
 
 .card-A::before {
