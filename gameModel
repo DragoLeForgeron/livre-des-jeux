@@ -57,6 +57,10 @@
                     <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
                     <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
                     <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#IDSousRègle1" title="Raccourcis vers la sous règle 1">Sous règle 1</a></li>
+                        <li><a href="#IDSousRègle2" title="Raccourcis vers la sous règle 2">Sous règle 2</a></li>
+                    </ol>
                     <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
                     <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
                 </ol>
