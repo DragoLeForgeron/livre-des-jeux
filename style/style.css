@@ -94,7 +94,15 @@ p:has(+ *:not(p)) {
 .die-3,
 .die-4,
 .die-5,
-.die-6 {
+.die-6,
+.dieT-2,
+.dieT-3,
+.dieT-6,
+.dieT-7,
+.dieT-9,
+.dieT-10,
+.dieT-11,
+.dieT-12 {
   position: relative;
 }
 .nbPlayers::before,
@@ -118,7 +126,15 @@ p:has(+ *:not(p)) {
 .die-3::before,
 .die-4::before,
 .die-5::before,
-.die-6::before {
+.die-6::before,
+.dieT-2::before,
+.dieT-3::before,
+.dieT-6::before,
+.dieT-7::before,
+.dieT-9::before,
+.dieT-10::before,
+.dieT-11::before,
+.dieT-12::before {
   content: "";
 }
 .nbPlayers.top,
@@ -142,7 +158,15 @@ p:has(+ *:not(p)) {
 .die-3.top,
 .die-4.top,
 .die-5.top,
-.die-6.top {
+.die-6.top,
+.dieT-2.top,
+.dieT-3.top,
+.dieT-6.top,
+.dieT-7.top,
+.dieT-9.top,
+.dieT-10.top,
+.dieT-11.top,
+.dieT-12.top {
   margin-left: unset;
 }
 .nbPlayers.top::before,
@@ -166,7 +190,15 @@ p:has(+ *:not(p)) {
 .die-3.top::before,
 .die-4.top::before,
 .die-5.top::before,
-.die-6.top::before {
+.die-6.top::before,
+.dieT-2.top::before,
+.dieT-3.top::before,
+.dieT-6.top::before,
+.dieT-7.top::before,
+.dieT-9.top::before,
+.dieT-10.top::before,
+.dieT-11.top::before,
+.dieT-12.top::before {
   position: unset;
   display: block;
   margin: auto;
@@ -230,10 +262,205 @@ p:has(+ *:not(p)) {
 .die-3::before,
 .die-4::before,
 .die-5::before,
-.die-6::before {
+.die-6::before,
+.dieT-2::before,
+.dieT-3::before,
+.dieT-6::before,
+.dieT-7::before,
+.dieT-9::before,
+.dieT-10::before,
+.dieT-11::before,
+.dieT-12::before {
   display: inline-block;
   vertical-align: middle;
   margin-top: -4px;
+  margin-right: 4px;
+}
+
+.die-1:has(+ .die-1)::before, .die-1:has(+ .die-2)::before, .die-1:has(+ .die-3)::before, .die-1:has(+ .die-4)::before, .die-1:has(+ .die-5)::before, .die-1:has(+ .die-6)::before, .die-1:has(+ .dieT-2)::before, .die-1:has(+ .dieT-3)::before, .die-1:has(+ .dieT-6)::before, .die-1:has(+ .dieT-7)::before, .die-1:has(+ .dieT-9)::before, .die-1:has(+ .dieT-10)::before, .die-1:has(+ .dieT-11)::before, .die-1:has(+ .dieT-12)::before,
+.die-2:has(+ .die-1)::before,
+.die-2:has(+ .die-2)::before,
+.die-2:has(+ .die-3)::before,
+.die-2:has(+ .die-4)::before,
+.die-2:has(+ .die-5)::before,
+.die-2:has(+ .die-6)::before,
+.die-2:has(+ .dieT-2)::before,
+.die-2:has(+ .dieT-3)::before,
+.die-2:has(+ .dieT-6)::before,
+.die-2:has(+ .dieT-7)::before,
+.die-2:has(+ .dieT-9)::before,
+.die-2:has(+ .dieT-10)::before,
+.die-2:has(+ .dieT-11)::before,
+.die-2:has(+ .dieT-12)::before,
+.die-3:has(+ .die-1)::before,
+.die-3:has(+ .die-2)::before,
+.die-3:has(+ .die-3)::before,
+.die-3:has(+ .die-4)::before,
+.die-3:has(+ .die-5)::before,
+.die-3:has(+ .die-6)::before,
+.die-3:has(+ .dieT-2)::before,
+.die-3:has(+ .dieT-3)::before,
+.die-3:has(+ .dieT-6)::before,
+.die-3:has(+ .dieT-7)::before,
+.die-3:has(+ .dieT-9)::before,
+.die-3:has(+ .dieT-10)::before,
+.die-3:has(+ .dieT-11)::before,
+.die-3:has(+ .dieT-12)::before,
+.die-4:has(+ .die-1)::before,
+.die-4:has(+ .die-2)::before,
+.die-4:has(+ .die-3)::before,
+.die-4:has(+ .die-4)::before,
+.die-4:has(+ .die-5)::before,
+.die-4:has(+ .die-6)::before,
+.die-4:has(+ .dieT-2)::before,
+.die-4:has(+ .dieT-3)::before,
+.die-4:has(+ .dieT-6)::before,
+.die-4:has(+ .dieT-7)::before,
+.die-4:has(+ .dieT-9)::before,
+.die-4:has(+ .dieT-10)::before,
+.die-4:has(+ .dieT-11)::before,
+.die-4:has(+ .dieT-12)::before,
+.die-5:has(+ .die-1)::before,
+.die-5:has(+ .die-2)::before,
+.die-5:has(+ .die-3)::before,
+.die-5:has(+ .die-4)::before,
+.die-5:has(+ .die-5)::before,
+.die-5:has(+ .die-6)::before,
+.die-5:has(+ .dieT-2)::before,
+.die-5:has(+ .dieT-3)::before,
+.die-5:has(+ .dieT-6)::before,
+.die-5:has(+ .dieT-7)::before,
+.die-5:has(+ .dieT-9)::before,
+.die-5:has(+ .dieT-10)::before,
+.die-5:has(+ .dieT-11)::before,
+.die-5:has(+ .dieT-12)::before,
+.die-6:has(+ .die-1)::before,
+.die-6:has(+ .die-2)::before,
+.die-6:has(+ .die-3)::before,
+.die-6:has(+ .die-4)::before,
+.die-6:has(+ .die-5)::before,
+.die-6:has(+ .die-6)::before,
+.die-6:has(+ .dieT-2)::before,
+.die-6:has(+ .dieT-3)::before,
+.die-6:has(+ .dieT-6)::before,
+.die-6:has(+ .dieT-7)::before,
+.die-6:has(+ .dieT-9)::before,
+.die-6:has(+ .dieT-10)::before,
+.die-6:has(+ .dieT-11)::before,
+.die-6:has(+ .dieT-12)::before,
+.dieT-2:has(+ .die-1)::before,
+.dieT-2:has(+ .die-2)::before,
+.dieT-2:has(+ .die-3)::before,
+.dieT-2:has(+ .die-4)::before,
+.dieT-2:has(+ .die-5)::before,
+.dieT-2:has(+ .die-6)::before,
+.dieT-2:has(+ .dieT-2)::before,
+.dieT-2:has(+ .dieT-3)::before,
+.dieT-2:has(+ .dieT-6)::before,
+.dieT-2:has(+ .dieT-7)::before,
+.dieT-2:has(+ .dieT-9)::before,
+.dieT-2:has(+ .dieT-10)::before,
+.dieT-2:has(+ .dieT-11)::before,
+.dieT-2:has(+ .dieT-12)::before,
+.dieT-3:has(+ .die-1)::before,
+.dieT-3:has(+ .die-2)::before,
+.dieT-3:has(+ .die-3)::before,
+.dieT-3:has(+ .die-4)::before,
+.dieT-3:has(+ .die-5)::before,
+.dieT-3:has(+ .die-6)::before,
+.dieT-3:has(+ .dieT-2)::before,
+.dieT-3:has(+ .dieT-3)::before,
+.dieT-3:has(+ .dieT-6)::before,
+.dieT-3:has(+ .dieT-7)::before,
+.dieT-3:has(+ .dieT-9)::before,
+.dieT-3:has(+ .dieT-10)::before,
+.dieT-3:has(+ .dieT-11)::before,
+.dieT-3:has(+ .dieT-12)::before,
+.dieT-6:has(+ .die-1)::before,
+.dieT-6:has(+ .die-2)::before,
+.dieT-6:has(+ .die-3)::before,
+.dieT-6:has(+ .die-4)::before,
+.dieT-6:has(+ .die-5)::before,
+.dieT-6:has(+ .die-6)::before,
+.dieT-6:has(+ .dieT-2)::before,
+.dieT-6:has(+ .dieT-3)::before,
+.dieT-6:has(+ .dieT-6)::before,
+.dieT-6:has(+ .dieT-7)::before,
+.dieT-6:has(+ .dieT-9)::before,
+.dieT-6:has(+ .dieT-10)::before,
+.dieT-6:has(+ .dieT-11)::before,
+.dieT-6:has(+ .dieT-12)::before,
+.dieT-7:has(+ .die-1)::before,
+.dieT-7:has(+ .die-2)::before,
+.dieT-7:has(+ .die-3)::before,
+.dieT-7:has(+ .die-4)::before,
+.dieT-7:has(+ .die-5)::before,
+.dieT-7:has(+ .die-6)::before,
+.dieT-7:has(+ .dieT-2)::before,
+.dieT-7:has(+ .dieT-3)::before,
+.dieT-7:has(+ .dieT-6)::before,
+.dieT-7:has(+ .dieT-7)::before,
+.dieT-7:has(+ .dieT-9)::before,
+.dieT-7:has(+ .dieT-10)::before,
+.dieT-7:has(+ .dieT-11)::before,
+.dieT-7:has(+ .dieT-12)::before,
+.dieT-9:has(+ .die-1)::before,
+.dieT-9:has(+ .die-2)::before,
+.dieT-9:has(+ .die-3)::before,
+.dieT-9:has(+ .die-4)::before,
+.dieT-9:has(+ .die-5)::before,
+.dieT-9:has(+ .die-6)::before,
+.dieT-9:has(+ .dieT-2)::before,
+.dieT-9:has(+ .dieT-3)::before,
+.dieT-9:has(+ .dieT-6)::before,
+.dieT-9:has(+ .dieT-7)::before,
+.dieT-9:has(+ .dieT-9)::before,
+.dieT-9:has(+ .dieT-10)::before,
+.dieT-9:has(+ .dieT-11)::before,
+.dieT-9:has(+ .dieT-12)::before,
+.dieT-10:has(+ .die-1)::before,
+.dieT-10:has(+ .die-2)::before,
+.dieT-10:has(+ .die-3)::before,
+.dieT-10:has(+ .die-4)::before,
+.dieT-10:has(+ .die-5)::before,
+.dieT-10:has(+ .die-6)::before,
+.dieT-10:has(+ .dieT-2)::before,
+.dieT-10:has(+ .dieT-3)::before,
+.dieT-10:has(+ .dieT-6)::before,
+.dieT-10:has(+ .dieT-7)::before,
+.dieT-10:has(+ .dieT-9)::before,
+.dieT-10:has(+ .dieT-10)::before,
+.dieT-10:has(+ .dieT-11)::before,
+.dieT-10:has(+ .dieT-12)::before,
+.dieT-11:has(+ .die-1)::before,
+.dieT-11:has(+ .die-2)::before,
+.dieT-11:has(+ .die-3)::before,
+.dieT-11:has(+ .die-4)::before,
+.dieT-11:has(+ .die-5)::before,
+.dieT-11:has(+ .die-6)::before,
+.dieT-11:has(+ .dieT-2)::before,
+.dieT-11:has(+ .dieT-3)::before,
+.dieT-11:has(+ .dieT-6)::before,
+.dieT-11:has(+ .dieT-7)::before,
+.dieT-11:has(+ .dieT-9)::before,
+.dieT-11:has(+ .dieT-10)::before,
+.dieT-11:has(+ .dieT-11)::before,
+.dieT-11:has(+ .dieT-12)::before,
+.dieT-12:has(+ .die-1)::before,
+.dieT-12:has(+ .die-2)::before,
+.dieT-12:has(+ .die-3)::before,
+.dieT-12:has(+ .die-4)::before,
+.dieT-12:has(+ .die-5)::before,
+.dieT-12:has(+ .die-6)::before,
+.dieT-12:has(+ .dieT-2)::before,
+.dieT-12:has(+ .dieT-3)::before,
+.dieT-12:has(+ .dieT-6)::before,
+.dieT-12:has(+ .dieT-7)::before,
+.dieT-12:has(+ .dieT-9)::before,
+.dieT-12:has(+ .dieT-10)::before,
+.dieT-12:has(+ .dieT-11)::before,
+.dieT-12:has(+ .dieT-12)::before {
+  margin-right: 1px;
 }
 
 .nbPlayers::before,
@@ -255,7 +482,15 @@ p:has(+ *:not(p)) {
 .die-3::before,
 .die-4::before,
 .die-5::before,
-.die-6::before {
+.die-6::before,
+.dieT-2::before,
+.dieT-3::before,
+.dieT-6::before,
+.dieT-7::before,
+.dieT-9::before,
+.dieT-10::before,
+.dieT-11::before,
+.dieT-12::before {
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
@@ -361,8 +596,16 @@ p:has(+ *:not(p)) {
 .die-3::before,
 .die-4::before,
 .die-5::before,
-.die-6::before {
-  scale: 0.8;
+.die-6::before,
+.dieT-2::before,
+.dieT-3::before,
+.dieT-6::before,
+.dieT-7::before,
+.dieT-9::before,
+.dieT-10::before,
+.dieT-11::before,
+.dieT-12::before {
+  scale: 0.85;
 }
 
 .die-1::before {
@@ -387,6 +630,38 @@ p:has(+ *:not(p)) {
 
 .die-6::before {
   background-image: url(../img/pictos/dice/6.svg);
+}
+
+.dieT-2::before {
+  background-image: url(../img/pictos/dice/T-2.png);
+}
+
+.dieT-3::before {
+  background-image: url(../img/pictos/dice/T-3.png);
+}
+
+.dieT-6::before {
+  background-image: url(../img/pictos/dice/T-6.png);
+}
+
+.dieT-7::before {
+  background-image: url(../img/pictos/dice/T-7.png);
+}
+
+.dieT-9::before {
+  background-image: url(../img/pictos/dice/T-9.png);
+}
+
+.dieT-10::before {
+  background-image: url(../img/pictos/dice/T-10.png);
+}
+
+.dieT-11::before {
+  background-image: url(../img/pictos/dice/T-11.png);
+}
+
+.dieT-12::before {
+  background-image: url(../img/pictos/dice/T-12.png);
 }
 
 .toast {
