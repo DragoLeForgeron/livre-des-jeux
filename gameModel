@@ -99,6 +99,13 @@
                     <p class="col-title">Titre de colonne 2</p>
                 </div>
             </div>
+
+            <section>
+                <h3 id="SubSectionID">Sous section</h3>
+                
+                <p class="far">Une toute nouvelle sous section.</p>
+                <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
+                
         </section>
 
         <section>
