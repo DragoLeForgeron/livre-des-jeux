@@ -1,0 +1,47 @@
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.infinity::before,
+*[class*="card-"]::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: calc(-100% - $margin-right) -50%;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.infinity::before {
+    margin-top: -1px;
+    opacity: 0.6;
+}
+
+.infinity-light::before {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -4px;
+}
+
+*[class*="die-"],
+*[class*="dieT-"] {
+
+    &::before {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -4px;
+        margin-right: 4px;
+    }
+
+    &:has(+ *[class*="die-"]),
+    &:has(+ *[class*="dieT-"]) {
+        &::before {
+            margin-right: 1px;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.infinity::before {
+    width: $info-size;
+    height: $info-size;
+    background-size: $info-size $info-size;
+}
+
+.infinity-light::before {
+    width: $onLine-size;
+    height: $inf-lig-height;
+    background-size: $onLine-size $inf-lig-height;
+}
+
+.right::before,
+.wrong::before,
+.joker::before,
+*[class*="die-"]::before,
+*[class*="dieT-"]::before {
+    width: $onLine-size;
+    height: $onLine-size;
+    background-size: $onLine-size $onLine-size;
+}
+
+*[class*="card-"]::before {
+    width: $card-width;
+    height: $card-height;
+    background-size: $card-width $card-height;
+}

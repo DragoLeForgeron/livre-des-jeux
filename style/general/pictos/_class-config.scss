@@ -1,0 +1,48 @@
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.infinity,
+.infinity-light,
+*[class*="card-"],
+*[class*="die-"],
+*[class*="dieT-"] {
+    position: relative;
+
+    &::before {
+        content: "";
+    }
+
+    &.top {
+        margin-left: unset;
+
+        &::before {
+            position: unset;
+            display: block;
+            margin: auto;
+            margin-bottom: 2px;
+            translate: unset;
+        }
+    }
+}
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.infinity {
+    margin-left: calc($info-size + $margin-right);
+}
+
+*[class*="card-"].start {
+    margin-left: calc($card-width + $margin-right);
+    min-height: $card-height;
+    display: flex;
+    align-items: center;
+}
