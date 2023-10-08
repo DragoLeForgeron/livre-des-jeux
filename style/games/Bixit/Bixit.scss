@@ -2,8 +2,8 @@ main#game {
     >section:has(h2#Sommaire) {
         >div#picture {
             width: 40%;
-            min-width: 240px;
-            max-width: 350px;
+            min-width: 265px;
+            max-width: 400px;
         }
 
         @media screen and (max-width: 640px) {
@@ -18,7 +18,7 @@ main#game {
 
                     width: 100%;
                     min-width: unset;
-                    max-width: 300px;
+                    max-width: 350px;
                 }
 
                 &:has(h2#Sommaire) {

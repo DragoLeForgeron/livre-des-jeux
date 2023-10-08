@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/games/game.css">
+    <link rel="stylesheet" href="./style/games/Bixit/Bixit.css">
 
     <script src="./src/toast.js"></script>
 </head>
@@ -46,10 +47,118 @@
     <main id="game">
         <h1>Bixit</h1>
 
-        <div class="indisponible">
-            <p class="far">Ce jeu n'est pas encore disponible, il est en cours d'écriture.</p>
-            <p class="close">Revient voir plus tard.</p>
-        </div>
+        <section>
+            <div id="picture">
+                <img src="./img/games/Bixit/presentation.png">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#Prison" title="Raccourcis vers l'explication de la prison">Prison</a></li>
+                        <li><a href="#Duel" title="Raccourcis vers l'explication du duel">Duel</a></li>
+                        <li><a href="#Bixit" title="Raccourcis vers l'explication du bixit">Bixit</a></li>
+                    </ol>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers top" title="Nombre de joueurs">2 ou plus</p>
+                <p class="duration top" title="Durée">Jusqu'à plus soif</p>
+                <p class="drunking top" title="Alcoolomètre">3~7/10</p>
+                <ul class="material top" title="Matériel">
+                    <li>
+                        2 dés
+                    </li>
+                </ul>
+            </div>
+
+            <p class="far">Lancez les dés et voyez si la chance vous sourit !</p>
+        </section>
+
+        <section>
+            <h2 id="Préparation">Préparation</h2>
+            <ol>
+                <li>Désignez un joueur comme <strong>maître des dés</strong>.</li>
+                <li>Vous êtes prêt à jouer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="Règles">Règles</h2>
+
+            <p class="far">Le maître des dés <strong>lance les dés et effectue une action en fonction du total des dés et/ou en fonction des faces affichées</strong>.</p>
+
+            <p class="far">Les actions en fonction du total sont les suivantes :</p>
+            <p class="close"><span class="dieT-2"></span><strong>Changement de sens</strong>.</p>
+            <p class="close"><span class="dieT-3"></span><a href="#Prison" title="Raccourcis vers la règle de la prison"><strong>Prison</strong></a>.</p>
+            <p class="close"><span class="dieT-6"></span><a href="#Duel" title="Raccourcis vers la règle du duel"><strong>Duel</strong></a>.</p>
+            <p class="close"><span class="dieT-7"></span><a href="#Bixit" title="Raccourcis vers la règle du bixit"><strong>Bixit</strong></a>.</p>
+            <p class="close"><span class="dieT-9"></span><strong>La personne à droite</strong> boit 1 gorgée.</p>
+            <p class="close"><span class="dieT-10"></span><strong>Le maître des dés</strong> boit 1 gorgée.</p>
+            <p class="close"><span class="dieT-11"></span><strong>La personne à gauche</strong> boit 1 gorgée.</p>
+            <p class="close"><span class="dieT-12"></span>Le maître des dés <strong>invente une règle</strong>.</p>
+            
+            <p class="far">Les actions en fonction des faces sont les suivantes :</p>
+            <p class="close" title="Double 1"><span class="die-1"></span><span class="die-1"></span><strong>Distribue 1</strong> gorgée.</p>
+            <p class="close" title="Double 2"><span class="die-2"></span><span class="die-2"></span><strong>Distribue 2</strong> gorgées.</p>
+            <p class="close" title="Double 3"><span class="die-3"></span><span class="die-3"></span><strong>Distribue 3</strong> gorgées.</p>
+            <p class="close" title="Double 4"><span class="die-4"></span><span class="die-4"></span><strong>Distribue 4</strong> gorgées.</p>
+            <p class="close" title="Double 5"><span class="die-5"></span><span class="die-5"></span><strong>Distribue 5</strong> gorgées.</p>
+            <p class="close" title="Double 6"><span class="die-6"></span><span class="die-6"></span><strong>Distribue 6</strong> gorgées.</p>
+        
+            <p class="far">À chaque fois que <strong>le maître des dés fait boire quelqu'un, il rejoue</strong>.</p>
+            <p class="close">À chaque fois que <strong>le maître des dés boit, il passe les dés</strong> (même si il a fait boire) au joueurs suivant qui devient le nouveau maître des dés.</p>
+
+            <p class="far">Le maître des dés ne doit pas lancer les dés avant que tout le monde ait bu ses gorgées et posé son verre sur la table, sinon c'est une <a href="./RèglesGénérales.html#TentativeDePin" title="Lien vers la règle générale de la tentative de pin">tentative de pin</a>.</p>
+            <p class="close">Un joueur à le droit de dire qu'il buvera plus tard, ce qui autorise le maître des dés à lancer les dés.</p>
+
+            <section>
+                <h3 id="Prison">Prison</h3>
+                
+                <p class="far">Lorsqu'un joueur tombe en prison, il <strong>passe les dés au joueur suivant</strong>.</p>
+                <p class="close">À chaque fois qu'un dés affiche la face <span class="die-3" title="3"></span>, <strong>tous les joueurs en prison boivent 1</strong> gorgée.</p>
+                <p class="close">Lorsqu'un joueur en prison lance les dés, <strong>plus aucune règle ne compte</strong>.</p>
+                <p class="close">Pour sortir de prison, un joueur dois <strong>obtenir au moins 1 dés avec la face <span class="die-3" title="3"></span></strong>.</p>
+                <p class="close">Il est possible d'accumuler les prisons.</p>
+            </section>
+
+            <section>
+                <h3 id="Duel">Duel</h3>
+                
+                <p class="far">Le maître des dés est en <strong>duel avec le joueur suivant</strong>.</p>
+                <p class="close">Lors d'un duel, <strong>plus aucune règle ne compte</strong>.</p>
+                <p class="close"><strong>Les 2 joueurs lancent chacun 1 fois les dés</strong>.</p>
+                <p class="close">Le joueur avec <strong>le plus gros total gagne</strong> le duel et le perdant boit 1 gorgée.</p>
+                <p class="close">En cas d'égalité, chaque joueur relance les dés.</p>
+            </section>
+
+            <section>
+                <h3 id="Bixit">Bixit</h3>
+                
+                <p class="far">Le dernier joueur à <strong>placer son pouce sur son front en disant "bixit"</strong> boit une gorgée.</p>
+            </section>
+        </section>
+
+        <section>
+            <h2 id="Variantes">Variantes</h2>
+
+            <p class="far">Le <a href="#Duel" title="Raccourcis vers la règle du duel">duel</a> peu se faire avec le jeu <a href="./D1B2C.html" title="Lien vers le jeu d'1 bière 2 coups">D'1 bière 2 coups</a>.</p>
+        </section>
+        
+        <section>
+            <h2 id="Anecdotes">Anecdotes</h2>
+
+            <p class="far">Un ami du fou se retrouve toujours très rapidement en prison...</p>
+        </section>
     </main>
 
     <footer>

@@ -57,6 +57,10 @@
                     <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
                     <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
                     <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#IDSousRègle1" title="Raccourcis vers la sous règle 1">Sous règle 1</a></li>
+                        <li><a href="#IDSousRègle2" title="Raccourcis vers la sous règle 2">Sous règle 2</a></li>
+                    </ol>
                     <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
                     <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
                 </ol>
@@ -99,6 +103,13 @@
                     <p class="col-title">Titre de colonne 2</p>
                 </div>
             </div>
+
+            <section>
+                <h3 id="SubSectionID">Sous section</h3>
+                
+                <p class="far">Une toute nouvelle sous section.</p>
+                <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
+                
         </section>
 
         <section>

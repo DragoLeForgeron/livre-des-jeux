@@ -1,12 +1,12 @@
-main#game {
+/* main#game {
     >section:has(h2#Sommaire) {
         >div#picture {
-            width: 40%;
-            min-width: 240px;
-            max-width: 350px;
+            width: %;
+            min-width: px;
+            max-width: px;
         }
 
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: px) {
             flex-flow: column nowrap;
             margin-top: 20px;
             margin-bottom: -20px;
@@ -16,9 +16,9 @@ main#game {
                     margin: auto;
                     margin-bottom: 20px;
 
-                    width: 100%;
-                    min-width: unset;
-                    max-width: 300px;
+                    width: %;
+                    min-width: ; // unset
+                    max-width: px;
                 }
 
                 &:has(h2#Sommaire) {
@@ -28,4 +28,4 @@ main#game {
             }
         }
     }
-}
+} */
