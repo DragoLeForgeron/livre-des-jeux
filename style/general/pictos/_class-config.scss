@@ -12,37 +12,48 @@
 *[class*="dieT-"] {
     position: relative;
 
-    &::before {
-        content: "";
-    }
-
     &.top {
         margin-left: unset;
+    }
 
-        &::before {
-            position: unset;
-            display: block;
-            margin: auto;
-            margin-bottom: 2px;
-            translate: unset;
-        }
+    /* need a child span child which contain the html content when there is a strong markup in */
+    &.start {
+        display: flex;
+        align-items: center;
     }
 }
+
 
 .nbPlayers,
 .material,
 .duration,
 .drunking,
+.infinity {
+    &.start {
+        margin-left: calc($onStart-info-size + $margin-right);
+    }
+}
+
 .right,
 .wrong,
 .joker,
-.infinity {
-    margin-left: calc($info-size + $margin-right);
+.infinity-light {
+    &.start {
+        margin-left: calc($onStart-special-size + $margin-right);
+    }
 }
 
-*[class*="card-"].start {
-    margin-left: calc($card-width + $margin-right);
-    min-height: $card-height;
-    display: flex;
-    align-items: center;
+*[class*="die-"],
+*[class*="dieT-"] {
+    &.start {
+        margin-left: calc($onStart-size + $margin-right);
+        min-height: $onStart-size;
+    }
+}
+
+*[class*="card-"] {
+    &.start {
+        margin-left: calc($onStart-size + $margin-right);
+        min-height: $onStart-card-height;
+    }
 }

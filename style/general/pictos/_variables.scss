@@ -1,6 +1,11 @@
 $margin-right: 5px;
+
 $onLine-size: 22px;
-$info-size: 25px;
-$card-width: 30px;
-$card-height: 40px;
-$inf-lig-height: 14px;
+$onLine-info-size: 25px;
+$onLine-card-height: 29px;
+$onLine-infinityLight-height: 14px;
+
+$onStart-size: 30px;
+$onStart-info-size: $onLine-info-size;
+$onStart-card-height: 40px;
+$onStart-special-size: $onLine-size;

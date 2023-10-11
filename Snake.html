@@ -99,27 +99,42 @@
             <h2 id="Règles">Règles</h2>
 
             <p class="far">À tour de rôle, dans le sens horaire, <strong>chaque joueur lance le dé et fait avancer son pion</strong>, d'autant de carte que le résultat du dé, vers la case d'arrivée.</p>
-            <p class="close"><strong>Lorsqu'un joueur s'arrête sur une carte il doit appliquer sa règle</strong>.</p>
+            <p class="close"><strong>Lorsqu'un joueur s'arrête sur une carte il doit appliquer son effet</strong>.</p>
 
-            <p class="far">Les règles des cartes sont les suivantes :</p>
-            <p class="close card-A start" title="As"><span>Le joueur <strong>recule d'1 ligne</strong> vers la case départ.</span></p>
+            <p class="far">Les effets des cartes sont les suivantes :</p>
             <p class="close card-2 start" title="2"><span>Le joueur <strong>invente une règle</strong>.</span></p>
             <p class="close card-7 start" title="7"><span>Le joueur <strong>rejoue</strong>.</span></p>
-            <p class="close card-8 start" title="8"><span>Le joueur <strong>va à la carte <span class="card-8" title="8"></span> la plus proche</strong> (mais n'applique pas sa règle). En cas d'égalité, prioriser la carte <span class="card-8" title="8"></span> la plus proche de la case d'arrivée.</span></p>
-            <p class="close card-10 start" title="10"><span>Le joueur <strong>avance de 5 cartes et applique 2x la règle</strong> de la carte sur laquelle il s'arrête.</span></p>
+            <p class="close card-8 start" title="8"><span>Le joueur <strong>va à la carte <span class="card-8" title="8"></span> la plus proche</strong> (mais n'applique pas son effet). En cas d'égalité, prioriser la carte <span class="card-8" title="8"></span> la plus proche de la case d'arrivée.</span></p>
+            <p class="close card-10 start" title="10"><span>Le joueur <strong>avance de 5 cartes et applique 2x l'effet</strong> de la carte sur laquelle il s'arrête.</span></p>
             <p class="close card-V start" title="Valet"><span>Le joueur <strong>avance de 2 cartes</strong>.</span></p>
             <p class="close card-D start" title="Dame"><span>Le joueur <strong>recule de 2 cartes</strong>.</span></p>
             <p class="close card-R start" title="Roi"><span>Le joueur <strong>avance d'1 ligne</strong> vers la case d'arrivée.</span></p>
+            <p class="close card-A start" title="As"><span>Le joueur <strong>recule d'1 ligne</strong> vers la case départ.</span></p>
+
+            <p class="far">Pour toutes les autres cartes les effets sont les suivants :</p>
+            <div class="col-2">
+                <div id="even">
+                    <p class="col-title">Si la carte est de <strong>couleur noire</strong></p>
+                </div>
+
+                <div id="odd">
+                    <p class="col-title">Si la carte est de <strong>couleur rouge</strong></p>
+                </div>
+            </div>
 
             <p class="far">Pour qu'un joueur termine le jeu, <strong>il faut arriver exactement sur la case d'arrivée</strong>.</p>
             <p class="close">Si son score est supérieur, il recule d'autant que la différence entre son lancé et le nombre de carte sur lesquelles il s'est déjà déplacé ce tour.</p>
 
             <p class="far"><strong>Si un joueur entre dans une boucle, il s'arrête à la carte 1ère carte de la boucle</strong>, celle qui l'a déclanchée.</p>
             <p class="close">
-                Par exmple, un joueur s'arrête sur un <span class="card-A" title="As"></span>,
-                il descend d'une ligne et s'arrête sur un <span class="card-R" title="Roi"></span>,
-                il monte d'une ligne et s'arrête sur le même <span class="card-A" title="As"></span> que celui cité précédemment,
-                il rentre donc ici dans une boucle, il reste cependant sur la carte <span class="card-A" title="As"></span>, celle qui a déclanchée cette boucle.
+                <i>
+                    Par exemple, un joueur s'arrête sur un <span class="card-A" title="As"></span>,
+                    il recule d'une ligne et s'arrête sur un <span class="card-R" title="Roi"></span>,
+                    il avance d'une ligne et s'arrête sur le même <span class="card-A" title="As"></span> que celui cité précédemment,
+                    il rentre donc ici dans une boucle puisqu'il est censé reculer puis avancer d'une ligne indéfiniment,
+                    cependant, il reste sur la carte 1ère carte sur laquelle il est tombé avant de rentré dans la boucle, celle qui a déclanchée cette boucle,
+                    dans le cas présent c'est la carte <span class="card-A" title="As"></span>.
+                </i>
             </p>
         </section>
 

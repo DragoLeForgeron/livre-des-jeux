@@ -86,20 +86,7 @@ p:has(+ *:not(p)) {
 *[class*=die-],
 *[class*=dieT-] {
   position: relative;
-}
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before,
-.infinity::before,
-.infinity-light::before,
-*[class*=card-]::before,
-*[class*=die-]::before,
-*[class*=dieT-]::before {
-  content: "";
+  /* need a child span child which contain the html content when there is a strong markup in */
 }
 .nbPlayers.top,
 .material.top,
@@ -114,6 +101,64 @@ p:has(+ *:not(p)) {
 *[class*=die-].top,
 *[class*=dieT-].top {
   margin-left: unset;
+}
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.right.start,
+.wrong.start,
+.joker.start,
+.infinity.start,
+.infinity-light.start,
+*[class*=card-].start,
+*[class*=die-].start,
+*[class*=dieT-].start {
+  display: flex;
+  align-items: center;
+}
+
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.infinity.start {
+  margin-left: 30px;
+}
+
+.right.start,
+.wrong.start,
+.joker.start,
+.infinity-light.start {
+  margin-left: 27px;
+}
+
+*[class*=die-].start,
+*[class*=dieT-].start {
+  margin-left: 35px;
+  min-height: 30px;
+}
+
+*[class*=card-].start {
+  margin-left: 35px;
+  min-height: 40px;
+}
+
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.right::before,
+.wrong::before,
+.joker::before,
+.infinity::before,
+.infinity-light::before,
+*[class*=card-]::before,
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
 }
 .nbPlayers.top::before,
 .material.top::before,
@@ -133,34 +178,18 @@ p:has(+ *:not(p)) {
   margin-bottom: 2px;
   translate: unset;
 }
-
-.nbPlayers,
-.material,
-.duration,
-.drunking,
-.right,
-.wrong,
-.joker,
-.infinity {
-  margin-left: 30px;
-}
-
-*[class*=card-].start {
-  margin-left: 35px;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-}
-
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before,
-.infinity::before,
-*[class*=card-]::before {
+.nbPlayers.start::before,
+.material.start::before,
+.duration.start::before,
+.drunking.start::before,
+.right.start::before,
+.wrong.start::before,
+.joker.start::before,
+.infinity.start::before,
+.infinity-light.start::before,
+*[class*=card-].start::before,
+*[class*=die-].start::before,
+*[class*=dieT-].start::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -177,22 +206,16 @@ p:has(+ *:not(p)) {
 }
 
 .infinity-light::before {
-  display: inline-block;
-  vertical-align: middle;
   margin-top: -4px;
+}
+
+*[class*=card-]::before {
+  translate: 0 -1px;
 }
 
 *[class*=die-]::before,
 *[class*=dieT-]::before {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -4px;
-  margin-right: 4px;
-}
-*[class*=die-]:has(+ *[class*=die-])::before, *[class*=die-]:has(+ *[class*=dieT-])::before,
-*[class*=dieT-]:has(+ *[class*=die-])::before,
-*[class*=dieT-]:has(+ *[class*=dieT-])::before {
-  margin-right: 1px;
+  translate: 0 -1.6px;
 }
 
 .nbPlayers::before,
@@ -213,15 +236,31 @@ p:has(+ *:not(p)) {
 
 .right::before,
 .wrong::before,
-.joker::before,
+.joker::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+
 *[class*=die-]::before,
 *[class*=dieT-]::before {
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
 }
+*[class*=die-].start::before,
+*[class*=dieT-].start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
 
 *[class*=card-]::before {
+  width: 22px;
+  height: 29px;
+  background-size: 22px 29px;
+}
+*[class*=card-].start::before {
   width: 30px;
   height: 40px;
   background-size: 30px 40px;
@@ -310,11 +349,6 @@ p:has(+ *:not(p)) {
 
 .card-R::before {
   background-image: url(../img/pictos/cards/R.png);
-}
-
-*[class*=die-]::before,
-*[class*=dieT-]::before {
-  scale: 0.85;
 }
 
 .die-1::before {

@@ -1,47 +1,69 @@
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before,
-.infinity::before,
-*[class*="card-"]::before {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    translate: calc(-100% - $margin-right) -50%;
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.infinity,
+.infinity-light,
+*[class*="card-"],
+*[class*="die-"],
+*[class*="dieT-"] {
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.top {
+        &::before {
+            position: unset;
+            display: block;
+            margin: auto;
+            margin-bottom: 2px;
+            translate: unset;
+        }
+    }
+
+    &.start {
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            translate: calc(-100% - $margin-right) -50%;
+        }
+    }
 }
 
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.infinity::before {
-    margin-top: -1px;
-    opacity: 0.6;
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.infinity {
+    &::before {
+        margin-top: -1px;
+        opacity: 0.6;
+    }
 }
 
-.infinity-light::before {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: -4px;
+.infinity-light {
+    &::before {
+        margin-top: -4px;
+    }
+}
+
+
+*[class*="card-"] {
+    &::before {
+        translate: 0 -1px;
+    }
 }
 
 *[class*="die-"],
 *[class*="dieT-"] {
-
     &::before {
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: -4px;
-        margin-right: 4px;
-    }
-
-    &:has(+ *[class*="die-"]),
-    &:has(+ *[class*="dieT-"]) {
-        &::before {
-            margin-right: 1px;
-        }
+        translate: 0 -1.6px;
     }
 }

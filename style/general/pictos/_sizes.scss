@@ -1,31 +1,68 @@
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.infinity::before {
-    width: $info-size;
-    height: $info-size;
-    background-size: $info-size $info-size;
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.infinity {
+    &::before {
+        width: $onLine-info-size;
+        height: $onLine-info-size;
+        background-size: $onLine-info-size $onLine-info-size;
+    }
+
+    // &.start ?
 }
 
-.infinity-light::before {
-    width: $onLine-size;
-    height: $inf-lig-height;
-    background-size: $onLine-size $inf-lig-height;
+.infinity-light {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-infinityLight-height;
+        background-size: $onLine-size $onLine-infinityLight-height;
+    }
+
+    // &.start ?
 }
 
-.right::before,
-.wrong::before,
-.joker::before,
-*[class*="die-"]::before,
-*[class*="dieT-"]::before {
-    width: $onLine-size;
-    height: $onLine-size;
-    background-size: $onLine-size $onLine-size;
+.right,
+.wrong,
+.joker {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    // &.start ?
 }
 
-*[class*="card-"]::before {
-    width: $card-width;
-    height: $card-height;
-    background-size: $card-width $card-height;
+*[class*="die-"],
+*[class*="dieT-"] {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-size;
+            background-size: $onStart-size $onStart-size;
+        }
+    }
+}
+
+*[class*="card-"] {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-card-height;
+        background-size: $onLine-size $onLine-card-height;
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-card-height;
+            background-size: $onStart-size $onStart-card-height;
+        }
+    }
 }
