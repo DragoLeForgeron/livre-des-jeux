@@ -58,6 +58,7 @@
                     <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
                     <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
                     <ol>
+                        <li><a href="#ChangementDeSens" title="Raccourcis vers l'explication du changement de sens">Changement de sens</a></li>
                         <li><a href="#Prison" title="Raccourcis vers l'explication de la prison">Prison</a></li>
                         <li><a href="#Duel" title="Raccourcis vers l'explication du duel">Duel</a></li>
                         <li><a href="#Bixit" title="Raccourcis vers l'explication du bixit">Bixit</a></li>
@@ -76,7 +77,7 @@
                 <p class="drunking top" title="Alcoolomètre">3~7/10</p>
                 <ul class="material top" title="Matériel">
                     <li>
-                        2 dés
+                        2 dés à 6 faces
                     </li>
                 </ul>
             </div>
@@ -95,10 +96,10 @@
         <section>
             <h2 id="Règles">Règles</h2>
 
-            <p class="far">Le maître des dés <strong>lance les dés et effectue une action en fonction du total des dés et/ou en fonction des faces affichées</strong>.</p>
+            <p class="far">Le maître des dés <strong>lance les dés et applique un effet en fonction du total des dés et/ou en fonction des faces affichées</strong>.</p>
 
-            <p class="far">Les actions en fonction du total sont les suivantes :</p>
-            <p class="close"><span class="dieT-2"></span><strong>Changement de sens</strong>.</p>
+            <p class="far">Les effets en fonction du total sont les suivantes :</p>
+            <p class="close"><span class="dieT-2"></span><a href="#ChangementDeSens" title="Raccourcis vers la règle du changement de sens"><strong>Changement de sens</strong></a>.</p>
             <p class="close"><span class="dieT-3"></span><a href="#Prison" title="Raccourcis vers la règle de la prison"><strong>Prison</strong></a>.</p>
             <p class="close"><span class="dieT-6"></span><a href="#Duel" title="Raccourcis vers la règle du duel"><strong>Duel</strong></a>.</p>
             <p class="close"><span class="dieT-7"></span><a href="#Bixit" title="Raccourcis vers la règle du bixit"><strong>Bixit</strong></a>.</p>
@@ -107,7 +108,7 @@
             <p class="close"><span class="dieT-11"></span><strong>La personne à gauche</strong> boit 1 gorgée.</p>
             <p class="close"><span class="dieT-12"></span>Le maître des dés <strong>invente une règle</strong>.</p>
             
-            <p class="far">Les actions en fonction des faces sont les suivantes :</p>
+            <p class="far">Les effets en fonction des faces sont les suivantes :</p>
             <p class="close" title="Double 1"><span class="die-1"></span><span class="die-1"></span><strong>Distribue 1</strong> gorgée.</p>
             <p class="close" title="Double 2"><span class="die-2"></span><span class="die-2"></span><strong>Distribue 2</strong> gorgées.</p>
             <p class="close" title="Double 3"><span class="die-3"></span><span class="die-3"></span><strong>Distribue 3</strong> gorgées.</p>
@@ -116,29 +117,35 @@
             <p class="close" title="Double 6"><span class="die-6"></span><span class="die-6"></span><strong>Distribue 6</strong> gorgées.</p>
         
             <p class="far">À chaque fois que <strong>le maître des dés fait boire quelqu'un, il rejoue</strong>.</p>
-            <p class="close">À chaque fois que <strong>le maître des dés boit, il passe les dés</strong> (même si il a fait boire) au joueurs suivant qui devient le nouveau maître des dés.</p>
+            <p class="close">À chaque fois que <strong>le maître des dés boit, il passe les dés</strong> (même si il a fait boire) au joueur suivant (au début, dans le sens horaire) qui devient le nouveau maître des dés.</p>
 
-            <p class="far">Le maître des dés ne doit pas lancer les dés avant que tout le monde ait bu ses gorgées et posé son verre sur la table, sinon c'est une <a href="./RèglesGénérales.html#TentativeDePin" title="Lien vers la règle générale de la tentative de pin">tentative de pin</a>.</p>
-            <p class="close">Un joueur à le droit de dire qu'il buvera plus tard, ce qui autorise le maître des dés à lancer les dés.</p>
+            <p class="far">Le maître des dés ne doit pas lancer les dés avant que tout le monde n'ait bu ses gorgées et posé son verre sur la table, sinon, c'est une <a href="./RèglesGénérales.html#TentativeDePin" title="Lien vers la règle générale de la tentative de pin">tentative de pin</a>.</p>
+            <p class="close">Si un joueur doit boire des gorgées, mais doit s'absenter ou n'est plus en capacité de les boires (ou toute autre raison valable), il a le droit de dire qu'il va les boire plus tard, ce qui autorise le maître des dés à lancer les dés sans prendre de sanctions.</p>
 
+            <section>
+                <h3 id="ChangementDeSens">Changement de sens</h3>
+                
+                <p class="far">Si vous passiez les dés dans le sens horaire, passez désormais les dés dans le sens anti-horaire et inversement.</p>
+            </section>
+            
             <section>
                 <h3 id="Prison">Prison</h3>
                 
                 <p class="far">Lorsqu'un joueur tombe en prison, il <strong>passe les dés au joueur suivant</strong>.</p>
-                <p class="close">À chaque fois qu'un dés affiche la face <span class="die-3" title="3"></span>, <strong>tous les joueurs en prison boivent 1</strong> gorgée.</p>
-                <p class="close">Lorsqu'un joueur en prison lance les dés, <strong>plus aucune règle ne compte</strong>.</p>
-                <p class="close">Pour sortir de prison, un joueur dois <strong>obtenir au moins 1 dés avec la face <span class="die-3" title="3"></span></strong>.</p>
-                <p class="close">Il est possible d'accumuler les prisons.</p>
+                <p class="close">À chaque fois qu'un dé affiche la face <span class="die-3" title="3"></span>, <strong>tous les joueurs en prison boivent 1</strong> gorgée.</p>
+                <p class="close">Lorsqu'un joueur en prison lance les dés, <strong>plus aucune règle ni effet de dé ne compte</strong>.</p>
+                <p class="close">Pour sortir de prison, un joueur doit <strong>obtenir au moins 1 dé avec la face <span class="die-3" title="3"></span></strong>.</p>
+                <p class="close">Il est possible d'être plusieurs fois en prison, ce qui ajoute toujours plus de gorgées à boire.</p>
             </section>
 
             <section>
                 <h3 id="Duel">Duel</h3>
                 
                 <p class="far">Le maître des dés est en <strong>duel avec le joueur suivant</strong>.</p>
-                <p class="close">Lors d'un duel, <strong>plus aucune règle ne compte</strong>.</p>
+                <p class="close">Lors d'un duel, <strong>plus aucune règle ni effet de dé ne compte</strong>.</p>
                 <p class="close"><strong>Les 2 joueurs lancent chacun 1 fois les dés</strong>.</p>
                 <p class="close">Le joueur avec <strong>le plus gros total gagne</strong> le duel et le perdant boit 1 gorgée.</p>
-                <p class="close">En cas d'égalité, chaque joueur relance les dés.</p>
+                <p class="close">En cas d'égalité, chaque joueur relance 1 fois les dés.</p>
             </section>
 
             <section>
@@ -151,7 +158,7 @@
         <section>
             <h2 id="Variantes">Variantes</h2>
 
-            <p class="far">Le <a href="#Duel" title="Raccourcis vers la règle du duel">duel</a> peu se faire avec le jeu <a href="./D1B2C.html" title="Lien vers le jeu d'1 bière 2 coups">D'1 bière 2 coups</a>.</p>
+            <p class="far">Le <a href="#Duel" title="Raccourcis vers la règle du duel">duel</a> peut se faire avec le jeu <a href="./D1B2C.html" title="Lien vers le jeu d'1 bière 2 coups">d'1 bière 2 coups</a>.</p>
         </section>
         
         <section>
