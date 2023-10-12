@@ -1,0 +1,69 @@
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.infinity,
+.infinity-light,
+*[class*="card-"],
+*[class*="die-"],
+*[class*="dieT-"] {
+    &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &.top {
+        &::before {
+            position: unset;
+            display: block;
+            margin: auto;
+            margin-bottom: 2px;
+            translate: unset;
+        }
+    }
+
+    &.start {
+        &::before {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            translate: calc(-100% - $margin-right) -50%;
+        }
+    }
+}
+
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.infinity {
+    &::before {
+        margin-top: -1px;
+        opacity: 0.6;
+    }
+}
+
+.infinity-light {
+    &::before {
+        margin-top: -4px;
+    }
+}
+
+
+*[class*="card-"] {
+    &::before {
+        translate: 0 -1px;
+    }
+}
+
+*[class*="die-"],
+*[class*="dieT-"] {
+    &::before {
+        translate: 0 -1.6px;
+    }
+}

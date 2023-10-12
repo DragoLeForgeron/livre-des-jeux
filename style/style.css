@@ -22,6 +22,9 @@ a {
 strong {
   color: #ff0000;
 }
+strong a {
+  color: #ff0000;
+}
 
 p.close {
   margin-bottom: 0;
@@ -39,17 +42,7 @@ p.close {
 }
 p.far {
   margin-bottom: 0;
-  margin-top: 20px;
-}
-@media screen and (max-width: 640px) {
-  p.far {
-    margin-top: 24px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  p.far {
-    margin-top: 22px;
-  }
+  margin-top: 30px;
 }
 p.collapse {
   margin-bottom: 0;
@@ -57,6 +50,35 @@ p.collapse {
 }
 p:has(+ *:not(p)) {
   margin-bottom: revert !important;
+}
+
+h1 + p.far,
+h2 + p.far,
+h3 + p.far,
+h4 + p.far,
+h5 + p.far,
+h6 + p.far {
+  margin-top: 24px;
+}
+@media screen and (max-width: 640px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 22px;
+  }
 }
 
 .small {
@@ -82,60 +104,11 @@ p:has(+ *:not(p)) {
 .joker,
 .infinity,
 .infinity-light,
-.card-A,
-.card-3,
-.card-6,
-.card-9,
-.card-V,
-.card-D,
-.card-R,
-.die-1,
-.die-2,
-.die-3,
-.die-4,
-.die-5,
-.die-6,
-.dieT-2,
-.dieT-3,
-.dieT-6,
-.dieT-7,
-.dieT-9,
-.dieT-10,
-.dieT-11,
-.dieT-12 {
+*[class*=card-],
+*[class*=die-],
+*[class*=dieT-] {
   position: relative;
-}
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before,
-.infinity::before,
-.infinity-light::before,
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before,
-.die-1::before,
-.die-2::before,
-.die-3::before,
-.die-4::before,
-.die-5::before,
-.die-6::before,
-.dieT-2::before,
-.dieT-3::before,
-.dieT-6::before,
-.dieT-7::before,
-.dieT-9::before,
-.dieT-10::before,
-.dieT-11::before,
-.dieT-12::before {
-  content: "";
+  /* need a child span child which contain the html content when there is a strong markup in */
 }
 .nbPlayers.top,
 .material.top,
@@ -146,88 +119,51 @@ p:has(+ *:not(p)) {
 .joker.top,
 .infinity.top,
 .infinity-light.top,
-.card-A.top,
-.card-3.top,
-.card-6.top,
-.card-9.top,
-.card-V.top,
-.card-D.top,
-.card-R.top,
-.die-1.top,
-.die-2.top,
-.die-3.top,
-.die-4.top,
-.die-5.top,
-.die-6.top,
-.dieT-2.top,
-.dieT-3.top,
-.dieT-6.top,
-.dieT-7.top,
-.dieT-9.top,
-.dieT-10.top,
-.dieT-11.top,
-.dieT-12.top {
+*[class*=card-].top,
+*[class*=die-].top,
+*[class*=dieT-].top {
   margin-left: unset;
 }
-.nbPlayers.top::before,
-.material.top::before,
-.duration.top::before,
-.drunking.top::before,
-.right.top::before,
-.wrong.top::before,
-.joker.top::before,
-.infinity.top::before,
-.infinity-light.top::before,
-.card-A.top::before,
-.card-3.top::before,
-.card-6.top::before,
-.card-9.top::before,
-.card-V.top::before,
-.card-D.top::before,
-.card-R.top::before,
-.die-1.top::before,
-.die-2.top::before,
-.die-3.top::before,
-.die-4.top::before,
-.die-5.top::before,
-.die-6.top::before,
-.dieT-2.top::before,
-.dieT-3.top::before,
-.dieT-6.top::before,
-.dieT-7.top::before,
-.dieT-9.top::before,
-.dieT-10.top::before,
-.dieT-11.top::before,
-.dieT-12.top::before {
-  position: unset;
-  display: block;
-  margin: auto;
-  margin-bottom: 2px;
-  translate: unset;
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.right.start,
+.wrong.start,
+.joker.start,
+.infinity.start,
+.infinity-light.start,
+*[class*=card-].start,
+*[class*=die-].start,
+*[class*=dieT-].start {
+  display: flex;
+  align-items: center;
 }
 
-.nbPlayers,
-.material,
-.duration,
-.drunking,
-.right,
-.wrong,
-.joker,
-.infinity {
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.infinity.start {
   margin-left: 30px;
 }
 
-.card-A,
-.card-3,
-.card-6,
-.card-9,
-.card-V,
-.card-D,
-.card-R {
+.right.start,
+.wrong.start,
+.joker.start,
+.infinity-light.start {
+  margin-left: 27px;
+}
+
+*[class*=die-].start,
+*[class*=dieT-].start {
+  margin-left: 35px;
+  min-height: 30px;
+}
+
+*[class*=card-].start {
   margin-left: 35px;
   min-height: 40px;
-  display: flex;
-  align-items: center;
 }
 
 .nbPlayers::before,
@@ -238,229 +174,70 @@ p:has(+ *:not(p)) {
 .wrong::before,
 .joker::before,
 .infinity::before,
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
+.infinity-light::before,
+*[class*=card-]::before,
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.nbPlayers.top::before,
+.material.top::before,
+.duration.top::before,
+.drunking.top::before,
+.right.top::before,
+.wrong.top::before,
+.joker.top::before,
+.infinity.top::before,
+.infinity-light.top::before,
+*[class*=card-].top::before,
+*[class*=die-].top::before,
+*[class*=dieT-].top::before {
+  position: unset;
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
+  translate: unset;
+}
+.nbPlayers.start::before,
+.material.start::before,
+.duration.start::before,
+.drunking.start::before,
+.right.start::before,
+.wrong.start::before,
+.joker.start::before,
+.infinity.start::before,
+.infinity-light.start::before,
+*[class*=card-].start::before,
+*[class*=die-].start::before,
+*[class*=dieT-].start::before {
   position: absolute;
   top: 50%;
   left: 0;
   translate: calc(-100% - 5px) -50%;
 }
 
+.nbPlayers::before,
+.material::before,
+.duration::before,
+.drunking::before,
+.infinity::before {
+  margin-top: -1px;
+  opacity: 0.6;
+}
+
 .infinity-light::before {
-  display: inline-block;
-  vertical-align: middle;
   margin-top: -4px;
 }
 
-.die-1::before,
-.die-2::before,
-.die-3::before,
-.die-4::before,
-.die-5::before,
-.die-6::before,
-.dieT-2::before,
-.dieT-3::before,
-.dieT-6::before,
-.dieT-7::before,
-.dieT-9::before,
-.dieT-10::before,
-.dieT-11::before,
-.dieT-12::before {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: -4px;
-  margin-right: 4px;
+*[class*=card-]::before {
+  translate: 0 -1px;
 }
 
-.die-1:has(+ .die-1)::before, .die-1:has(+ .die-2)::before, .die-1:has(+ .die-3)::before, .die-1:has(+ .die-4)::before, .die-1:has(+ .die-5)::before, .die-1:has(+ .die-6)::before, .die-1:has(+ .dieT-2)::before, .die-1:has(+ .dieT-3)::before, .die-1:has(+ .dieT-6)::before, .die-1:has(+ .dieT-7)::before, .die-1:has(+ .dieT-9)::before, .die-1:has(+ .dieT-10)::before, .die-1:has(+ .dieT-11)::before, .die-1:has(+ .dieT-12)::before,
-.die-2:has(+ .die-1)::before,
-.die-2:has(+ .die-2)::before,
-.die-2:has(+ .die-3)::before,
-.die-2:has(+ .die-4)::before,
-.die-2:has(+ .die-5)::before,
-.die-2:has(+ .die-6)::before,
-.die-2:has(+ .dieT-2)::before,
-.die-2:has(+ .dieT-3)::before,
-.die-2:has(+ .dieT-6)::before,
-.die-2:has(+ .dieT-7)::before,
-.die-2:has(+ .dieT-9)::before,
-.die-2:has(+ .dieT-10)::before,
-.die-2:has(+ .dieT-11)::before,
-.die-2:has(+ .dieT-12)::before,
-.die-3:has(+ .die-1)::before,
-.die-3:has(+ .die-2)::before,
-.die-3:has(+ .die-3)::before,
-.die-3:has(+ .die-4)::before,
-.die-3:has(+ .die-5)::before,
-.die-3:has(+ .die-6)::before,
-.die-3:has(+ .dieT-2)::before,
-.die-3:has(+ .dieT-3)::before,
-.die-3:has(+ .dieT-6)::before,
-.die-3:has(+ .dieT-7)::before,
-.die-3:has(+ .dieT-9)::before,
-.die-3:has(+ .dieT-10)::before,
-.die-3:has(+ .dieT-11)::before,
-.die-3:has(+ .dieT-12)::before,
-.die-4:has(+ .die-1)::before,
-.die-4:has(+ .die-2)::before,
-.die-4:has(+ .die-3)::before,
-.die-4:has(+ .die-4)::before,
-.die-4:has(+ .die-5)::before,
-.die-4:has(+ .die-6)::before,
-.die-4:has(+ .dieT-2)::before,
-.die-4:has(+ .dieT-3)::before,
-.die-4:has(+ .dieT-6)::before,
-.die-4:has(+ .dieT-7)::before,
-.die-4:has(+ .dieT-9)::before,
-.die-4:has(+ .dieT-10)::before,
-.die-4:has(+ .dieT-11)::before,
-.die-4:has(+ .dieT-12)::before,
-.die-5:has(+ .die-1)::before,
-.die-5:has(+ .die-2)::before,
-.die-5:has(+ .die-3)::before,
-.die-5:has(+ .die-4)::before,
-.die-5:has(+ .die-5)::before,
-.die-5:has(+ .die-6)::before,
-.die-5:has(+ .dieT-2)::before,
-.die-5:has(+ .dieT-3)::before,
-.die-5:has(+ .dieT-6)::before,
-.die-5:has(+ .dieT-7)::before,
-.die-5:has(+ .dieT-9)::before,
-.die-5:has(+ .dieT-10)::before,
-.die-5:has(+ .dieT-11)::before,
-.die-5:has(+ .dieT-12)::before,
-.die-6:has(+ .die-1)::before,
-.die-6:has(+ .die-2)::before,
-.die-6:has(+ .die-3)::before,
-.die-6:has(+ .die-4)::before,
-.die-6:has(+ .die-5)::before,
-.die-6:has(+ .die-6)::before,
-.die-6:has(+ .dieT-2)::before,
-.die-6:has(+ .dieT-3)::before,
-.die-6:has(+ .dieT-6)::before,
-.die-6:has(+ .dieT-7)::before,
-.die-6:has(+ .dieT-9)::before,
-.die-6:has(+ .dieT-10)::before,
-.die-6:has(+ .dieT-11)::before,
-.die-6:has(+ .dieT-12)::before,
-.dieT-2:has(+ .die-1)::before,
-.dieT-2:has(+ .die-2)::before,
-.dieT-2:has(+ .die-3)::before,
-.dieT-2:has(+ .die-4)::before,
-.dieT-2:has(+ .die-5)::before,
-.dieT-2:has(+ .die-6)::before,
-.dieT-2:has(+ .dieT-2)::before,
-.dieT-2:has(+ .dieT-3)::before,
-.dieT-2:has(+ .dieT-6)::before,
-.dieT-2:has(+ .dieT-7)::before,
-.dieT-2:has(+ .dieT-9)::before,
-.dieT-2:has(+ .dieT-10)::before,
-.dieT-2:has(+ .dieT-11)::before,
-.dieT-2:has(+ .dieT-12)::before,
-.dieT-3:has(+ .die-1)::before,
-.dieT-3:has(+ .die-2)::before,
-.dieT-3:has(+ .die-3)::before,
-.dieT-3:has(+ .die-4)::before,
-.dieT-3:has(+ .die-5)::before,
-.dieT-3:has(+ .die-6)::before,
-.dieT-3:has(+ .dieT-2)::before,
-.dieT-3:has(+ .dieT-3)::before,
-.dieT-3:has(+ .dieT-6)::before,
-.dieT-3:has(+ .dieT-7)::before,
-.dieT-3:has(+ .dieT-9)::before,
-.dieT-3:has(+ .dieT-10)::before,
-.dieT-3:has(+ .dieT-11)::before,
-.dieT-3:has(+ .dieT-12)::before,
-.dieT-6:has(+ .die-1)::before,
-.dieT-6:has(+ .die-2)::before,
-.dieT-6:has(+ .die-3)::before,
-.dieT-6:has(+ .die-4)::before,
-.dieT-6:has(+ .die-5)::before,
-.dieT-6:has(+ .die-6)::before,
-.dieT-6:has(+ .dieT-2)::before,
-.dieT-6:has(+ .dieT-3)::before,
-.dieT-6:has(+ .dieT-6)::before,
-.dieT-6:has(+ .dieT-7)::before,
-.dieT-6:has(+ .dieT-9)::before,
-.dieT-6:has(+ .dieT-10)::before,
-.dieT-6:has(+ .dieT-11)::before,
-.dieT-6:has(+ .dieT-12)::before,
-.dieT-7:has(+ .die-1)::before,
-.dieT-7:has(+ .die-2)::before,
-.dieT-7:has(+ .die-3)::before,
-.dieT-7:has(+ .die-4)::before,
-.dieT-7:has(+ .die-5)::before,
-.dieT-7:has(+ .die-6)::before,
-.dieT-7:has(+ .dieT-2)::before,
-.dieT-7:has(+ .dieT-3)::before,
-.dieT-7:has(+ .dieT-6)::before,
-.dieT-7:has(+ .dieT-7)::before,
-.dieT-7:has(+ .dieT-9)::before,
-.dieT-7:has(+ .dieT-10)::before,
-.dieT-7:has(+ .dieT-11)::before,
-.dieT-7:has(+ .dieT-12)::before,
-.dieT-9:has(+ .die-1)::before,
-.dieT-9:has(+ .die-2)::before,
-.dieT-9:has(+ .die-3)::before,
-.dieT-9:has(+ .die-4)::before,
-.dieT-9:has(+ .die-5)::before,
-.dieT-9:has(+ .die-6)::before,
-.dieT-9:has(+ .dieT-2)::before,
-.dieT-9:has(+ .dieT-3)::before,
-.dieT-9:has(+ .dieT-6)::before,
-.dieT-9:has(+ .dieT-7)::before,
-.dieT-9:has(+ .dieT-9)::before,
-.dieT-9:has(+ .dieT-10)::before,
-.dieT-9:has(+ .dieT-11)::before,
-.dieT-9:has(+ .dieT-12)::before,
-.dieT-10:has(+ .die-1)::before,
-.dieT-10:has(+ .die-2)::before,
-.dieT-10:has(+ .die-3)::before,
-.dieT-10:has(+ .die-4)::before,
-.dieT-10:has(+ .die-5)::before,
-.dieT-10:has(+ .die-6)::before,
-.dieT-10:has(+ .dieT-2)::before,
-.dieT-10:has(+ .dieT-3)::before,
-.dieT-10:has(+ .dieT-6)::before,
-.dieT-10:has(+ .dieT-7)::before,
-.dieT-10:has(+ .dieT-9)::before,
-.dieT-10:has(+ .dieT-10)::before,
-.dieT-10:has(+ .dieT-11)::before,
-.dieT-10:has(+ .dieT-12)::before,
-.dieT-11:has(+ .die-1)::before,
-.dieT-11:has(+ .die-2)::before,
-.dieT-11:has(+ .die-3)::before,
-.dieT-11:has(+ .die-4)::before,
-.dieT-11:has(+ .die-5)::before,
-.dieT-11:has(+ .die-6)::before,
-.dieT-11:has(+ .dieT-2)::before,
-.dieT-11:has(+ .dieT-3)::before,
-.dieT-11:has(+ .dieT-6)::before,
-.dieT-11:has(+ .dieT-7)::before,
-.dieT-11:has(+ .dieT-9)::before,
-.dieT-11:has(+ .dieT-10)::before,
-.dieT-11:has(+ .dieT-11)::before,
-.dieT-11:has(+ .dieT-12)::before,
-.dieT-12:has(+ .die-1)::before,
-.dieT-12:has(+ .die-2)::before,
-.dieT-12:has(+ .die-3)::before,
-.dieT-12:has(+ .die-4)::before,
-.dieT-12:has(+ .die-5)::before,
-.dieT-12:has(+ .die-6)::before,
-.dieT-12:has(+ .dieT-2)::before,
-.dieT-12:has(+ .dieT-3)::before,
-.dieT-12:has(+ .dieT-6)::before,
-.dieT-12:has(+ .dieT-7)::before,
-.dieT-12:has(+ .dieT-9)::before,
-.dieT-12:has(+ .dieT-10)::before,
-.dieT-12:has(+ .dieT-11)::before,
-.dieT-12:has(+ .dieT-12)::before {
-  margin-right: 1px;
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  translate: 0 -1.6px;
 }
 
 .nbPlayers::before,
@@ -471,29 +248,6 @@ p:has(+ *:not(p)) {
   width: 25px;
   height: 25px;
   background-size: 25px 25px;
-  margin-top: -1px;
-}
-
-.right::before,
-.wrong::before,
-.joker::before,
-.die-1::before,
-.die-2::before,
-.die-3::before,
-.die-4::before,
-.die-5::before,
-.die-6::before,
-.dieT-2::before,
-.dieT-3::before,
-.dieT-6::before,
-.dieT-7::before,
-.dieT-9::before,
-.dieT-10::before,
-.dieT-11::before,
-.dieT-12::before {
-  width: 22px;
-  height: 22px;
-  background-size: 22px 22px;
 }
 
 .infinity-light::before {
@@ -502,24 +256,36 @@ p:has(+ *:not(p)) {
   background-size: 22px 14px;
 }
 
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
+.right::before,
+.wrong::before,
+.joker::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+*[class*=die-].start::before,
+*[class*=dieT-].start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
+
+*[class*=card-]::before {
+  width: 22px;
+  height: 29px;
+  background-size: 22px 29px;
+}
+*[class*=card-].start::before {
   width: 30px;
   height: 40px;
   background-size: 30px 40px;
-}
-
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.infinity::before {
-  opacity: 0.6;
 }
 
 .nbPlayers::before {
@@ -567,6 +333,10 @@ p:has(+ *:not(p)) {
   background-image: url(../img/pictos/cards/A.png);
 }
 
+.card-2::before {
+  background-image: url(../img/pictos/cards/2.png);
+}
+
 .card-3::before {
   background-image: url(../img/pictos/cards/3.png);
 }
@@ -575,8 +345,20 @@ p:has(+ *:not(p)) {
   background-image: url(../img/pictos/cards/6.png);
 }
 
+.card-7::before {
+  background-image: url(../img/pictos/cards/7.png);
+}
+
+.card-8::before {
+  background-image: url(../img/pictos/cards/8.png);
+}
+
 .card-9::before {
   background-image: url(../img/pictos/cards/9.png);
+}
+
+.card-10::before {
+  background-image: url(../img/pictos/cards/10.png);
 }
 
 .card-V::before {
@@ -589,23 +371,6 @@ p:has(+ *:not(p)) {
 
 .card-R::before {
   background-image: url(../img/pictos/cards/R.png);
-}
-
-.die-1::before,
-.die-2::before,
-.die-3::before,
-.die-4::before,
-.die-5::before,
-.die-6::before,
-.dieT-2::before,
-.dieT-3::before,
-.dieT-6::before,
-.dieT-7::before,
-.dieT-9::before,
-.dieT-10::before,
-.dieT-11::before,
-.dieT-12::before {
-  scale: 0.85;
 }
 
 .die-1::before {

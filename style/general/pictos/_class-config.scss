@@ -1,0 +1,59 @@
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.right,
+.wrong,
+.joker,
+.infinity,
+.infinity-light,
+*[class*="card-"],
+*[class*="die-"],
+*[class*="dieT-"] {
+    position: relative;
+
+    &.top {
+        margin-left: unset;
+    }
+
+    /* need a child span child which contain the html content when there is a strong markup in */
+    &.start {
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.infinity {
+    &.start {
+        margin-left: calc($onStart-info-size + $margin-right);
+    }
+}
+
+.right,
+.wrong,
+.joker,
+.infinity-light {
+    &.start {
+        margin-left: calc($onStart-special-size + $margin-right);
+    }
+}
+
+*[class*="die-"],
+*[class*="dieT-"] {
+    &.start {
+        margin-left: calc($onStart-size + $margin-right);
+        min-height: $onStart-size;
+    }
+}
+
+*[class*="card-"] {
+    &.start {
+        margin-left: calc($onStart-size + $margin-right);
+        min-height: $onStart-card-height;
+    }
+}
