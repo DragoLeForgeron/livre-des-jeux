@@ -19,6 +19,10 @@ a {
 
 strong {
     color: $l-p-color;
+
+    a {
+        color: $l-p-color;
+    }
 }
 
 p {
@@ -38,14 +42,6 @@ p {
     &.far {
         margin-bottom: 0;
         margin-top: 30px;
-
-        @media screen and (max-width: 640px) {
-            margin-top: 30px;
-        }
-
-        @media screen and (min-width: 641px) and (max-width: 1200px) {
-            margin-top: 30px;
-        }
     }
 
     &.collapse {
@@ -57,6 +53,28 @@ p {
         margin-bottom: revert !important;
     }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    &+p {
+        &.far {
+            margin-top: 24px;
+
+            @media screen and (max-width: 640px) {
+                margin-top: 20px;
+            }
+
+            @media screen and (min-width: 641px) and (max-width: 1200px) {
+                margin-top: 22px;
+            }
+        }
+    }
+}
+
 
 
 .small {

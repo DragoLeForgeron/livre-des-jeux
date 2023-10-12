@@ -22,6 +22,9 @@ a {
 strong {
   color: #ff0000;
 }
+strong a {
+  color: #ff0000;
+}
 
 p.close {
   margin-bottom: 0;
@@ -41,22 +44,41 @@ p.far {
   margin-bottom: 0;
   margin-top: 30px;
 }
-@media screen and (max-width: 640px) {
-  p.far {
-    margin-top: 30px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  p.far {
-    margin-top: 30px;
-  }
-}
 p.collapse {
   margin-bottom: 0;
   margin-top: 0;
 }
 p:has(+ *:not(p)) {
   margin-bottom: revert !important;
+}
+
+h1 + p.far,
+h2 + p.far,
+h3 + p.far,
+h4 + p.far,
+h5 + p.far,
+h6 + p.far {
+  margin-top: 24px;
+}
+@media screen and (max-width: 640px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 22px;
+  }
 }
 
 .small {
