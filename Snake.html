@@ -77,7 +77,7 @@
                 </ul>
             </div>
 
-            <p class="far">Faufile toi tel un serpent pour finir le jeu encore en vie... Lance le dé et fait avancer ton pion sur les cartes puis applique leur règle.</p>
+            <p class="far">Faufile toi tel un serpent pour finir le jeu encore en vie... Lance le dé et fait avancer ton pion sur les cartes puis applique leur effet.</p>
         </section>
 
         <section>
@@ -87,10 +87,10 @@
                 <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
                 <li>Le RJ prend le paquet de carte, <strong>retire les jokers du jeu et mélange le reste</strong>.</li>
                 <li>Il place des cartes face visible de tel sorte à <strong>réaliser 5 lignes de 9 cartes</strong>.</li>
-                <li>Il <strong>place 1 carte entre les lignes, à droite ou à gauche 1 ligne sur 2</strong>.</li>
-                <li>Il <strong>place 1 carte supplémentaire au début de la 1ère ligne puis un joker devant</strong> celle-ci, ce joker sera la case départ.</li>
-                <li>Il <strong>place les 2 cartes restante à la fin de la dernière ligne puis un joker derière</strong> celles-ci, ce joker sera la case d'arrivée.</li>
-                <li><strong>Chaque joueur choisi un pion</strong> unique pour le représenter qu'ils placent sur la case départ</li>
+                <li>Il <strong>place 1 carte à droite ou à gauche, 1 ligne sur 2, centrée au milieu de 2 autre lignes</strong>.</li>
+                <li>Il <strong>place 1 carte supplémentaire au début de la 1ère ligne puis un joker avant</strong> celle-ci, ce joker sera la carte départ.</li>
+                <li>Il <strong>place les 2 cartes restantes à la fin de la dernière ligne puis un joker après</strong> celles-ci, ce joker sera la carte d'arrivée.</li>
+                <li><strong>Chaque joueur choisi un pion</strong> unique pour le représenter qu'ils placent sur la carte départ</li>
                 <li>Vous êtes prêt à jouer.</li>
             </ol>
         </section>
@@ -98,32 +98,36 @@
         <section>
             <h2 id="Règles">Règles</h2>
 
-            <p class="far">À tour de rôle, dans le sens horaire, <strong>chaque joueur lance le dé et fait avancer son pion</strong>, d'autant de carte que le résultat du dé, vers la case d'arrivée.</p>
+            <p class="far">À tour de rôle, dans le sens horaire, <strong>chaque joueur lance le dé et fait avancer son pion</strong>, d'autant de carte que le résultat du dé, vers la carte d'arrivée.</p>
             <p class="close"><strong>Lorsqu'un joueur s'arrête sur une carte il doit appliquer son effet</strong>.</p>
 
             <p class="far">Les effets des cartes sont les suivantes :</p>
-            <p class="close card-2 start" title="2"><span>Le joueur <strong>invente une règle</strong>.</span></p>
             <p class="close card-7 start" title="7"><span>Le joueur <strong>rejoue</strong>.</span></p>
-            <p class="close card-8 start" title="8"><span>Le joueur <strong>va à la carte <span class="card-8" title="8"></span> la plus proche</strong> (mais n'applique pas son effet). En cas d'égalité, prioriser la carte <span class="card-8" title="8"></span> la plus proche de la case d'arrivée.</span></p>
+            <p class="close card-8 start" title="8"><span>Le joueur <strong>va à la carte <span class="card-8" title="8"></span> la plus proche</strong> (mais n'applique pas son effet). En cas d'égalité, prioriser la carte <span class="card-8" title="8"></span> la plus proche de la carte d'arrivée.</span></p>
+            <p class="close card-9 start" title="9"><span>Le joueur <strong>invente une règle</strong>.</span></p>
             <p class="close card-10 start" title="10"><span>Le joueur <strong>avance de 5 cartes et applique 2x l'effet</strong> de la carte sur laquelle il s'arrête.</span></p>
             <p class="close card-V start" title="Valet"><span>Le joueur <strong>avance de 2 cartes</strong>.</span></p>
             <p class="close card-D start" title="Dame"><span>Le joueur <strong>recule de 2 cartes</strong>.</span></p>
-            <p class="close card-R start" title="Roi"><span>Le joueur <strong>avance d'1 ligne</strong> vers la case d'arrivée.</span></p>
-            <p class="close card-A start" title="As"><span>Le joueur <strong>recule d'1 ligne</strong> vers la case départ.</span></p>
+            <p class="close card-R start" title="Roi"><span>Le joueur <strong>avance d'1 ligne</strong> vers la carte d'arrivée.</span></p>
+            <p class="close card-A start" title="As"><span>Le joueur <strong>recule d'1 ligne</strong> vers la carte départ.</span></p>
 
-            <p class="far">Pour toutes les autres cartes les effets sont les suivants :</p>
+            <p class="far">Pour toutes les autres cartes (de <span class="card-2" title="2"></span> à <span class="card-6" title="6"></span>) les effets sont les suivants :</p>
             <div class="col-2">
                 <div id="even">
                     <p class="col-title">Si la carte est de <strong>couleur noire</strong></p>
+                    <p class="far">Le joueur <strong>boit</strong> autant que le chiffre de la carte.</p>
                 </div>
 
                 <div id="odd">
                     <p class="col-title">Si la carte est de <strong>couleur rouge</strong></p>
+                    <p class="far">Le joueur <strong>distibue</strong> autant que le chiffre de la carte.</p>
                 </div>
             </div>
 
-            <p class="far">Pour qu'un joueur termine le jeu, <strong>il faut arriver exactement sur la case d'arrivée</strong>.</p>
-            <p class="close">Si son score est supérieur, il recule d'autant que la différence entre son lancé et le nombre de carte sur lesquelles il s'est déjà déplacé ce tour.</p>
+            <p class="far"><strong>Un joueur termine le jeu lorsque qu'il s'arrête exactement sur la carte d'arrivée</strong>.</p>
+            <p class="close"><strong>Si son résultat au dé est supérieur au nombre de carte à parcourir pour s'arrêter sur la carte, il recule</strong> d'autant de carte qu'il lui reste à parcourir.</p>
+            <p class="close"><strong>Un joueur qui arrive sur la carte d'arrivée est désormais <a href="./RèglesGénérales.html#HorsJeu" title="Lien vers la règle générale intouchable">hors jeu</a></strong>.</p>
+            <p class="close">Le jeu se termine lorsque tous les joueurs ont terminés le jeu.</p>
 
             <p class="far"><strong>Si un joueur entre dans une boucle, il s'arrête à la carte 1ère carte de la boucle</strong>, celle qui l'a déclanchée.</p>
             <p class="close">
