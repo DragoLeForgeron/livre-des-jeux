@@ -135,29 +135,6 @@ main#game {
                     padding-left: 20px;
                 }
             }
-
-            /* To define in a sub folder game */
-            // @media screen and (max-width: 840px) {  // <-- (max-width : depend of the presentation picture)
-            //     flex-flow: column nowrap;
-            //     margin-top: 20px;
-            //     margin-bottom: -20px;
-
-            //     >div {
-            //         &#picture {
-            //             margin: auto;
-            //             margin-bottom: 20px;
-                        
-            //             width: 100%; // <--
-            //             min-width: unset; // <--
-            //             max-width: 350px; // <--
-            //         }
-                    
-            //         &:has(h2#Sommaire) {
-            //             width: 100%;
-            //             padding-left: 0;
-            //         }
-            //     }
-            // }
         }
 
         &:has(>h2#Présentation) {
