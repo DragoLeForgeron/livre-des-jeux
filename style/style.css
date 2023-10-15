@@ -85,6 +85,14 @@ h6 + p.far {
   font-size: small;
 }
 
+.textCenter {
+  text-align: center;
+}
+
+.boxCenter {
+  margin: auto;
+}
+
 /* temp */
 .indisponible {
   width: -moz-fit-content;
