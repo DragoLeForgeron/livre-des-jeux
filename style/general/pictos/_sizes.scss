@@ -66,3 +66,30 @@
         }
     }
 }
+
+.spades,
+.clover,
+.diamond,
+.heart {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    &.small {
+        &::before {
+            width: $onLine-size-small;
+            height: $onLine-size-small;
+            background-size: $onLine-size-small $onLine-size-small;
+        }
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-size;
+            background-size: $onStart-size $onStart-size;
+        }
+    }
+}

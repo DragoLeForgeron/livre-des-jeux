@@ -81,7 +81,8 @@ h6 + p.far {
   }
 }
 
-.small {
+p.small,
+i.small {
   font-size: small;
 }
 
@@ -114,7 +115,11 @@ h6 + p.far {
 .infinity-light,
 *[class*=card-],
 *[class*=die-],
-*[class*=dieT-] {
+*[class*=dieT-],
+.spades,
+.clover,
+.diamond,
+.heart {
   position: relative;
   /* need a child span child which contain the html content when there is a strong markup in */
 }
@@ -129,7 +134,11 @@ h6 + p.far {
 .infinity-light.top,
 *[class*=card-].top,
 *[class*=die-].top,
-*[class*=dieT-].top {
+*[class*=dieT-].top,
+.spades.top,
+.clover.top,
+.diamond.top,
+.heart.top {
   margin-left: unset;
 }
 .nbPlayers.start,
@@ -143,7 +152,11 @@ h6 + p.far {
 .infinity-light.start,
 *[class*=card-].start,
 *[class*=die-].start,
-*[class*=dieT-].start {
+*[class*=dieT-].start,
+.spades.start,
+.clover.start,
+.diamond.start,
+.heart.start {
   display: flex;
   align-items: center;
 }
@@ -164,7 +177,11 @@ h6 + p.far {
 }
 
 *[class*=die-].start,
-*[class*=dieT-].start {
+*[class*=dieT-].start,
+.spades.start,
+.clover.start,
+.diamond.start,
+.heart.start {
   margin-left: 35px;
   min-height: 30px;
 }
@@ -185,7 +202,11 @@ h6 + p.far {
 .infinity-light::before,
 *[class*=card-]::before,
 *[class*=die-]::before,
-*[class*=dieT-]::before {
+*[class*=dieT-]::before,
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -201,7 +222,11 @@ h6 + p.far {
 .infinity-light.top::before,
 *[class*=card-].top::before,
 *[class*=die-].top::before,
-*[class*=dieT-].top::before {
+*[class*=dieT-].top::before,
+.spades.top::before,
+.clover.top::before,
+.diamond.top::before,
+.heart.top::before {
   position: unset;
   display: block;
   margin: auto;
@@ -219,7 +244,11 @@ h6 + p.far {
 .infinity-light.start::before,
 *[class*=card-].start::before,
 *[class*=die-].start::before,
-*[class*=dieT-].start::before {
+*[class*=dieT-].start::before,
+.spades.start::before,
+.clover.start::before,
+.diamond.start::before,
+.heart.start::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -246,6 +275,13 @@ h6 + p.far {
 *[class*=die-]::before,
 *[class*=dieT-]::before {
   translate: 0 -1.6px;
+}
+
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  translate: 0 -1px;
 }
 
 .nbPlayers::before,
@@ -294,6 +330,31 @@ h6 + p.far {
   width: 30px;
   height: 40px;
   background-size: 30px 40px;
+}
+
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+.spades.small::before,
+.clover.small::before,
+.diamond.small::before,
+.heart.small::before {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+}
+.spades.start::before,
+.clover.start::before,
+.diamond.start::before,
+.heart.start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
 }
 
 .nbPlayers::before {
@@ -443,6 +504,22 @@ h6 + p.far {
 
 .dieT-12::before {
   background-image: url(../img/pictos/dice/T-12.png);
+}
+
+.spades::before {
+  background-image: url(../img/pictos/cards/spades.svg);
+}
+
+.clover::before {
+  background-image: url(../img/pictos/cards/clover.svg);
+}
+
+.diamond::before {
+  background-image: url(../img/pictos/cards/diamond.svg);
+}
+
+.heart::before {
+  background-image: url(../img/pictos/cards/heart.svg);
 }
 
 .toast {
