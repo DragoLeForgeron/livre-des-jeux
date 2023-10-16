@@ -52,6 +52,14 @@
     background-image: url(../img/pictos/cards/3.png);
 }
 
+.card-4::before {
+    background-image: url(../img/pictos/cards/4.png);
+}
+
+.card-5::before {
+    background-image: url(../img/pictos/cards/5.png);
+}
+
 .card-6::before {
     background-image: url(../img/pictos/cards/6.png);
 }
@@ -139,4 +147,21 @@
 
 .dieT-12::before {
     background-image: url(../img/pictos/dice/T-12.png);
+}
+
+
+.spades::before {
+    background-image: url(../img/pictos/cards/spades.svg);
+}
+
+.clover::before {
+    background-image: url(../img/pictos/cards/clover.svg);
+}
+
+.diamond::before {
+    background-image: url(../img/pictos/cards/diamond.svg);
+}
+
+.heart::before {
+    background-image: url(../img/pictos/cards/heart.svg);
 }

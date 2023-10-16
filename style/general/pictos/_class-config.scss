@@ -9,7 +9,11 @@
 .infinity-light,
 *[class*="card-"],
 *[class*="die-"],
-*[class*="dieT-"] {
+*[class*="dieT-"],
+.spades,
+.clover,
+.diamond,
+.heart {
     position: relative;
 
     &.top {
@@ -44,7 +48,11 @@
 }
 
 *[class*="die-"],
-*[class*="dieT-"] {
+*[class*="dieT-"],
+.spades,
+.clover,
+.diamond,
+.heart {
     &.start {
         margin-left: calc($onStart-size + $margin-right);
         min-height: $onStart-size;

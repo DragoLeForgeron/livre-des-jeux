@@ -4,7 +4,7 @@ main#game {
     .right::before {
         margin-top: $mt-base;
     
-        @media screen and (max-width: 782px) {
+        @media screen and (max-width: 2588px) {
             margin-top: 0;
         }
     }
@@ -12,40 +12,39 @@ main#game {
     .wrong::before {
         margin-top: $mt-base;
     
-        @media screen and (max-width: 490px) {
+        @media screen and (max-width: 2546px) {
             margin-top: 0;
         }
     }
 
+
     .preview {
-        width: 20%;
-        min-width: 130px;
-        max-width: 200px;
+        display: block;
+        float: unset;
+        object-position: unset;
+        margin-left: unset;
+        margin-bottom: unset;
+        margin: auto;
+
+        width: 50%;
+        min-width: 250px;
+        max-width: 400px;
 
         @media screen and (max-width: 680px) {
-            display: block;
-            float: unset;
-            object-position: unset;
-            margin-left: unset;
-            margin-bottom: unset;
-            margin: auto;
-
             width: 100%;
             min-width: unset;
-            max-width: 150px;
+            max-width: 250px;
         }
     }
 
-
-
     >section:has(h2#Sommaire) {
         >div#picture {
-            width: 40%;
-            min-width: 260px;
-            max-width: 450px;
+            width: 60%;
+            min-width: 350px;
+            max-width: 600px;
         }
 
-        @media screen and (max-width: 840px) {
+        @media screen and (max-width: 690px) {
             flex-flow: column nowrap;
             margin-top: 20px;
             margin-bottom: -20px;
@@ -55,9 +54,9 @@ main#game {
                     margin: auto;
                     margin-bottom: 20px;
 
-                    width: 100%;
+                    width: 100%; // often 100%
                     min-width: unset;
-                    max-width: 350px;
+                    max-width: 450px;
                 }
 
                 &:has(h2#Sommaire) {

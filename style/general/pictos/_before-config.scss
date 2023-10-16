@@ -9,7 +9,11 @@
 .infinity-light,
 *[class*="card-"],
 *[class*="die-"],
-*[class*="dieT-"] {
+*[class*="dieT-"],
+.spades,
+.clover,
+.diamond,
+.heart {
     &::before {
         content: "";
         display: inline-block;
@@ -65,5 +69,14 @@
 *[class*="dieT-"] {
     &::before {
         translate: 0 -1.6px;
+    }
+}
+
+.spades,
+.clover,
+.diamond,
+.heart {
+    &::before {
+        translate: 0 -1px;
     }
 }
