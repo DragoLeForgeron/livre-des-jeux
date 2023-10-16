@@ -10,6 +10,7 @@ main#game .preview {
     -o-object-position: unset;
        object-position: unset;
     margin-left: unset;
+    margin-bottom: unset;
     margin: auto;
     width: 100%;
     min-width: unset;

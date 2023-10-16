@@ -40,6 +40,7 @@ main#game .preview {
   -o-object-position: top right;
      object-position: top right;
   margin-left: 20px;
+  margin-bottom: 10px;
   /* To redefine in a sub folder game, check ./subGame.scss.example */
   width: 25%;
   max-width: 600px;
