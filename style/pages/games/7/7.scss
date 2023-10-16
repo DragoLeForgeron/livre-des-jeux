@@ -18,32 +18,24 @@ main#game {
     }
 
 
-    // .preview {
-    //     width: %;
-    //     min-width: px;
-    //     max-width: px;
+    .preview {
+        display: block;
+        float: unset;
+        object-position: unset;
+        margin-left: unset;
+        margin-bottom: unset;
+        margin: auto;
 
-    //     height: %; // often not used
-    //     min-height: px; // often not used
-    //     max-height: px; // often not used
+        width: 50%;
+        min-width: 250px;
+        max-width: 400px;
 
-    //     @media screen and (max-width: px) {
-    //         display: block;
-    //         float: unset;
-    //         object-position: unset;
-    //         margin-left: unset;
-    //         margin-bottom: unset;
-    //         margin: auto;
-
-    //         width: %; // often 100%
-    //         min-width: px; // often unset
-    //         max-width: px;
-
-    //         height: %; // often not used
-    //         min-width: px; // often not used but used to unset
-    //         max-width: px;
-    //     }
-    // }
+        @media screen and (max-width: 680px) {
+            width: 100%;
+            min-width: unset;
+            max-width: 250px;
+        }
+    }
 
     >section:has(h2#Sommaire) {
         >div#picture {
