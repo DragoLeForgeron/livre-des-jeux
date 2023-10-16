@@ -86,7 +86,9 @@
 
         <section>
             <h2 id="Préparation">Préparation</h2>
+            <img class="preview" src="./img/games/GAMENAME/preparation.png" alt="Image de la préparation du jeu">
             <ol>
+                <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
                 <li>Vous êtes prêt à jouer.</li>
             </ol>
         </section>

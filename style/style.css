@@ -349,6 +349,14 @@ h6 + p.far {
   background-image: url(../img/pictos/cards/3.png);
 }
 
+.card-4::before {
+  background-image: url(../img/pictos/cards/4.png);
+}
+
+.card-5::before {
+  background-image: url(../img/pictos/cards/5.png);
+}
+
 .card-6::before {
   background-image: url(../img/pictos/cards/6.png);
 }
