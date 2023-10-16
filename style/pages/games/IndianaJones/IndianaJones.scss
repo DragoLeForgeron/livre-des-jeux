@@ -17,6 +17,25 @@ main#game {
         }
     }
 
+    .preview {
+        width: 20%;
+        min-width: 130px;
+        max-width: 200px;
+
+        @media screen and (max-width: 680px) {
+            display: block;
+            float: unset;
+            object-position: unset;
+            margin-left: unset;
+            margin: auto;
+
+            width: 100%;
+            min-width: unset;
+            max-width: 150px;
+        }
+    }
+
+
 
     >section:has(h2#Sommaire) {
         >div#picture {
