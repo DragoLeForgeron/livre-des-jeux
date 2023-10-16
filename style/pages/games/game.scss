@@ -1,4 +1,4 @@
-@import "../general/variables";
+@import "../../general/variables";
 
 main#game {
     padding-bottom: $footer-height + 50px;
@@ -40,24 +40,15 @@ main#game {
 
     .preview {
         float: right;
+        object-fit: contain;
+        object-position: top right;
+        margin-left: 20px;
+
+        /* To redefine in a sub folder game, check ./subGame.scss.example */
         width: 25%;
         max-width: 600px;
         height: 25%;
         max-height: 400px;
-        margin-left: 20px;
-        object-fit: contain;
-        object-position: top right;
-
-        @media screen and (max-width: 640px) {
-            display: block;
-            float: unset;
-            width: 60%;
-            max-width: unset;
-            height: unset;
-            margin-left: unset;
-            margin: auto;
-            object-position: unset;
-        }
     }
 
     .col-2 {
@@ -119,7 +110,7 @@ main#game {
                 box-sizing: border-box;
 
                 &#picture {
-                    /* To redefine in a sub folder game */
+                    /* To redefine in a sub folder game, check ./subGame.scss.example */
                     width: 40%;
                     min-width: 260px;
                     max-width: 450px;

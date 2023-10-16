@@ -35,28 +35,16 @@ main#game ol > li {
 }
 main#game .preview {
   float: right;
-  width: 25%;
-  max-width: 600px;
-  height: 25%;
-  max-height: 400px;
-  margin-left: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: top right;
      object-position: top right;
-}
-@media screen and (max-width: 640px) {
-  main#game .preview {
-    display: block;
-    float: unset;
-    width: 60%;
-    max-width: unset;
-    height: unset;
-    margin-left: unset;
-    margin: auto;
-    -o-object-position: unset;
-       object-position: unset;
-  }
+  margin-left: 20px;
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
+  width: 25%;
+  max-width: 600px;
+  height: 25%;
+  max-height: 400px;
 }
 main#game .col-2 {
   display: flex;
@@ -104,7 +92,6 @@ main#game > section {
 main#game > section:has(h2#Sommaire) {
   display: flex;
   flex-flow: row wrap;
-  /* To define in a sub folder game */
 }
 main#game > section:has(h2#Sommaire) h2 {
   margin-top: 0;
@@ -113,7 +100,7 @@ main#game > section:has(h2#Sommaire) > div {
   box-sizing: border-box;
 }
 main#game > section:has(h2#Sommaire) > div#picture {
-  /* To redefine in a sub folder game */
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
   width: 40%;
   min-width: 260px;
   max-width: 450px;

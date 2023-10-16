@@ -1,4 +1,22 @@
 main#game {
+    .preview {
+        width: 25%;
+        min-width: 200px;
+        max-width: 300px;
+
+        @media screen and (max-width: 950px) {
+            display: block;
+            float: unset;
+            object-position: unset;
+            margin-left: unset;
+            margin: auto;
+
+            width: 100%;
+            min-width: unset;
+            max-width: 250px;
+        }
+    }
+
     >section:has(h2#Sommaire) {
         >div#picture {
             width: 40%;

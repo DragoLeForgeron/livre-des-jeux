@@ -1,4 +1,30 @@
-/* main#game {
+main#game {
+    .preview {
+        width: %;
+        min-width: px;
+        max-width: px;
+
+        height: %; // often not used
+        min-height: px; // often not used
+        max-height: px; // often not used
+
+        @media screen and (max-width: px) {
+            display: block;
+            float: unset;
+            object-position: unset;
+            margin-left: unset;
+            margin: auto;
+
+            width: %; // often 100%
+            min-width: px; // often unset
+            max-width: px;
+
+            height: %; // often not used
+            min-width: px; // often not used but used to unset
+            max-width: px;
+        }
+    }
+
     >section:has(h2#Sommaire) {
         >div#picture {
             width: %;
@@ -16,8 +42,8 @@
                     margin: auto;
                     margin-bottom: 20px;
 
-                    width: %;
-                    min-width: ; // unset
+                    width: %; // often 100%
+                    min-width: px; // often unset
                     max-width: px;
                 }
 
@@ -28,4 +54,4 @@
             }
         }
     }
-} */
+}
