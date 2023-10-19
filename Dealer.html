@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/pages/games/game.css">
+    <link rel="stylesheet" href="./style/pages/games/Dealer/Dealer.css">
 
     <script src="./src/toast.js"></script>
 </head>
@@ -46,10 +47,84 @@
     <main id="game">
         <h1>Dealer</h1>
 
-        <div class="indisponible">
-            <p class="far">Ce jeu n'est pas encore disponible, il est en cours d'écriture.</p>
-            <p class="close">Revient voir plus tard.</p>
-        </div>
+        <section>
+            <div id="picture">
+                <img src="./img/games/GAMENAME/presentation.png">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#IDSousRègle1" title="Raccourcis vers la sous règle 1">Sous règle 1</a></li>
+                        <li><a href="#IDSousRègle2" title="Raccourcis vers la sous règle 2">Sous règle 2</a></li>
+                    </ol>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers top" title="Nombre de joueurs">2 ou plus</p>
+                <p class="duration top" title="Durée">15 minutes</p>
+                <p class="drunking top" title="Alcoolomètre">5/10</p>
+                <ul class="material top" title="Matériel">
+                    <li>
+                        1 paquet de 52 cartes<br>
+                        <i class="small">(sans joker)</i>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="far">GAMEDESC</p>
+        </section>
+
+        <section>
+            <h2 id="Préparation">Préparation</h2>
+            <img class="preview" src="./img/games/GAMENAME/preparation.png" alt="Image de la préparation du jeu">
+            <ol>
+                <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
+                <li>Vous êtes prêt à jouer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="Règles">Règles</h2>
+
+            <p class="far">Aucune règle pour ce jeu...</p>
+            <div class="col-2">
+                <div>
+                    <p class="col-title">Titre de colonne 1</p>
+                </div>
+                <div>
+                    <p class="col-title">Titre de colonne 2</p>
+                </div>
+            </div>
+
+            <section>
+                <h3 id="SubSectionID">Sous section</h3>
+                
+                <p class="far">Une toute nouvelle sous section.</p>
+                <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
+            </section>
+        </section>
+
+        <section>
+            <h2 id="Variantes">Variantes</h2>
+
+            <p class="far">Aucune variante pour ce jeu...</p>
+        </section>
+        
+        <section>
+            <h2 id="Anecdotes">Anecdotes</h2>
+
+            <p class="far">Aucune anecdote particulière sur ce jeu...</p>
+        </section>
     </main>
 
     <footer>
