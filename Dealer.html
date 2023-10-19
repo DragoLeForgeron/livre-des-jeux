@@ -49,7 +49,7 @@
 
         <section>
             <div id="picture">
-                <img src="./img/games/GAMENAME/presentation.png">
+                <img src="./img/games/Dealer/presentation.png">
             </div>
             <div>
                 <h2 id="Sommaire">Sommaire</h2>
@@ -57,10 +57,6 @@
                     <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
                     <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
                     <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
-                    <ol>
-                        <li><a href="#IDSousRègle1" title="Raccourcis vers la sous règle 1">Sous règle 1</a></li>
-                        <li><a href="#IDSousRègle2" title="Raccourcis vers la sous règle 2">Sous règle 2</a></li>
-                    </ol>
                     <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
                     <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
                 </ol>
@@ -81,14 +77,14 @@
                 </ul>
             </div>
 
-            <p class="far">GAMEDESC</p>
+            <p class="far">Trouvez ce que le dealer vend pour éviter les effets secondaires. Les joueurs devinent la valeur de la carte du dessus de la pile, si le dealer est malin il pourra passer la main.</p>
         </section>
 
         <section>
             <h2 id="Préparation">Préparation</h2>
-            <img class="preview" src="./img/games/GAMENAME/preparation.png" alt="Image de la préparation du jeu">
             <ol>
-                <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
+                <li><strong>Désignez un joueur qui sera le 1er dealer</strong>.</li>
+                <li>Il <strong>mélange les cartes et forme une pile</strong> face cachée qu'il garde avec lui.</li>
                 <li>Vous êtes prêt à jouer.</li>
             </ol>
         </section>
@@ -96,8 +92,26 @@
         <section>
             <h2 id="Règles">Règles</h2>
 
-            <p class="far">Aucune règle pour ce jeu...</p>
-            <div class="col-2">
+            <p class="far">Pour ce jeu l'<span class="card-A" title="As" style="margin-left: 2px;"></span> vaut 1 et est donc la plus petite carte.</p>
+
+            <p class="far">À tour de rôle, dans le sens horaire et en commençant par le joueur à la droite du dealer, chaque joueur (sauf le dealer) doit <strong>deviner la valeur de la carte</strong> du dessus de la pile.</p>
+            <p class="close">Pour se faire, le joueur doit <strong>donner une 1ère valeur</strong> à laquelle le dealer doit répondre :</p>
+            <p class="close right start"><span><strong>Oui, si la valeur donné est bien celle de la carte</strong>. <strong></strong>Le dealer s'est fait choper, il boit</strong> 4 gorgées.</span></p>
+            <p class="close upPlus start"><span><strong>Supérieur, si la valeur de la carte est supérieur</strong> à celle donné.</span></p>
+            <p class="close downMinus start"><span><strong>Inférieur, si la valeur de la carte est inférieur</strong> à celle donné.</span></p>
+
+            <p class="far">Si le joueur n'a pas trouvé la bonne valeur, il doit <strong>donner une 2ème valeur</strong> à laquelle le dealer doit répondre :</p>
+            <p class="close right start"><span><strong>Oui, si la valeur donnée est bien celle de la carte</strong>. <strong>Le dealer s'est fait choper, il boit</strong> 2 gorgées.</span></p>
+            <p class="close wrong start"><span><strong>Non, si la valeur donnée n'est pas celle de la carte</strong>. <strong>Le dealer ne s'est pas fait choper, le joueur boit</strong> un nombre de gorgées égal à la différence entre la valeur de la carte et la valeur qu'il a donné.</span></p>
+
+            <p class="far"><strong>Dès lors que le dealer ne s'est pas fait choper 3 fois d'affilé, le joueur à sa gauche prend la pile et devient le nouveau dealer</strong>. Le jeu continue à partir du joueur à droite du nouveau dealer.</p>
+
+            <p class="far">Lorsqu'il n'y a plus que 3 cartes ou moins dans la pile, le dealer a le droit d'<strong>annoncer un quitte ou double</strong>.</p>
+            <p class="close">Si c'est le cas, le joueur qui joue doit <strong>trouver la bonne valeur du 1er coup</strong>.</p>
+            <p class="close right start"><span>Si il trouve, <strong>le dealer boit</strong> 2 cul sec.</span></p>
+            <p class="close wrong start"><span>Si il ne trouve pas, <strong>le dealer ne boit rien et le jeu se termine</strong>.</span></p>
+
+            <!-- <div class="col-2">
                 <div>
                     <p class="col-title">Titre de colonne 1</p>
                 </div>
@@ -111,7 +125,7 @@
                 
                 <p class="far">Une toute nouvelle sous section.</p>
                 <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
-            </section>
+            </section> -->
         </section>
 
         <section>
@@ -123,7 +137,7 @@
         <section>
             <h2 id="Anecdotes">Anecdotes</h2>
 
-            <p class="far">Aucune anecdote particulière sur ce jeu...</p>
+            <p class="far">Un ami du fou est très malchanceux à ce jeu, il est très souvent le dernier joueur à être le dealer...</p>
         </section>
     </main>
 
