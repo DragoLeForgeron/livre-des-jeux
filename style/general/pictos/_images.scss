@@ -37,6 +37,16 @@
     background-image: url(../img/pictos/equal.svg);
 }
 
+.inside::before {
+    // background-image: url(../img/pictos/arrow-in.svg);
+    background-image: url(../img/pictos/inside.svg);
+}
+
+.outside::before {
+    // background-image: url(../img/pictos/arrow-out.svg);
+    background-image: url(../img/pictos/outside.svg);
+}
+
 .joker::before {
     background-image: url(../img/logo/picto-noir-transparent.png);
 }

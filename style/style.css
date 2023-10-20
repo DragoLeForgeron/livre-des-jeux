@@ -113,6 +113,8 @@ i.small {
 .plus,
 .minus,
 .equal,
+.inside,
+.outside,
 .joker,
 .infinity,
 .infinity-light,
@@ -135,6 +137,8 @@ i.small {
 .plus.top,
 .minus.top,
 .equal.top,
+.inside.top,
+.outside.top,
 .joker.top,
 .infinity.top,
 .infinity-light.top,
@@ -156,6 +160,8 @@ i.small {
 .plus.start,
 .minus.start,
 .equal.start,
+.inside.start,
+.outside.start,
 .joker.start,
 .infinity.start,
 .infinity-light.start,
@@ -183,6 +189,8 @@ i.small {
 .plus.start,
 .minus.start,
 .equal.start,
+.inside.start,
+.outside.start,
 .joker.start,
 .infinity-light.start {
   margin-left: 27px;
@@ -212,6 +220,8 @@ i.small {
 .plus::before,
 .minus::before,
 .equal::before,
+.inside::before,
+.outside::before,
 .joker::before,
 .infinity::before,
 .infinity-light::before,
@@ -235,6 +245,8 @@ i.small {
 .plus.top::before,
 .minus.top::before,
 .equal.top::before,
+.inside.top::before,
+.outside.top::before,
 .joker.top::before,
 .infinity.top::before,
 .infinity-light.top::before,
@@ -260,6 +272,8 @@ i.small {
 .plus.start::before,
 .minus.start::before,
 .equal.start::before,
+.inside.start::before,
+.outside.start::before,
 .joker.start::before,
 .infinity.start::before,
 .infinity-light.start::before,
@@ -337,6 +351,8 @@ i.small {
 .plus::before,
 .minus::before,
 .equal::before,
+.inside::before,
+.outside::before,
 .joker::before,
 .spades::before,
 .clover::before,
@@ -349,6 +365,8 @@ i.small {
 .plus.small::before,
 .minus.small::before,
 .equal.small::before,
+.inside.small::before,
+.outside.small::before,
 .joker.small::before,
 .spades.small::before,
 .clover.small::before,
@@ -361,6 +379,8 @@ i.small {
 .plus.start::before,
 .minus.start::before,
 .equal.start::before,
+.inside.start::before,
+.outside.start::before,
 .joker.start::before,
 .spades.start::before,
 .clover.start::before,
@@ -432,6 +452,14 @@ i.small {
 
 .equal::before {
   background-image: url(../img/pictos/equal.svg);
+}
+
+.inside::before {
+  background-image: url(../img/pictos/inside.svg);
+}
+
+.outside::before {
+  background-image: url(../img/pictos/outside.svg);
 }
 
 .joker::before {
