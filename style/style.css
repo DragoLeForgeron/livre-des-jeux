@@ -112,6 +112,7 @@ i.small {
 .wrong,
 .plus,
 .minus,
+.equal,
 .joker,
 .infinity,
 .infinity-light,
@@ -133,6 +134,7 @@ i.small {
 .wrong.top,
 .plus.top,
 .minus.top,
+.equal.top,
 .joker.top,
 .infinity.top,
 .infinity-light.top,
@@ -153,6 +155,7 @@ i.small {
 .wrong.start,
 .plus.start,
 .minus.start,
+.equal.start,
 .joker.start,
 .infinity.start,
 .infinity-light.start,
@@ -179,6 +182,7 @@ i.small {
 .wrong.start,
 .plus.start,
 .minus.start,
+.equal.start,
 .joker.start,
 .infinity-light.start {
   margin-left: 27px;
@@ -207,6 +211,7 @@ i.small {
 .wrong::before,
 .plus::before,
 .minus::before,
+.equal::before,
 .joker::before,
 .infinity::before,
 .infinity-light::before,
@@ -229,6 +234,7 @@ i.small {
 .wrong.top::before,
 .plus.top::before,
 .minus.top::before,
+.equal.top::before,
 .joker.top::before,
 .infinity.top::before,
 .infinity-light.top::before,
@@ -253,6 +259,7 @@ i.small {
 .wrong.start::before,
 .plus.start::before,
 .minus.start::before,
+.equal.start::before,
 .joker.start::before,
 .infinity.start::before,
 .infinity-light.start::before,
@@ -315,13 +322,53 @@ i.small {
 }
 
 .right::before,
-.wrong::before,
-.plus::before,
-.minus::before,
-.joker::before {
+.wrong::before {
   width: 22px;
   height: 22px;
   background-size: 22px 22px;
+}
+.right.small::before,
+.wrong.small::before {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+}
+
+.plus::before,
+.minus::before,
+.equal::before,
+.joker::before,
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+.plus.small::before,
+.minus.small::before,
+.equal.small::before,
+.joker.small::before,
+.spades.small::before,
+.clover.small::before,
+.diamond.small::before,
+.heart.small::before {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+}
+.plus.start::before,
+.minus.start::before,
+.equal.start::before,
+.joker.start::before,
+.spades.start::before,
+.clover.start::before,
+.diamond.start::before,
+.heart.start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
 }
 
 *[class*=die-]::before,
@@ -346,31 +393,6 @@ i.small {
   width: 30px;
   height: 40px;
   background-size: 30px 40px;
-}
-
-.spades::before,
-.clover::before,
-.diamond::before,
-.heart::before {
-  width: 22px;
-  height: 22px;
-  background-size: 22px 22px;
-}
-.spades.small::before,
-.clover.small::before,
-.diamond.small::before,
-.heart.small::before {
-  width: 14px;
-  height: 14px;
-  background-size: 14px 14px;
-}
-.spades.start::before,
-.clover.start::before,
-.diamond.start::before,
-.heart.start::before {
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
 }
 
 .nbPlayers::before {
@@ -406,6 +428,10 @@ i.small {
 
 .minus::before {
   background-image: url(../img/pictos/minus.svg);
+}
+
+.equal::before {
+  background-image: url(../img/pictos/equal.svg);
 }
 
 .joker::before {
