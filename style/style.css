@@ -110,6 +110,8 @@ i.small {
 .drunking,
 .right,
 .wrong,
+.plus,
+.minus,
 .joker,
 .infinity,
 .infinity-light,
@@ -129,6 +131,8 @@ i.small {
 .drunking.top,
 .right.top,
 .wrong.top,
+.plus.top,
+.minus.top,
 .joker.top,
 .infinity.top,
 .infinity-light.top,
@@ -147,6 +151,8 @@ i.small {
 .drunking.start,
 .right.start,
 .wrong.start,
+.plus.start,
+.minus.start,
 .joker.start,
 .infinity.start,
 .infinity-light.start,
@@ -171,6 +177,8 @@ i.small {
 
 .right.start,
 .wrong.start,
+.plus.start,
+.minus.start,
 .joker.start,
 .infinity-light.start {
   margin-left: 27px;
@@ -197,6 +205,8 @@ i.small {
 .drunking::before,
 .right::before,
 .wrong::before,
+.plus::before,
+.minus::before,
 .joker::before,
 .infinity::before,
 .infinity-light::before,
@@ -217,6 +227,8 @@ i.small {
 .drunking.top::before,
 .right.top::before,
 .wrong.top::before,
+.plus.top::before,
+.minus.top::before,
 .joker.top::before,
 .infinity.top::before,
 .infinity-light.top::before,
@@ -239,6 +251,8 @@ i.small {
 .drunking.start::before,
 .right.start::before,
 .wrong.start::before,
+.plus.start::before,
+.minus.start::before,
 .joker.start::before,
 .infinity.start::before,
 .infinity-light.start::before,
@@ -302,6 +316,8 @@ i.small {
 
 .right::before,
 .wrong::before,
+.plus::before,
+.minus::before,
 .joker::before {
   width: 22px;
   height: 22px;
@@ -382,6 +398,14 @@ i.small {
 
 .wrong::before {
   background-image: url(../img/pictos/wrong.svg);
+}
+
+.plus::before {
+  background-image: url(../img/pictos/plus.svg);
+}
+
+.minus::before {
+  background-image: url(../img/pictos/minus.svg);
 }
 
 .joker::before {

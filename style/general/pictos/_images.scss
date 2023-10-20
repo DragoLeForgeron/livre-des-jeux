@@ -25,6 +25,14 @@
     background-image: url(../img/pictos/wrong.svg);
 }
 
+.plus::before {
+    background-image: url(../img/pictos/plus.svg);
+}
+
+.minus::before {
+    background-image: url(../img/pictos/minus.svg);
+}
+
 .joker::before {
     background-image: url(../img/logo/picto-noir-transparent.png);
 }
