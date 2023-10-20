@@ -24,6 +24,8 @@
 
 .right,
 .wrong,
+.plus,
+.minus,
 .joker {
     &::before {
         width: $onLine-size;
