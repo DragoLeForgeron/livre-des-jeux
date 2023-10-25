@@ -87,7 +87,7 @@
                 <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
                 <li>Le RJ <strong>mélange les cartes et forme une pile face cachée</strong> qu'il place au centre de la zone de jeu, ce sera la pioche.</li>
                 <li>Le RJ <strong>distribue 2 cartes</strong> à chaque joueur, elles constituent leur main.</li>
-                <li>Le RJ <strong>retourne la 1ère carte de la pioche</strong> et la place à côté de la pioche.</li>
+                <li>Le RJ <strong>retourne la 1ère carte de la pioche</strong> et la place à côté de la pioche, ce sera la défausse ainsi que son <strong>1er total</strong>.</li>
                 <li>Désignez un 1er joueur.</li>
                 <li>Vous êtes prêt à jouer.</li>
             </ol>
@@ -96,22 +96,23 @@
         <section>
             <h2 id="Règles">Règles</h2>
 
-            <p class="far">Aucune règle pour ce jeu...</p>
-            <div class="col-2">
-                <div>
-                    <p class="col-title">Titre de colonne 1</p>
-                </div>
-                <div>
-                    <p class="col-title">Titre de colonne 2</p>
-                </div>
-            </div>
+            <p class="far">Dans ce jeu, l'<span class="card-A" title="as" style="margin-left: 2px;"></span> vaut 1.</p>
+            <p class="close">Si la 1ère carte de la défausse est un <span class="card-V" title="valet"></span>, le total de la défausse est de 11.</p>
+            <p class="close">Si la 1ère carte de la défausse est une <span class="card-D" title="dame"></span>, le total de la défausse est de 12.</p>
+            <p class="close">Si la 1ère carte de la défausse est un <span class="card-R" title="roi"></span>, le total de la défausse est de 13.</p>
 
-            <section>
-                <h3 id="SubSectionID">Sous section</h3>
-                
-                <p class="far">Une toute nouvelle sous section.</p>
-                <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
-            </section>
+            <p class="far">À tour de rôle, chaque joueur <strong>joue une carte de sa main dans la défausse et annonce le nouveau total de la défausse en y ajoutant la valeur de sa carte</strong></p>
+            <p class="close">Chaque carte vaut la valeur qu'elle indique à l'exception des cartes suivantes :</p>
+            <p class="close card-V start" title="Valet"><span><strong>Vaut -10</strong>.</span></p>
+            <p class="close card-D start" title="Dame"><span><strong>Arrondi à la dizaine suppérieur</strong> <i class="small">(exemple : 10, 11, 12, ..., 19, arrondissent à 20).</i></span></p>
+            <p class="close card-R start" title="Dame"><span><strong>Arrondi à la dizaine inférieur</strong> <i class="small">(exemple : 11, 12, 13, ..., 20, arrondissent à 10).</i></span></p>
+
+            <p class="far">Lorsque qu'un joueur <strong>annonce une dizaine pile (10, 20, 30, ...)</strong>, <strong>il distribue</strong> autant que cette dizaine (1, 2, 3, ...).</p>
+            <p class="close">Si le joueur <strong>oublie la valeur précédente de la défausse et annonce une mauvaise valeur</strong> en ayant ajouté celle de sa carte, <strong>il boit</strong> un nombre de gorgées égal à la différence entre la valeur annoncer et la vrai valeur calculé de la défausse.</p>
+            <p class="close">De plus, il ne distribue aucune gorgée si il devait annoncer ou si il a annoncé une mauvaise valeur.</p>
+
+            <p class="far">Si un joueur<strong>atteint ou dépasse le total de 98</strong>, il <strong>boit cul-sec</strong>et la partie est terminée.</p>
+            <p class="close">De plus, le perdant <strong>invente une règle</strong> qui dure tant que vous continuez d'enchaîner les parties de ce jeu.</p>
         </section>
 
         <section>
