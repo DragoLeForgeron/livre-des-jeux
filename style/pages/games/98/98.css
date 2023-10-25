@@ -1,1 +1,23 @@
-/*# sourceMappingURL=98.css.map */
+main#game > section:has(h2#Sommaire) > div#picture {
+  width: 40%;
+  min-width: 300px;
+  max-width: 475px;
+}
+@media screen and (max-width: 640px) {
+  main#game > section:has(h2#Sommaire) {
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  main#game > section:has(h2#Sommaire) > div#picture {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: unset;
+    max-width: 350px;
+  }
+  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+    width: 100%;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=98.css.map */
