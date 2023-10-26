@@ -22,6 +22,9 @@ a {
 strong {
   color: #ff0000;
 }
+strong a {
+  color: #ff0000;
+}
 
 p.close {
   margin-bottom: 0;
@@ -39,17 +42,7 @@ p.close {
 }
 p.far {
   margin-bottom: 0;
-  margin-top: 20px;
-}
-@media screen and (max-width: 640px) {
-  p.far {
-    margin-top: 24px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  p.far {
-    margin-top: 22px;
-  }
+  margin-top: 30px;
 }
 p.collapse {
   margin-bottom: 0;
@@ -59,8 +52,46 @@ p:has(+ *:not(p)) {
   margin-bottom: revert !important;
 }
 
-.small {
+h1 + p.far,
+h2 + p.far,
+h3 + p.far,
+h4 + p.far,
+h5 + p.far,
+h6 + p.far {
+  margin-top: 24px;
+}
+@media screen and (max-width: 640px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  h1 + p.far,
+  h2 + p.far,
+  h3 + p.far,
+  h4 + p.far,
+  h5 + p.far,
+  h6 + p.far {
+    margin-top: 22px;
+  }
+}
+
+p.small,
+i.small {
   font-size: small;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.boxCenter {
+  margin: auto;
 }
 
 /* temp */
@@ -79,31 +110,23 @@ p:has(+ *:not(p)) {
 .drunking,
 .right,
 .wrong,
+.plus,
+.minus,
+.equal,
+.inside,
+.outside,
 .joker,
-.card-A,
-.card-3,
-.card-6,
-.card-9,
-.card-V,
-.card-D,
-.card-R {
+.infinity,
+.infinity-light,
+*[class*=card-],
+*[class*=die-],
+*[class*=dieT-],
+.spades,
+.clover,
+.diamond,
+.heart {
   position: relative;
-}
-.nbPlayers::before,
-.material::before,
-.duration::before,
-.drunking::before,
-.right::before,
-.wrong::before,
-.joker::before,
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
-  content: "";
+  /* need a child span child which contain the html content when there is a strong markup in */
 }
 .nbPlayers.top,
 .material.top,
@@ -111,58 +134,81 @@ p:has(+ *:not(p)) {
 .drunking.top,
 .right.top,
 .wrong.top,
+.plus.top,
+.minus.top,
+.equal.top,
+.inside.top,
+.outside.top,
 .joker.top,
-.card-A.top,
-.card-3.top,
-.card-6.top,
-.card-9.top,
-.card-V.top,
-.card-D.top,
-.card-R.top {
+.infinity.top,
+.infinity-light.top,
+*[class*=card-].top,
+*[class*=die-].top,
+*[class*=dieT-].top,
+.spades.top,
+.clover.top,
+.diamond.top,
+.heart.top {
   margin-left: unset;
 }
-.nbPlayers.top::before,
-.material.top::before,
-.duration.top::before,
-.drunking.top::before,
-.right.top::before,
-.wrong.top::before,
-.joker.top::before,
-.card-A.top::before,
-.card-3.top::before,
-.card-6.top::before,
-.card-9.top::before,
-.card-V.top::before,
-.card-D.top::before,
-.card-R.top::before {
-  position: unset;
-  display: block;
-  margin: auto;
-  margin-bottom: 2px;
-  translate: unset;
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.right.start,
+.wrong.start,
+.plus.start,
+.minus.start,
+.equal.start,
+.inside.start,
+.outside.start,
+.joker.start,
+.infinity.start,
+.infinity-light.start,
+*[class*=card-].start,
+*[class*=die-].start,
+*[class*=dieT-].start,
+.spades.start,
+.clover.start,
+.diamond.start,
+.heart.start {
+  display: flex;
+  align-items: center;
 }
 
-.nbPlayers,
-.material,
-.duration,
-.drunking,
-.right,
-.wrong,
-.joker {
+.nbPlayers.start,
+.material.start,
+.duration.start,
+.drunking.start,
+.infinity.start {
   margin-left: 30px;
 }
 
-.card-A,
-.card-3,
-.card-6,
-.card-9,
-.card-V,
-.card-D,
-.card-R {
+.right.start,
+.wrong.start,
+.plus.start,
+.minus.start,
+.equal.start,
+.inside.start,
+.outside.start,
+.joker.start,
+.infinity-light.start {
+  margin-left: 27px;
+}
+
+*[class*=die-].start,
+*[class*=dieT-].start,
+.spades.start,
+.clover.start,
+.diamond.start,
+.heart.start {
+  margin-left: 35px;
+  min-height: 30px;
+}
+
+*[class*=card-].start {
   margin-left: 35px;
   min-height: 40px;
-  display: flex;
-  align-items: center;
 }
 
 .nbPlayers::before,
@@ -171,14 +217,73 @@ p:has(+ *:not(p)) {
 .drunking::before,
 .right::before,
 .wrong::before,
+.plus::before,
+.minus::before,
+.equal::before,
+.inside::before,
+.outside::before,
 .joker::before,
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
+.infinity::before,
+.infinity-light::before,
+*[class*=card-]::before,
+*[class*=die-]::before,
+*[class*=dieT-]::before,
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.nbPlayers.top::before,
+.material.top::before,
+.duration.top::before,
+.drunking.top::before,
+.right.top::before,
+.wrong.top::before,
+.plus.top::before,
+.minus.top::before,
+.equal.top::before,
+.inside.top::before,
+.outside.top::before,
+.joker.top::before,
+.infinity.top::before,
+.infinity-light.top::before,
+*[class*=card-].top::before,
+*[class*=die-].top::before,
+*[class*=dieT-].top::before,
+.spades.top::before,
+.clover.top::before,
+.diamond.top::before,
+.heart.top::before {
+  position: unset;
+  display: block;
+  margin: auto;
+  margin-bottom: 2px;
+  translate: unset;
+}
+.nbPlayers.start::before,
+.material.start::before,
+.duration.start::before,
+.drunking.start::before,
+.right.start::before,
+.wrong.start::before,
+.plus.start::before,
+.minus.start::before,
+.equal.start::before,
+.inside.start::before,
+.outside.start::before,
+.joker.start::before,
+.infinity.start::before,
+.infinity-light.start::before,
+*[class*=card-].start::before,
+*[class*=die-].start::before,
+*[class*=dieT-].start::before,
+.spades.start::before,
+.clover.start::before,
+.diamond.start::before,
+.heart.start::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -188,39 +293,126 @@ p:has(+ *:not(p)) {
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
-  width: 25px;
-  height: 25px;
-  background-size: 25px 25px;
+.drunking::before,
+.infinity::before {
   margin-top: -1px;
+  opacity: 0.6;
 }
 
-.right::before,
-.wrong::before,
-.joker::before {
-  width: 22px;
-  height: 22px;
-  background-size: 22px 22px;
-  margin-top: -2px;
+.infinity-light::before {
+  margin-top: -4px;
 }
 
-.card-A::before,
-.card-3::before,
-.card-6::before,
-.card-9::before,
-.card-V::before,
-.card-D::before,
-.card-R::before {
-  width: 30px;
-  height: 40px;
-  background-size: 30px 40px;
+*[class*=card-]::before {
+  translate: 0 -1px;
+}
+
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  translate: 0 -1.6px;
+}
+
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  translate: 0 -1px;
 }
 
 .nbPlayers::before,
 .material::before,
 .duration::before,
-.drunking::before {
-  opacity: 0.6;
+.drunking::before,
+.infinity::before {
+  width: 25px;
+  height: 25px;
+  background-size: 25px 25px;
+}
+
+.infinity-light::before {
+  width: 22px;
+  height: 14px;
+  background-size: 22px 14px;
+}
+
+.right::before,
+.wrong::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+.right.small::before,
+.wrong.small::before {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+}
+
+.plus::before,
+.minus::before,
+.equal::before,
+.inside::before,
+.outside::before,
+.joker::before,
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+.plus.small::before,
+.minus.small::before,
+.equal.small::before,
+.inside.small::before,
+.outside.small::before,
+.joker.small::before,
+.spades.small::before,
+.clover.small::before,
+.diamond.small::before,
+.heart.small::before {
+  width: 14px;
+  height: 14px;
+  background-size: 14px 14px;
+}
+.plus.start::before,
+.minus.start::before,
+.equal.start::before,
+.inside.start::before,
+.outside.start::before,
+.joker.start::before,
+.spades.start::before,
+.clover.start::before,
+.diamond.start::before,
+.heart.start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
+
+*[class*=die-]::before,
+*[class*=dieT-]::before {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
+}
+*[class*=die-].start::before,
+*[class*=dieT-].start::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+}
+
+*[class*=card-]::before {
+  width: 22px;
+  height: 29px;
+  background-size: 22px 29px;
+}
+*[class*=card-].start::before {
+  width: 30px;
+  height: 40px;
+  background-size: 30px 40px;
 }
 
 .nbPlayers::before {
@@ -250,24 +442,78 @@ p:has(+ *:not(p)) {
   background-image: url(../img/pictos/wrong.svg);
 }
 
+.plus::before {
+  background-image: url(../img/pictos/plus.svg);
+}
+
+.minus::before {
+  background-image: url(../img/pictos/minus.svg);
+}
+
+.equal::before {
+  background-image: url(../img/pictos/equal.svg);
+}
+
+.inside::before {
+  background-image: url(../img/pictos/inside.svg);
+}
+
+.outside::before {
+  background-image: url(../img/pictos/outside.svg);
+}
+
 .joker::before {
   background-image: url(../img/logo/picto-noir-transparent.png);
+}
+
+.infinity::before {
+  background-image: url(../img/pictos/infinity.svg);
+  scale: 0.9;
+}
+
+.infinity-light::before {
+  background-image: url(../img/pictos/infinity-light.svg);
+  scale: 1.5;
 }
 
 .card-A::before {
   background-image: url(../img/pictos/cards/A.png);
 }
 
+.card-2::before {
+  background-image: url(../img/pictos/cards/2.png);
+}
+
 .card-3::before {
   background-image: url(../img/pictos/cards/3.png);
+}
+
+.card-4::before {
+  background-image: url(../img/pictos/cards/4.png);
+}
+
+.card-5::before {
+  background-image: url(../img/pictos/cards/5.png);
 }
 
 .card-6::before {
   background-image: url(../img/pictos/cards/6.png);
 }
 
+.card-7::before {
+  background-image: url(../img/pictos/cards/7.png);
+}
+
+.card-8::before {
+  background-image: url(../img/pictos/cards/8.png);
+}
+
 .card-9::before {
   background-image: url(../img/pictos/cards/9.png);
+}
+
+.card-10::before {
+  background-image: url(../img/pictos/cards/10.png);
 }
 
 .card-V::before {
@@ -280,6 +526,78 @@ p:has(+ *:not(p)) {
 
 .card-R::before {
   background-image: url(../img/pictos/cards/R.png);
+}
+
+.die-1::before {
+  background-image: url(../img/pictos/dice/1.svg);
+}
+
+.die-2::before {
+  background-image: url(../img/pictos/dice/2.svg);
+}
+
+.die-3::before {
+  background-image: url(../img/pictos/dice/3.svg);
+}
+
+.die-4::before {
+  background-image: url(../img/pictos/dice/4.svg);
+}
+
+.die-5::before {
+  background-image: url(../img/pictos/dice/5.svg);
+}
+
+.die-6::before {
+  background-image: url(../img/pictos/dice/6.svg);
+}
+
+.dieT-2::before {
+  background-image: url(../img/pictos/dice/T-2.png);
+}
+
+.dieT-3::before {
+  background-image: url(../img/pictos/dice/T-3.png);
+}
+
+.dieT-6::before {
+  background-image: url(../img/pictos/dice/T-6.png);
+}
+
+.dieT-7::before {
+  background-image: url(../img/pictos/dice/T-7.png);
+}
+
+.dieT-9::before {
+  background-image: url(../img/pictos/dice/T-9.png);
+}
+
+.dieT-10::before {
+  background-image: url(../img/pictos/dice/T-10.png);
+}
+
+.dieT-11::before {
+  background-image: url(../img/pictos/dice/T-11.png);
+}
+
+.dieT-12::before {
+  background-image: url(../img/pictos/dice/T-12.png);
+}
+
+.spades::before {
+  background-image: url(../img/pictos/cards/spades.svg);
+}
+
+.clover::before {
+  background-image: url(../img/pictos/cards/clover.svg);
+}
+
+.diamond::before {
+  background-image: url(../img/pictos/cards/diamond.svg);
+}
+
+.heart::before {
+  background-image: url(../img/pictos/cards/heart.svg);
 }
 
 .toast {

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Livre des jeux - GAMENAME</title>
+
+    <link rel="icon" href="./img/logo/picto-noir-transparent.png" />
+
+    <meta name="subject" content="Jeux d'alcool">
+    <meta name="description" content="Ce site est une liste de jeux d'alcool.">
+    <meta name="keywords" content="Livre, Ivre, Jeux, Alcool, Jeu d'alcool, Jeux d'alcool, Livre d'alcool, GAMEREF">
+    <meta name="creator" content="LEMASSON Louis">
+    <meta name="author" content="LEMASSON Louis">
+    <meta name="publisher" content="LEMASSON Louis">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="revisit-After" content="31 days">
+    <meta name="robots" content="all">
+    <meta name="rating" content="mature">
+    <meta name="distribution" content="global">
+    <meta name="geography" content="France">
+    <meta name="category" content="games">
+
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/pages/games/game.css">
+    <link rel="stylesheet" href="./style/pages/games/GAMENAME/GAMENAME.css">
+
+    <script src="./src/toast.js"></script>
+</head>
+
+<body>
+    <header id="navigation">
+        <div id="logo">
+            <img src="./img/logo/complet-noir-transparent.png">
+        </div>
+        <nav>
+            <input id="menu" type="checkbox">
+            <label for="menu" title="Ouvrir le menu"></label>
+            <a href="./index.html" title="Lien vers la page des jeux">Jeux</a>
+            <a href="./RèglesGénérales.html" title="Lien vers la page des règles générales">Règles générales</a>
+            <!-- <a href="./Suggestions.html">Suggestions</a> -->
+        </nav>
+    </header>
+
+    <main id="game">
+        <h1>GAMENAME</h1>
+
+        <section>
+            <div id="picture">
+                <img src="./img/games/GAMENAME/presentation.png">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <ol>
+                        <li><a href="#IDSousRègle1" title="Raccourcis vers la sous règle 1">Sous règle 1</a></li>
+                        <li><a href="#IDSousRègle2" title="Raccourcis vers la sous règle 2">Sous règle 2</a></li>
+                    </ol>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers top" title="Nombre de joueurs">2 ou plus</p>
+                <p class="duration top" title="Durée">40 minutes</p>
+                <p class="drunking top" title="Alcoolomètre">4,5/10</p>
+                <ul class="material top" title="Matériel">
+                    <li>
+                        1 paquet de 54 cartes<br>
+                        <i class="small">(+1 tous les 8 joueurs)</i>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="far">GAMEDESC</p>
+        </section>
+
+        <section>
+            <h2 id="Préparation">Préparation</h2>
+            <img class="preview" src="./img/games/GAMENAME/preparation.png" alt="Image de la préparation du jeu">
+            <ol>
+                <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
+                <li>Vous êtes prêt à jouer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="Règles">Règles</h2>
+
+            <p class="far">Aucune règle pour ce jeu...</p>
+            <div class="col-2">
+                <div>
+                    <p class="col-title">Titre de colonne 1</p>
+                </div>
+                <div>
+                    <p class="col-title">Titre de colonne 2</p>
+                </div>
+            </div>
+
+            <section>
+                <h3 id="SubSectionID">Sous section</h3>
+                
+                <p class="far">Une toute nouvelle sous section.</p>
+                <p class="close">Il faudrait penser à <strong>l'ajouter dans le sommaire</strong></p>
+            </section>
+        </section>
+
+        <section>
+            <h2 id="Variantes">Variantes</h2>
+
+            <p class="far">Aucune variante pour ce jeu...</p>
+        </section>
+        
+        <section>
+            <h2 id="Anecdotes">Anecdotes</h2>
+
+            <p class="far">Aucune anecdote particulière sur ce jeu...</p>
+        </section>
+    </main>
+
+    <footer>
+        <div id="QRCode">
+            <div title="Copier le lien" onclick="navigator.clipboard.writeText('https://dragoleforgeron.github.io/livre-des-jeux/GAMENAME.html'); toast('Lien copié')">
+                <img src="./img/games/GAMENAME/QRCode.png" alt="QRCode de la page">
+                <p><i>Lien vers cette page</i></p>
+            </div>
+        </div>
+        <div id="others">
+            <a href="./MentionsLégales.html" title="Lien vers la page des mentions légales">Mentions légales</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -84,7 +84,7 @@ main#games > #gamesList > article > a > div#picture > img {
 main#games > #gamesList > article > a > div#informations {
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
+  padding: 10px 10px 10px 12px;
 }
 main#games > #gamesList > article > a > div#informations > h2 {
   margin: 0;

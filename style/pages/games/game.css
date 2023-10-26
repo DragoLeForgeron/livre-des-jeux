@@ -1,0 +1,137 @@
+@charset "UTF-8";
+/* LIGHT */
+/* DARK */
+main#game {
+  padding-bottom: 250px;
+}
+@media screen and (max-width: 640px) {
+  main#game {
+    padding-bottom: 190px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  main#game {
+    padding-bottom: 205px;
+  }
+}
+main#game h2 {
+  border-bottom: solid 1px #000;
+}
+main#game h3 {
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 5px 0 5px 10px;
+  border-bottom: solid 1px #000;
+  border-left: solid 1px #000;
+}
+main#game a:hover {
+  color: #ff0000;
+}
+main#game a:focus {
+  color: #be0000;
+}
+main#game ol > li {
+  margin: 7px 0;
+}
+main#game .preview {
+  float: right;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top right;
+     object-position: top right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
+  width: 25%;
+  max-width: 600px;
+  height: 25%;
+  max-height: 400px;
+}
+main#game .col-2 {
+  display: flex;
+  flex-flow: row wrap;
+}
+@media screen and (max-width: 640px) {
+  main#game .col-2 {
+    flex-flow: column nowrap;
+  }
+}
+main#game .col-2 > div {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px 20px 15px 20px;
+  text-align: center;
+  border-left: solid 4px #fff;
+  border-right: solid 4px #fff;
+  background-color: #eee;
+}
+@media screen and (max-width: 640px) {
+  main#game .col-2 > div {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+    border-top: solid 4px #fff;
+    border-bottom: solid 4px #fff;
+  }
+}
+main#game .col-2 > div > .col-title {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+main#game .col-2 > div > img {
+  display: block;
+  margin: auto;
+  width: 80%;
+}
+main#game .col-2 > div > p:last-child {
+  margin-bottom: 0;
+}
+main#game > section {
+  margin-top: 30px;
+}
+main#game > section:has(h2#Sommaire) {
+  display: flex;
+  flex-flow: row wrap;
+}
+main#game > section:has(h2#Sommaire) h2 {
+  margin-top: 0;
+}
+main#game > section:has(h2#Sommaire) > div {
+  box-sizing: border-box;
+}
+main#game > section:has(h2#Sommaire) > div#picture {
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
+  width: 40%;
+  min-width: 260px;
+  max-width: 450px;
+}
+main#game > section:has(h2#Sommaire) > div#picture > img {
+  display: block;
+  width: 100%;
+}
+main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+  flex-grow: 1;
+  padding-left: 20px;
+}
+main#game > section:has(> h2#Présentation) > div {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+main#game > section:has(> h2#Présentation) > div > * {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 5px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 10px;
+  text-align: center;
+}
+main#game > section:has(> h2#Présentation) > div > ul {
+  width: auto;
+  list-style: none;
+}
+main#game > section:has(> h2#Règles) {
+  clear: both;
+}/*# sourceMappingURL=game.css.map */

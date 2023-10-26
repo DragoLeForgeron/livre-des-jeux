@@ -1,0 +1,106 @@
+.nbPlayers,
+.material,
+.duration,
+.drunking,
+.infinity {
+    &::before {
+        width: $onLine-info-size;
+        height: $onLine-info-size;
+        background-size: $onLine-info-size $onLine-info-size;
+    }
+
+    // &.start ?
+}
+
+.infinity-light {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-infinityLight-height;
+        background-size: $onLine-size $onLine-infinityLight-height;
+    }
+
+    // &.start ?
+}
+
+.right,
+.wrong {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    &.small {
+        &::before {
+            width: $onLine-size-small;
+            height: $onLine-size-small;
+            background-size: $onLine-size-small $onLine-size-small;
+        }
+    }
+}
+
+.plus,
+.minus,
+.equal,
+.inside,
+.outside,
+.joker,
+.spades,
+.clover,
+.diamond,
+.heart {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    &.small {
+        &::before {
+            width: $onLine-size-small;
+            height: $onLine-size-small;
+            background-size: $onLine-size-small $onLine-size-small;
+        }
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-size;
+            background-size: $onStart-size $onStart-size;
+        }
+    }
+}
+
+*[class*="die-"],
+*[class*="dieT-"] {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-size;
+        background-size: $onLine-size $onLine-size;
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-size;
+            background-size: $onStart-size $onStart-size;
+        }
+    }
+}
+
+*[class*="card-"] {
+    &::before {
+        width: $onLine-size;
+        height: $onLine-card-height;
+        background-size: $onLine-size $onLine-card-height;
+    }
+
+    &.start {
+        &::before {
+            width: $onStart-size;
+            height: $onStart-card-height;
+            background-size: $onStart-size $onStart-card-height;
+        }
+    }
+}
