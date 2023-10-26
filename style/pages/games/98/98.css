@@ -1,7 +1,7 @@
 main#game .preview {
   width: 25%;
   min-width: 230px;
-  max-width: 330px;
+  max-width: 30px;
 }
 @media screen and (max-width: 1054px) {
   main#game .preview {
@@ -20,7 +20,7 @@ main#game .preview {
 main#game > section:has(h2#Sommaire) > div#picture {
   width: 40%;
   min-width: 300px;
-  max-width: 475px;
+  max-width: 400px;
 }
 @media screen and (max-width: 640px) {
   main#game > section:has(h2#Sommaire) {
