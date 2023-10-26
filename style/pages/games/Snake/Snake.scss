@@ -1,10 +1,10 @@
 main#game {
     .preview {
-        width: 25%;
-        min-width: 200px;
-        max-width: 300px;
+        width: 30%;
+        min-width: 250px;
+        max-width: 350px;
 
-        @media screen and (max-width: 950px) {
+        @media screen and (max-width: 1081px) {
             display: block;
             float: unset;
             object-position: unset;
@@ -21,8 +21,8 @@ main#game {
     >section:has(h2#Sommaire) {
         >div#picture {
             width: 40%;
-            min-width: 265px;
-            max-width: 400px;
+            min-width: 325px;
+            max-width: 475px;
         }
 
         @media screen and (max-width: 640px) {
@@ -37,7 +37,7 @@ main#game {
 
                     width: 100%;
                     min-width: unset;
-                    max-width: 300px;
+                    max-width: 350px;
                 }
 
                 &:has(h2#Sommaire) {
