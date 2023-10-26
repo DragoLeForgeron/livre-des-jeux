@@ -33,7 +33,7 @@ main#game > section:has(h2#Sommaire) > div#picture {
     margin-bottom: 20px;
     width: 100%;
     min-width: unset;
-    max-width: 350px;
+    max-width: 330px;
   }
   main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
     width: 100%;
