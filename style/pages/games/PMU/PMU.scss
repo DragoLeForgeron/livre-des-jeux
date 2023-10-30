@@ -1,0 +1,31 @@
+main#game {
+    >section:has(h2#Sommaire) {
+        >div#picture {
+            width: 35%;
+            min-width: 260px;
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: 640px) {
+            flex-flow: column nowrap;
+            margin-top: 20px;
+            margin-bottom: -20px;
+
+            >div {
+                &#picture {
+                    margin: auto;
+                    margin-bottom: 20px;
+
+                    width: 100%;
+                    min-width: unset;
+                    max-width: 280px;
+                }
+
+                &:has(h2#Sommaire) {
+                    width: 100%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
