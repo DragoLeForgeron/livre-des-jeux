@@ -35,28 +35,17 @@ main#game ol > li {
 }
 main#game .preview {
   float: right;
-  width: 25%;
-  max-width: 600px;
-  height: 25%;
-  max-height: 400px;
-  margin-left: 20px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: top right;
      object-position: top right;
-}
-@media screen and (max-width: 640px) {
-  main#game .preview {
-    display: block;
-    float: unset;
-    width: 60%;
-    max-width: unset;
-    height: unset;
-    margin-left: unset;
-    margin: auto;
-    -o-object-position: unset;
-       object-position: unset;
-  }
+  margin-left: 20px;
+  margin-bottom: 10px;
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
+  width: 25%;
+  max-width: 600px;
+  height: 25%;
+  max-height: 400px;
 }
 main#game .col-2 {
   display: flex;
@@ -105,13 +94,6 @@ main#game > section:has(h2#Sommaire) {
   display: flex;
   flex-flow: row wrap;
 }
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) {
-    flex-flow: column nowrap;
-    margin-top: 20px;
-    margin-bottom: -20px;
-  }
-}
 main#game > section:has(h2#Sommaire) h2 {
   margin-top: 0;
 }
@@ -119,36 +101,18 @@ main#game > section:has(h2#Sommaire) > div {
   box-sizing: border-box;
 }
 main#game > section:has(h2#Sommaire) > div#picture {
+  /* To redefine in a sub folder game, check ./subGame.scss.example */
   width: 40%;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture {
-    width: 100%;
-    margin-bottom: 20px;
-  }
+  min-width: 260px;
+  max-width: 450px;
 }
 main#game > section:has(h2#Sommaire) > div#picture > img {
   display: block;
   width: 100%;
-  min-width: 260px;
-  max-width: 450px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div#picture > img {
-    margin: auto;
-    min-width: unset;
-    max-width: 350px;
-  }
 }
 main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
-  width: 60%;
+  flex-grow: 1;
   padding-left: 20px;
-}
-@media screen and (max-width: 840px) {
-  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
-    width: 100%;
-    padding-left: 0;
-  }
 }
 main#game > section:has(> h2#Présentation) > div {
   display: flex;
@@ -167,4 +131,7 @@ main#game > section:has(> h2#Présentation) > div > * {
 main#game > section:has(> h2#Présentation) > div > ul {
   width: auto;
   list-style: none;
+}
+main#game > section:has(> h2#Règles) {
+  clear: both;
 }/*# sourceMappingURL=game.css.map */

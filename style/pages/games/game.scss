@@ -1,4 +1,4 @@
-@import "../variables";
+@import "../../general/variables";
 
 main#game {
     padding-bottom: $footer-height + 50px;
@@ -40,24 +40,16 @@ main#game {
 
     .preview {
         float: right;
+        object-fit: contain;
+        object-position: top right;
+        margin-left: 20px;
+        margin-bottom: 10px;
+
+        /* To redefine in a sub folder game, check ./subGame.scss.example */
         width: 25%;
         max-width: 600px;
         height: 25%;
         max-height: 400px;
-        margin-left: 20px;
-        object-fit: contain;
-        object-position: top right;
-
-        @media screen and (max-width: 640px) {
-            display: block;
-            float: unset;
-            width: 60%;
-            max-width: unset;
-            height: unset;
-            margin-left: unset;
-            margin: auto;
-            object-position: unset;
-        }
     }
 
     .col-2 {
@@ -111,12 +103,6 @@ main#game {
             display: flex;
             flex-flow: row wrap;
 
-            @media screen and (max-width: 840px) {
-                flex-flow: column nowrap;
-                margin-top: 20px;
-                margin-bottom: -20px;
-            }
-
             h2 {
                 margin-top: 0;
             }
@@ -125,35 +111,20 @@ main#game {
                 box-sizing: border-box;
 
                 &#picture {
+                    /* To redefine in a sub folder game, check ./subGame.scss.example */
                     width: 40%;
-
-                    @media screen and (max-width: 840px) {
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
+                    min-width: 260px;
+                    max-width: 450px;
 
                     >img {
                         display: block;
                         width: 100%;
-                        min-width: 260px;
-                        max-width: 450px;
-
-                        @media screen and (max-width: 840px) {
-                            margin: auto;
-                            min-width: unset;
-                            max-width: 350px;
-                        }
                     }
                 }
 
                 &:has(h2#Sommaire) {
-                    width: 60%;
+                    flex-grow: 1;
                     padding-left: 20px;
-
-                    @media screen and (max-width: 840px) {
-                        width: 100%;
-                        padding-left: 0;
-                    }
                 }
             }
         }
@@ -181,5 +152,8 @@ main#game {
             }
         }
 
+        &:has(>h2#Règles) {
+            clear: both;
+        }
     }
 }

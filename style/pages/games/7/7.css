@@ -1,0 +1,58 @@
+main#game .right::before {
+  margin-top: -2px;
+}
+@media screen and (max-width: 2588px) {
+  main#game .right::before {
+    margin-top: 0;
+  }
+}
+main#game .wrong::before {
+  margin-top: -2px;
+}
+@media screen and (max-width: 2546px) {
+  main#game .wrong::before {
+    margin-top: 0;
+  }
+}
+main#game .preview {
+  display: block;
+  float: unset;
+  -o-object-position: unset;
+     object-position: unset;
+  margin-left: unset;
+  margin-bottom: unset;
+  margin: auto;
+  width: 50%;
+  min-width: 250px;
+  max-width: 400px;
+}
+@media screen and (max-width: 680px) {
+  main#game .preview {
+    width: 100%;
+    min-width: unset;
+    max-width: 250px;
+  }
+}
+main#game > section:has(h2#Sommaire) > div#picture {
+  width: 60%;
+  min-width: 350px;
+  max-width: 600px;
+}
+@media screen and (max-width: 690px) {
+  main#game > section:has(h2#Sommaire) {
+    flex-flow: column nowrap;
+    margin-top: 20px;
+    margin-bottom: -20px;
+  }
+  main#game > section:has(h2#Sommaire) > div#picture {
+    margin: auto;
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: unset;
+    max-width: 450px;
+  }
+  main#game > section:has(h2#Sommaire) > div:has(h2#Sommaire) {
+    width: 100%;
+    padding-left: 0;
+  }
+}/*# sourceMappingURL=7.css.map */
