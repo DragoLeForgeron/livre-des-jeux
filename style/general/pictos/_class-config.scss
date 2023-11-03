@@ -51,12 +51,7 @@
 .inside,
 .outside,
 .joker,
-.infinity-light {
-    &.start {
-        margin-left: calc($onStart-special-size + $margin-right);
-    }
-}
-
+.infinity-light,
 *[class*="die-"],
 *[class*="dieT-"],
 .spades,

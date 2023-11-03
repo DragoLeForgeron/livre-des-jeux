@@ -1,23 +1,4 @@
 main#game {
-    // $mt-base: -px; // for .right and .wrong
-
-    // .right::before { // if used in the page
-    //     margin-top: $mt-base;
-    
-    //     @media screen and (max-width: px) {
-    //         margin-top: 0;
-    //     }
-    // }
-    
-    // .wrong::before { // if used in the page
-    //     margin-top: $mt-base;
-    
-    //     @media screen and (max-width: px) {
-    //         margin-top: 0;
-    //     }
-    // }
-
-
     >section:has(h2#Sommaire) {
         >div#picture {
             width: 40%;
