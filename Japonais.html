@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/pages/games/game.css">
+    <link rel="stylesheet" href="./style/pages/games/Japonais/Japonais.css">
 
     <script src="./src/toast.js"></script>
 </head>
@@ -46,10 +47,75 @@
     <main id="game">
         <h1>Japonais</h1>
 
-        <div class="indisponible">
-            <p class="far">Ce jeu n'est pas encore disponible, il est en cours d'écriture.</p>
-            <p class="close">Revient voir plus tard.</p>
-        </div>
+        <section>
+            <div id="picture">
+                <img src="./img/games/Japonais/presentation.png">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers top" title="Nombre de joueurs">1 joueur</p>
+                <p class="duration top" title="Durée">5 minutes</p>
+                <p class="drunking top" title="Alcoolomètre">6/10</p>
+                <ul class="material top" title="Matériel">
+                    <li>
+                        1 paquet de 54 cartes
+                    </li>
+                </ul>
+            </div>
+
+            <p class="far">Le japonais est un jeu de chance et d'analyse où vous jouez seul contre le jeu. Retournez les cartes les unes après les autres en faisant le bon choix.</p>
+        </section>
+
+        <section>
+            <h2 id="Préparation">Préparation</h2>
+            <ol>
+                <li>Servez-vous un <strong>verre plein</strong>.</li>
+                <li><strong>Mélangez le paquet et formez une pile face cachée</strong> que vous gardez avec vous.</li>
+                <li><strong>Retournez la 1ère carte de la pile</strong> et placez-la devant vous.</li>
+                <li>Vous êtes prêt à jouer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="Règles">Règles</h2>
+
+            <p class="far">Pour ce jeu, l'<span class="card-A" title="as" style="margin-left: 2px;"></span> vaut 1 et est donc la plus petite carte.</p>
+
+            <p class="far"><strong>Pour chacune des cartes du dessus de la pile, devinez si sa valeur est <span class="plus" title="supérieure"></span> ou <span class="minus" title="inférieure"></span></strong> par rapport à la valeur de la carte face visible devant vous, puis <strong>placez-la sur celle-ci</strong>.</p>
+            <p class="close wrong start"><span>À chaque fois que votre <strong>réponse est incorrecte, buvez 1 gorgée</strong>.</span></p>
+            <p class="close equal start"><span>Rien ne se passe si <strong>la carte retournée est de valeur égale, continuez à jouer</strong>.</span></p>
+            <p class="close joker start"><span>Si <strong>la carte retournée est un joker, retournez la carte suivante puis continuez à jouer</strong>.</span></p>
+
+            <p class="far"><strong>Si vous finissez votre verre avant de finir la pile, vous avez perdu</strong>, tant pis pour vous.</p>
+            <p class="close"><strong>Si vous finissez la pile avant de finir votre verre, vous avez gagné</strong>, félicitations, vous pouvez donner cul-sec à n'importe qui.</p>
+
+            <p class="far"><i class="small">Le fou conseil de prendre un témoin lorsque vous jouez à ce jeu...</i></p>
+        </section>
+
+        <section>
+            <h2 id="Variantes">Variantes</h2>
+
+            <p class="far">Aucune variante pour ce jeu...</p>
+        </section>
+
+        <section>
+            <h2 id="Anecdotes">Anecdotes</h2>
+
+            <p class="far">Jeu inventé par le fou alors qu'il était le seul à ne pas prendre de pause clope... Et aussi, car il avait du retard sur les autres...</p>
+        </section>
     </main>
 
     <footer>

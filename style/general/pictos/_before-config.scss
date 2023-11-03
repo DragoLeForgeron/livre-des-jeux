@@ -63,8 +63,16 @@
     }
 }
 
-
-*[class*="card-"] {
+.plus,
+.minus,
+.equal,
+.inside,
+.outside,
+*[class*="card-"],
+.spades,
+.clover,
+.diamond,
+.heart {
     &::before {
         translate: 0 -1px;
     }
@@ -74,14 +82,5 @@
 *[class*="dieT-"] {
     &::before {
         translate: 0 -1.6px;
-    }
-}
-
-.spades,
-.clover,
-.diamond,
-.heart {
-    &::before {
-        translate: 0 -1px;
     }
 }

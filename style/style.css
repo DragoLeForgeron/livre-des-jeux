@@ -192,10 +192,7 @@ i.small {
 .inside.start,
 .outside.start,
 .joker.start,
-.infinity-light.start {
-  margin-left: 27px;
-}
-
+.infinity-light.start,
 *[class*=die-].start,
 *[class*=dieT-].start,
 .spades.start,
@@ -303,20 +300,22 @@ i.small {
   margin-top: -4px;
 }
 
-*[class*=card-]::before {
+.plus::before,
+.minus::before,
+.equal::before,
+.inside::before,
+.outside::before,
+*[class*=card-]::before,
+.spades::before,
+.clover::before,
+.diamond::before,
+.heart::before {
   translate: 0 -1px;
 }
 
 *[class*=die-]::before,
 *[class*=dieT-]::before {
   translate: 0 -1.6px;
-}
-
-.spades::before,
-.clover::before,
-.diamond::before,
-.heart::before {
-  translate: 0 -1px;
 }
 
 .nbPlayers::before,
@@ -336,18 +335,7 @@ i.small {
 }
 
 .right::before,
-.wrong::before {
-  width: 22px;
-  height: 22px;
-  background-size: 22px 22px;
-}
-.right.small::before,
-.wrong.small::before {
-  width: 14px;
-  height: 14px;
-  background-size: 14px 14px;
-}
-
+.wrong::before,
 .plus::before,
 .minus::before,
 .equal::before,
@@ -362,6 +350,8 @@ i.small {
   height: 22px;
   background-size: 22px 22px;
 }
+.right.small::before,
+.wrong.small::before,
 .plus.small::before,
 .minus.small::before,
 .equal.small::before,
@@ -376,6 +366,8 @@ i.small {
   height: 14px;
   background-size: 14px 14px;
 }
+.right.start::before,
+.wrong.start::before,
 .plus.start::before,
 .minus.start::before,
 .equal.start::before,
