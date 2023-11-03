@@ -1,3 +1,34 @@
+main#game .right::before {
+  margin-top: -1px;
+}
+@media screen and (max-width: 929px) {
+  main#game .right#right0::before {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 954px) {
+  main#game .right#right1::before {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 341px) {
+  main#game .right#right2::before {
+    margin-top: 0;
+  }
+}
+main#game .wrong::before {
+  margin-top: -1px;
+}
+@media screen and (max-width: 2081px) {
+  main#game .wrong#wrong1::before {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 564px) {
+  main#game .wrong#wrong2::before {
+    margin-top: 0;
+  }
+}
 main#game > section:has(h2#Sommaire) > div#picture {
   width: 50%;
   min-width: 260px;
