@@ -15,9 +15,13 @@ main#game {
         border-bottom: solid 1px $l-base-color;
     }
 
+    section:has(>h3) {
+        margin-left: 20px;
+    }
+
     h3 {
         margin-top: 30px;
-        margin-left: 10px;
+        margin-left: -10px;
         padding: 5px 0 5px 10px;
         border-bottom: solid 1px $l-base-color;
         border-left: solid 1px $l-base-color;

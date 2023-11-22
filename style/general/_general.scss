@@ -26,6 +26,10 @@ strong {
 }
 
 p {
+    &.close, &.far, &.collapse {
+        text-align: justify;
+    }
+
     &.close {
         margin-bottom: 0;
         margin-top: 4px;

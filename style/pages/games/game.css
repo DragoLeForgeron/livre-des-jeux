@@ -17,9 +17,12 @@ main#game {
 main#game h2 {
   border-bottom: solid 1px #000;
 }
+main#game section:has(> h3) {
+  margin-left: 20px;
+}
 main#game h3 {
   margin-top: 30px;
-  margin-left: 10px;
+  margin-left: -10px;
   padding: 5px 0 5px 10px;
   border-bottom: solid 1px #000;
   border-left: solid 1px #000;

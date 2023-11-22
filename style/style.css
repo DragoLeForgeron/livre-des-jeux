@@ -26,6 +26,9 @@ strong a {
   color: #ff0000;
 }
 
+p.close, p.far, p.collapse {
+  text-align: justify;
+}
 p.close {
   margin-bottom: 0;
   margin-top: 4px;
