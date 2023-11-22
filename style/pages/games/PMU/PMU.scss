@@ -1,10 +1,10 @@
 main#game {
     .preview {
-        width: 30%;
-        min-width: 250px;
-        max-width: 350px;
+        width: 15%;
+        max-width: 180px;
+        min-width: 120px;
 
-        @media screen and (max-width: 1081px) {
+        @media screen and (max-width: 684px) {
             display: block;
             float: unset;
             object-position: unset;
@@ -14,15 +14,15 @@ main#game {
 
             width: 100%;
             min-width: unset;
-            max-width: 250px;
+            max-width: 120px;
         }
     }
 
     >section:has(h2#Sommaire) {
         >div#picture {
-            width: 40%;
-            min-width: 325px;
-            max-width: 475px;
+            width: 35%;
+            min-width: 260px;
+            max-width: 400px;
         }
 
         @media screen and (max-width: 640px) {
@@ -37,7 +37,7 @@ main#game {
 
                     width: 100%;
                     min-width: unset;
-                    max-width: 350px;
+                    max-width: 280px;
                 }
 
                 &:has(h2#Sommaire) {

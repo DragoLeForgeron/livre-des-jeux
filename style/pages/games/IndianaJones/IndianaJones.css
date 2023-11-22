@@ -1,7 +1,7 @@
 main#game .right::before {
   margin-top: -2px;
 }
-@media screen and (max-width: 782px) {
+@media screen and (max-width: 792px) {
   main#game .right::before {
     margin-top: 0;
   }
@@ -9,7 +9,7 @@ main#game .right::before {
 main#game .wrong::before {
   margin-top: -2px;
 }
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 499px) {
   main#game .wrong::before {
     margin-top: 0;
   }

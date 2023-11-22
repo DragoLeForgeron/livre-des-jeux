@@ -23,22 +23,7 @@
 }
 
 .right,
-.wrong {
-    &::before {
-        width: $onLine-size;
-        height: $onLine-size;
-        background-size: $onLine-size $onLine-size;
-    }
-
-    &.small {
-        &::before {
-            width: $onLine-size-small;
-            height: $onLine-size-small;
-            background-size: $onLine-size-small $onLine-size-small;
-        }
-    }
-}
-
+.wrong,
 .plus,
 .minus,
 .equal,

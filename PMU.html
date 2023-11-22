@@ -25,6 +25,7 @@
 
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/pages/games/game.css">
+    <link rel="stylesheet" href="./style/pages/games/PMU/PMU.css">
 
     <script src="./src/toast.js"></script>
 </head>
@@ -46,10 +47,88 @@
     <main id="game">
         <h1>PMU</h1>
 
-        <div class="indisponible">
-            <p class="far">Ce jeu n'est pas encore disponible, il est en cours d'écriture.</p>
-            <p class="close">Revient voir plus tard.</p>
-        </div>
+        <section>
+            <div id="picture">
+                <img src="./img/games/PMU/presentation.png">
+            </div>
+            <div>
+                <h2 id="Sommaire">Sommaire</h2>
+                <ol>
+                    <li><a href="#Présentation" title="Raccourcis vers la présentation">Présentation</a></li>
+                    <li><a href="#Préparation" title="Raccourcis vers la préparation">Préparation</a></li>
+                    <li><a href="#Règles" title="Raccourcis vers les règles">Règles</a></li>
+                    <li><a href="#Variantes" title="Raccourcis vers les variantes">Variantes</a></li>
+                    <li><a href="#Anecdotes" title="Raccourcis vers les anecdotes">Anecdotes</a></li>
+                </ol>
+            </div>
+        </section>
+
+        <section>
+            <h2 id="Présentation">Présentation</h2>
+            <div>
+                <p class="nbPlayers top" title="Nombre de joueurs">2 joueurs ou plus</p>
+                <p class="duration top" title="Durée">5 minutes</p>
+                <p class="drunking top" title="Alcoolomètre">5/10</p>
+                <ul class="material top" title="Matériel">
+                    <li>
+                        1 paquet de 52 cartes<br>
+                        <i class="small">(sans joker)</i>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="far">PMU est un jeu de course de chevaux. Pariez sur le bon cheval et espérez qu'il soit en tête.</p>
+        </section>
+
+        <section>
+            <h2 id="Préparation">Préparation</h2>
+            <img class="preview" src="./img/games/PMU/preparation.png" alt="Photo du jeu préparé">
+            <ol>
+                <li>Désignez <a href="./RèglesGénérales.html#RJ" title="Lien vers la règle générale du RJ">un RJ</a>.</li>
+                <li>Le RJ <strong>retire les <span class="card-A" title="as"></span> du jeu</strong>, ils symbolisent les chevaux.</li>
+                <li>Le RJ <strong>place les 4 chevaux en ligne</strong> les uns à côtés des autres.</li>
+                <li>Le RJ <strong>mélange toutes les autres cartes</strong>.</li>
+                <li>Le RJ <strong>place 7 cartes face cachée en colonne</strong> à côté des chevaux à partir de la ligne d'au-dessus.</li>
+                <li>Le reste des cartes forment une pile face cachée que le RJ garde avec lui.</li>
+                <li>Vous êtes prêt à jouer.</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 id="Règles">Règles</h2>
+
+            <p class="far">Chaque joueur choisi un cheval (signe <span class="spades small" title="pique"></span>, <span class="clover small" title="trèfle"></span>, <span class="diamond small" title="carreau"></span> ou <span class="heart small" title="cœur"></span>) et pari un nombre de gorgées qu'il doit boire tout de suite.</p>
+
+            <p class="far">Le RJ <strong>retourne les cartes du dessus de la pile</strong> les unes après les autres et fait <strong>avancer d'une ligne le cheval correspondant au même signe</strong> (<span class="spades small" title="pique"></span>, <span class="clover small" title="trèfle"></span>, <span class="diamond small" title="carreau"></span> ou <span class="heart small" title="cœur"></span>).</p>
+
+            <p class="far">À chaque fois qu'un cheval avance et est <strong>le seul 1er, tous les joueurs qui ont parié sur ce cheval distribuent chacun</strong> un nombre de gorgées égal à la différence de lignes entre le 1er cheval et le 2ème.</p>
+            <p class="close">À chaque fois qu'un cheval avance et qu'un cheval est <strong>le seul 4ème, tous les joueurs qui ont parié sur ce cheval boivent chacun</strong> un nombre de gorgées égal à la différence de lignes entre le 3ème cheval et le 4ème.</p>
+            <p class="close">Une fois que tous les chevaux sont passés sur une ligne, le RJ <strong>retourne la carte face cachée de cette ligne et fait descendre le cheval</strong> correspondant au signe de cette carte (<span class="spades small" title="pique"></span>, <span class="clover small" title="trèfle"></span>, <span class="diamond small" title="carreau"></span> ou <span class="heart small" title="cœur"></span>).</p>
+
+            <p class="far"><strong>Lorsqu'un cheval dépasse la ligne d'arrivée :</strong></p>
+            <p class="close">Si il est en <strong>1ère position</strong>, tous <strong>les joueurs qui ont pariés sur lui distribuent chacun le double du nombre de gorgées qu'ils ont respectivement pariés</strong>.</p>
+            <p class="close">Si il est en <strong>2ème position</strong>, tous <strong>les joueurs qui ont pariés sur lui distribuent chacun le nombre de gorgées qu'ils ont respectivement pariés</strong>.</p>
+            <p class="close">Si il est en <strong>3ème position</strong>, tous <strong>les joueurs qui ont pariés sur lui boivent chacun le du nombre de gorgées qu'ils ont respectivement pariés</strong>.</p>
+            <p class="close">Si il est en <strong>4ème position</strong>, tous <strong>les joueurs qui ont pariés sur lui boivent chacun le double du nombre de gorgées qu'ils ont respectivement pariés</strong>.</p>
+
+            <p class="far">Un cheval qui a terminé la course ne peut plus avancer ni reculer.</p>
+
+            <p class="far">Le jeu s'arrête lorsque tous les chevaux ont franchi la ligne d'arrivée ou lorsqu'il n'y a plus de carte dans la pile.</p>
+        </section>
+
+        <section>
+            <h2 id="Variantes">Variantes</h2>
+
+            <p class="far">Vous pouvez faire en sorte que lorsqu'un cheval avance et qu'il est le 1er à arriver sur une ligne qui n'a pas déjà fait distribuer, les joueurs qui ont pariés sur lui distribuent chacun un nombre de gorgées égal à la différence de lignes entre le 1er cheval et la ligne 0.</p>
+
+            <p class="far">Vous pouvez faire en sorte que lorsqu'il n'y a plus de carte dans la pile, vous reprenez toutes les cartes de la pile qui ont été retournées, les mélangez et continuez le jeu.</p>
+        </section>
+
+        <section>
+            <h2 id="Anecdotes">Anecdotes</h2>
+
+            <p class="far">Ce jeu est l'un des préférés du fou... Bien qu'il ait une malchance légendaire à celui-ci...</p>
+        </section>
     </main>
 
     <footer>

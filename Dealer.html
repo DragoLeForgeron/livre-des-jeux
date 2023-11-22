@@ -66,7 +66,7 @@
         <section>
             <h2 id="Présentation">Présentation</h2>
             <div>
-                <p class="nbPlayers top" title="Nombre de joueurs">2 ou plus</p>
+                <p class="nbPlayers top" title="Nombre de joueurs">2 joueurs ou plus</p>
                 <p class="duration top" title="Durée">15 minutes</p>
                 <p class="drunking top" title="Alcoolomètre">5/10</p>
                 <ul class="material top" title="Matériel">
@@ -97,20 +97,20 @@
 
             <p class="far">À tour de rôle, dans le sens horaire et en commençant par le joueur à la droite du dealer, chaque joueur (sauf le dealer) doit <strong>deviner la valeur de la carte</strong> du dessus de la pile.</p>
             <p class="close">Pour ce faire, le joueur doit <strong>donner une 1ère valeur</strong>, le dealer regarde la carte du dessus de la pile et doit répondre :</p>
-            <p class="close right start"><span><strong>Oui, si la valeur donnée est bien celle de la carte</strong>. <strong></strong>Le dealer s'est fait choper, il boit</strong> 4 gorgées.</span></p>
+            <p class="close right start" id="right0"><span><strong>Oui, si la valeur donnée est bien celle de la carte</strong>. <strong></strong>Le dealer s'est fait choper, il boit</strong> 4 gorgées.</span></p>
             <p class="close plus start"><span><strong>Supérieur, si la valeur de la carte est supérieure</strong> à celle donnée.</span></p>
             <p class="close minus start"><span><strong>Inférieur, si la valeur de la carte est inférieure</strong> à celle donnée.</span></p>
 
             <p class="far">Si le joueur n'a pas trouvé la bonne valeur, il doit <strong>donner une 2ème valeur</strong> à laquelle le dealer doit répondre :</p>
-            <p class="close right start"><span><strong>Oui, si la valeur donnée est bien celle de la carte</strong>. <strong>Le dealer s'est fait choper, il boit</strong> 2 gorgées.</span></p>
-            <p class="close wrong start"><span><strong>Non, si la valeur donnée n'est pas celle de la carte</strong>. <strong>Le dealer ne s'est pas fait choper, le joueur boit</strong> un nombre de gorgées égal à la différence entre la valeur de la carte et la valeur qu'il a donné.</span></p>
+            <p class="close right start" id="right1"><span><strong>Oui, si la valeur donnée est bien celle de la carte</strong>. <strong>Le dealer s'est fait choper, il boit</strong> 2 gorgées.</span></p>
+            <p class="close wrong start" id="wrong1"><span><strong>Non, si la valeur donnée n'est pas celle de la carte</strong>. <strong>Le dealer ne s'est pas fait choper, le joueur boit</strong> un nombre de gorgées égal à la différence entre la valeur de la carte et la valeur qu'il a donné.</span></p>
 
             <p class="far"><strong>Dès lors que le dealer ne s'est pas fait choper 3 fois d'affilé, le joueur à sa gauche prend la pile et devient le nouveau dealer</strong>. Le jeu continue à partir du joueur à droite du nouveau dealer.</p>
 
-            <p class="far">Lorsqu'il n'y a plus que 3 cartes ou moins dans la pile, le dealer a le droit d'<strong>annoncer un quitte ou double</strong>.</p>
+            <p class="far"><strong>Lorsqu'il n'y a plus que 3 cartes ou moins</strong> dans la pile, le dealer a le droit d'<strong>annoncer un quitte ou double</strong>.</p>
             <p class="close">Si c'est le cas, le joueur qui joue doit <strong>trouver la bonne valeur du 1er coup</strong>.</p>
-            <p class="close right start"><span>Si il trouve, <strong>le dealer boit</strong> 2 cul-sec.</span></p>
-            <p class="close wrong start"><span>Si il ne trouve pas, <strong>le dealer ne boit rien et le jeu se termine</strong>.</span></p>
+            <p class="close right start" id="right2"><span>Si il trouve, <strong>le dealer boit</strong> 2 cul-sec.</span></p>
+            <p class="close wrong start" id="wrong2"><span>Si il ne trouve pas, <strong>le dealer ne boit rien et le jeu se termine</strong>.</span></p>
         </section>
 
         <section>
