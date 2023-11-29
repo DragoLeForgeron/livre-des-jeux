@@ -9,22 +9,22 @@
     "scope": "/",
     "icons": [
         {
-            "src": "./img/logo/manifest/48x48.png",
+            "src": "./img/manifest/48x48.png",
             "type": "image/png",
             "sizes": "48x48"
         },
         {
-            "src": "./img/logo/manifest/98x98.png",
+            "src": "./img/manifest/96x96.png",
             "type": "image/png",
             "sizes": "96x96"
         },
         {
-            "src": "./img/logo/manifest/192x192.png",
+            "src": "./img/manifest/192x192.png",
             "type": "image/png",
             "sizes": "192x192"
         },
         {
-            "src": "./img/logo/manifest/512x512.png",
+            "src": "./img/manifest/512x512.png",
             "type": "image/png",
             "sizes": "512x512"
         }
