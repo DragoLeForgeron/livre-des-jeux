@@ -1,5 +1,5 @@
 User-Agent: * 
-Disallow: game.html.example
+Disallow: *game.html.example
 Disallow: /style/pages/games/subGame.scss.example
 
 Sitemap: https://dragoleforgeron.github.io/livre-des-jeux/sitemap.xml
