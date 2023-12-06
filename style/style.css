@@ -748,6 +748,28 @@ header#navigation > nav > a[selected] {
     display: none;
   }
 }
+header#navigation div#installApp {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(0, -50%);
+  width: 50px;
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  header#navigation div#installApp {
+    width: 30px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation div#installApp {
+    width: 40px;
+  }
+}
+header#navigation div#installApp > img {
+  display: block;
+  width: 100%;
+}
 
 main {
   margin: auto;

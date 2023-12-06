@@ -144,4 +144,26 @@ header#navigation {
             }
         }
     }
+
+    div#installApp {
+        position: absolute;
+        top: 50%;
+        right: 1%;
+        transform: translate(0, -50%);
+        width: 50px;
+        cursor: pointer;
+
+        @media screen and (max-width: 640px) {
+            width: 30px;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 1200px) {
+            width: 40px;
+        }
+
+        >img {
+            display: block;
+            width: 100%;
+        }
+    }
 }
