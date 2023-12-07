@@ -682,6 +682,34 @@ header#navigation > nav {
     justify-content: flex-end;
   }
 }
+header#navigation > nav > #installApp {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(0, -50%);
+  width: 50px;
+  cursor: pointer;
+}
+@media screen and (max-width: 640px) {
+  header#navigation > nav > #installApp {
+    width: 30px;
+    position: unset;
+    transform: unset;
+    padding-right: 1%;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1200px) {
+  header#navigation > nav > #installApp {
+    width: 40px;
+    position: unset;
+    transform: unset;
+    padding-right: 1%;
+  }
+}
+header#navigation > nav > #installApp > img {
+  display: block;
+  width: 100%;
+}
 header#navigation > nav > input {
   display: none;
 }
@@ -747,28 +775,6 @@ header#navigation > nav > a[selected] {
   header#navigation > nav:has(> input:not(:checked)) > a {
     display: none;
   }
-}
-header#navigation div#installApp {
-  position: absolute;
-  top: 50%;
-  right: 1%;
-  transform: translate(0, -50%);
-  width: 50px;
-  cursor: pointer;
-}
-@media screen and (max-width: 640px) {
-  header#navigation div#installApp {
-    width: 30px;
-  }
-}
-@media screen and (min-width: 641px) and (max-width: 1200px) {
-  header#navigation div#installApp {
-    width: 40px;
-  }
-}
-header#navigation div#installApp > img {
-  display: block;
-  width: 100%;
 }
 
 main {
