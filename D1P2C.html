@@ -27,7 +27,11 @@
     <link rel="stylesheet" href="./style/pages/games/game.css">
     <link rel="stylesheet" href="./style/pages/games/D1P2C/D1P2C.css">
 
+    <link rel="manifest" href="./Manifest.webmanifest">
+
     <script src="./src/toast.js"></script>
+
+    <script src="./src/install-app.js"></script>
 </head>
 
 <body>
@@ -41,6 +45,9 @@
             <a href="./index.html" title="Lien vers la page des jeux">Jeux</a>
             <a href="./RèglesGénérales.html" title="Lien vers la page des règles générales">Règles générales</a>
             <!-- <a href="./Suggestions.html">Suggestions</a> -->
+            <div id="installApp" onclick="promptAppInstallation()" style="display: none;">
+                <img src="./img/pictos/download-app.svg" alt="Logo d'installation d'application" title="Installer l'application"/>
+            </div>
         </nav>
     </header>
 

@@ -57,6 +57,34 @@ header#navigation {
             justify-content: flex-end;
         }
 
+        >#installApp {
+            position: absolute;
+            top: 50%;
+            right: 1%;
+            transform: translate(0, -50%);
+            width: 50px;
+            cursor: pointer;
+    
+            @media screen and (max-width: 640px) {
+                width: 30px;
+                position: unset;
+                transform: unset;
+                padding-right: 1%;
+            }
+    
+            @media screen and (min-width: 641px) and (max-width: 1200px) {
+                width: 40px;
+                position: unset;
+                transform: unset;
+                padding-right: 1%;
+            }
+    
+            >img {
+                display: block;
+                width: 100%;
+            }
+        }
+
         >input {
             display: none;
 
@@ -144,4 +172,5 @@ header#navigation {
             }
         }
     }
+
 }

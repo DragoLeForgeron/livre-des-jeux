@@ -1,0 +1,70 @@
+{
+    "short_name": "LdJ",
+    "name": "Livre des jeux",
+    "description": "Le site qui répértorie les jeux d'alcool du fou. \n\nMention : Le site n'est pas encore disponible hors ligne, veillez à garder votre connexion internet ouverte lors de son utilisation.",
+    "lang": "fr",
+    "display": "fullscreen",
+    "orientation": "natural",
+    "start_url": "./index.html",
+    "scope": "/",
+    "icons": [
+        {
+            "src": "./img/manifest/icons/48x48.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "./img/manifest/icons/96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "./img/manifest/icons/192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "./img/manifest/icons/512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./img/manifest/screenshots/desktop1.png",
+            "type": "image/png",
+            "sizes": "1920x1080",
+            "form_factor": "wide"
+        },
+        {
+            "src": "./img/manifest/screenshots/desktop2.png",
+            "type": "image/png",
+            "sizes": "1920x1080",
+            "form_factor": "wide"
+        },
+        {
+            "src": "./img/manifest/screenshots/desktop3.png",
+            "type": "image/png",
+            "sizes": "1920x1080",
+            "form_factor": "wide"
+        },
+        {
+            "src": "./img/manifest/screenshots/mobile1.png",
+            "type": "image/png",
+            "sizes": "540x860",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "./img/manifest/screenshots/mobile2.png",
+            "type": "image/png",
+            "sizes": "540x860",
+            "form_factor": "narrow"
+        },
+        {
+            "src": "./img/manifest/screenshots/mobile3.png",
+            "type": "image/png",
+            "sizes": "540x860",
+            "form_factor": "narrow"
+        }
+    ]
+}
