@@ -685,25 +685,26 @@ header#navigation > nav {
 header#navigation > nav > #installApp {
   position: absolute;
   top: 50%;
-  right: 1%;
+  right: 20px;
   transform: translate(0, -50%);
   width: 50px;
   cursor: pointer;
 }
 @media screen and (max-width: 640px) {
   header#navigation > nav > #installApp {
-    width: 30px;
     position: unset;
     transform: unset;
-    padding-right: 1%;
+    width: 30px;
+    padding-right: 10px;
+    order: -1;
   }
 }
 @media screen and (min-width: 641px) and (max-width: 1200px) {
   header#navigation > nav > #installApp {
-    width: 40px;
     position: unset;
     transform: unset;
-    padding-right: 1%;
+    width: 40px;
+    padding-right: 15px;
   }
 }
 header#navigation > nav > #installApp > img {
@@ -728,6 +729,11 @@ header#navigation > nav > label::before {
   width: 30px;
   height: 30px;
   background-image: url(../img/pictos/bars.svg);
+}
+@media screen and (max-width: 640px) {
+  header#navigation > nav > label {
+    order: -2;
+  }
 }
 header#navigation > nav > a {
   box-sizing: border-box;
