@@ -28,6 +28,12 @@ main#games > input::-webkit-search-cancel-button {
     padding: 12px 24px;
   }
 }
+main#games > #nothingFound {
+  margin-top: 40px;
+  font-size: 2em;
+  color: #888;
+  text-align: center;
+}
 main#games > #gamesList {
   width: -moz-fit-content;
   width: fit-content;
