@@ -1,4 +1,4 @@
-const cacheName = "LdJ_vBeta3.0.0";
+const cacheName = "LdJ_vPreRelease1.0.0";
 const excludedResources = [
     'chrome-extension',
     '.webmanifest',
@@ -171,28 +171,31 @@ const precachedResources = [
 
     "/Trébuchet.html",
     "/img/games/Trébuchet/presentation.png",
-    "/img/games/Trébuchet/QRCode.png"
+    "/img/games/Trébuchet/QRCode.png",
+
+    "/ÉchelleDeRichcard.html",
+    "/img/QRCode_%C3%89chelleDeRichcard.png"
 ];
 
 
 self.addEventListener('install', event => {
-    console.log("install");
+    // console.log("install");
     self.skipWaiting();
     event.waitUntil(precache());
 });
 
 self.addEventListener("activate", event => {
-    console.log("activate");
+    // console.log("activate");
     clients.claim();
     event.waitUntil(clearOldCache());
 });
 
 self.addEventListener('fetch', event => {
-    console.log("fetch", event.request.url);
+    // console.log("fetch", event.request.url);
     // if(!excludedResources.some(resource => event.request.url.includes(resource)) && !precachedResources.some(resource => event.request.url.includes(resource))) console.log("fetch", event.request.url);
-    console.log("event", event);
+    // console.log("event", event);
     // console.log("host", window.location.host);
-    console.log("host", self.location.hostname);
+    // console.log("host", self.location.hostname);
 
     // if(event.request.mode === "navigate") {
     //     event.respondWith(
