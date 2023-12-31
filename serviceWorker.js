@@ -1,4 +1,4 @@
-const cacheName = "LdJ_vBeta2.0.0";
+const cacheName = "LdJ_vBeta3.0.0";
 const excludedResources = [
     'chrome-extension',
     '.webmanifest',
@@ -190,7 +190,9 @@ self.addEventListener("activate", event => {
 self.addEventListener('fetch', event => {
     console.log("fetch", event.request.url);
     // if(!excludedResources.some(resource => event.request.url.includes(resource)) && !precachedResources.some(resource => event.request.url.includes(resource))) console.log("fetch", event.request.url);
-    // console.log("event", event);
+    console.log("event", event);
+    // console.log("host", window.location.host);
+    console.log("host", self.location.hostname);
 
     // if(event.request.mode === "navigate") {
     //     event.respondWith(
@@ -214,7 +216,7 @@ self.addEventListener('fetch', event => {
 
 async function precache() {
     const cache = await caches.open(cacheName);
-    return cache.addAll(precachedResources);
+    return cache.addAll(getPrecachedResourcesDependOfHost());
 }
 
 async function clearOldCache() {
@@ -236,4 +238,14 @@ async function cacheFirstWithRefresh(request) {
     });
 
     return (await caches.match(request)) || (await fetcResponsePromise);
+}
+
+function getPrecachedResourcesDependOfHost() {
+    const host = self.location.hostname;
+    const specificHosts = [
+        "dragoleforgeron.github.io"
+    ];
+
+    if(specificHosts.includes(host)) return precachedResources.map(resource => "/livre-des-jeux" + resource);
+    else return precachedResources;
 }
