@@ -1,4 +1,4 @@
-const cacheName = "LdJ_vPreRelease1.0.0";
+const cacheName = "LdJ_v1.0.0";
 const excludedResources = [
     'chrome-extension',
     '.webmanifest',
@@ -96,6 +96,10 @@ const precachedResources = [
     "/img/games/Boilotte/presentation.png",
     "/img/games/Boilotte/QRCode.png",
 
+    "/BusMagique.html",
+    "/img/games/BusMagique/presentation.png",
+    "/img/games/BusMagique/QRCode.png",
+    
     "/CarréMagique.html",
     "/img/games/CarréMagique/presentation.png",
     "/img/games/CarréMagique/QRCode.png",
@@ -109,6 +113,10 @@ const precachedResources = [
     "/style/pages/games/Dealer/Dealer.css",
     "/img/games/Dealer/presentation.png",
     "/img/games/Dealer/QRCode.png",
+
+    "/Formule1.html",
+    "/img/games/Formule1/presentation.png",
+    "/img/games/Formule1/QRCode.png",
 
     "/H.html",
     "/img/games/H/presentation.png",
@@ -151,6 +159,10 @@ const precachedResources = [
     "/img/games/PMU/preparation.png",
     "/img/games/PMU/QRCode.png",
 
+    "/Purple.html",
+    "/img/games/Purple/presentation.png",
+    "/img/games/Purple/QRCode.png",
+
     "/Pyramide.html",
     "/img/games/Pyramide/presentation.png",
     "/img/games/Pyramide/QRCode.png",
@@ -172,6 +184,10 @@ const precachedResources = [
     "/Trébuchet.html",
     "/img/games/Trébuchet/presentation.png",
     "/img/games/Trébuchet/QRCode.png",
+
+    "/Trio.html",
+    "/img/games/Trio/presentation.png",
+    "/img/games/Trio/QRCode.png",
 
     "/ÉchelleDeRichcard.html",
     "/img/QRCode_%C3%89chelleDeRichcard.png"
