@@ -46,9 +46,16 @@ async function promptAppInstallation() {
 async function promptAppInstallationTest() {
     console.log("promptAppInstallation()");
 
-    if (isIos() && !isInStandaloneMode()) {
+    if(isInStandaloneMode()) {
+        console.log("Application déjà installée");
+        toast("Application déjà installée");
+        alert("ℹ️ L’application est déjà installée sur ton appareil.");
+        return;
+    }
+    else if (isIos() && !isInStandaloneMode()) {
         installAppButton.onclick = () => {
             console.log("iOS installation instructions");
+            toast("iOS installation instructions");
             alert("📲 Pour installer l’application sur iOS :\n\n" +
                 "1. Appuie sur le bouton 'Partager' (icône ⬆️ en bas)\n" +
                 "2. Sélectionne 'Sur l’écran d’accueil'\n" +
@@ -58,6 +65,7 @@ async function promptAppInstallationTest() {
     else if (!window.BeforeInstallPromptEvent && !isIos() && !isInStandaloneMode()) {
         installAppButton.onclick = () => {
             console.log("Non-supported browser installation instructions");
+            toast("Non-supported browser installation instructions");
             alert("ℹ️ Ton navigateur ne propose pas l’installation directe.\n\n" +
                 "👉 Ouvre ce site dans Chrome (Android) ou Safari (iOS) " +
                 "pour pouvoir l’ajouter à ton écran d’accueil.");
@@ -68,6 +76,7 @@ async function promptAppInstallationTest() {
     }
     else {
         console.warn("Aucune méthode d'installation disponible");
+        toast("Aucune méthode d'installation disponible");
         alert("ℹ️ Aucune méthode d'installation disponible pour ce navigateur.");
     }
 }
