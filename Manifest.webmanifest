@@ -1,7 +1,7 @@
 {
     "short_name": "Livre des jeux",
     "name": "Livre des jeux",
-    "description": "Le site qui répértorie les jeux d'alcool du fou. \n\nMention : Le site n'est pas encore disponible hors ligne, veillez à garder votre connexion internet ouverte lors de son utilisation.",
+    "description": "Le site qui répértorie les jeux d'alcool du fou.",
     "lang": "fr",
     "display": "fullscreen",
     "orientation": "natural",
