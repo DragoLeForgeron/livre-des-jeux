@@ -1,10 +1,7 @@
+// import showModal from "./modal.js";
+
 let deferredPrompt;
 let installAppButton;
-
-function isIos() {
-  console.log("isIos()", /iphone|ipad|ipod/i.test(window.navigator.userAgent));
-  return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
-}
 
 
 function isInStandaloneMode() {
@@ -46,37 +43,131 @@ async function promptAppInstallation() {
 async function promptAppInstallationTest() {
     console.log("promptAppInstallation()");
 
-    if(isInStandaloneMode()) {
-        console.log("Application déjà installée");
-        toast("Application déjà installée");
-        alert("ℹ️ L’application est déjà installée sur ton appareil.");
-        return;
+    const { browser, os } = detectBrowserAndOS();
+    const instructions = getInstallInstructions(browser, os);
+    showModal(instructions.title, instructions.steps.join("<br>"));
+}
+
+
+function detectBrowserAndOS() {
+    const userAgent = navigator.userAgent;
+    let browser = 'Unknown';
+    let os = 'Unknown';
+
+    // OS detection
+    if (/Windows/i.test(userAgent)) os = 'Windows';
+    else if (/Macintosh|Mac OS X/i.test(userAgent)) os = 'macOS';
+    else if (/Linux/i.test(userAgent)) os = 'Linux';
+    else if (/Android/i.test(userAgent)) os = 'Android';
+    else if (/iPhone|iPad|iPod/i.test(userAgent)) os = 'iOS';
+
+    // Navigator detection
+    if (/Chrome/i.test(userAgent) && !/Edge|OPR|Samsung/i.test(userAgent)) browser = 'Chrome';
+    else if (/Firefox/i.test(userAgent)) browser = 'Firefox';
+    else if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) browser = 'Safari';
+    else if (/Edge/i.test(userAgent)) browser = 'Edge';
+    else if (/OPR|Opera/i.test(userAgent)) browser = 'Opera';
+    else if (/Samsung/i.test(userAgent)) browser = 'Samsung Internet';
+
+    return { browser, os };
+}
+
+
+function getInstallInstructions(browser, os) {
+    if (os === 'iOS') {
+        if (browser === 'Safari') {
+            return {
+                title: "Installation sur iOS Safari",
+                steps: [
+                    "Appuyez sur le bouton de partage (carré avec flèche vers le haut)",
+                    "Faites défiler et sélectionnez 'Sur l'écran d'accueil'",
+                    "Appuyez sur 'Ajouter' pour confirmer"
+                ]
+            };
+        } else {
+            return {
+                title: "Installation sur iOS",
+                steps: [
+                    "Ouvrez ce site dans Safari",
+                    "Suivez les instructions pour Safari iOS"
+                ]
+            };
+        }
     }
-    else if (isIos() && !isInStandaloneMode()) {
-        installAppButton.onclick = () => {
-            console.log("iOS installation instructions");
-            toast("iOS installation instructions");
-            alert("📲 Pour installer l’application sur iOS :\n\n" +
-                "1. Appuie sur le bouton 'Partager' (icône ⬆️ en bas)\n" +
-                "2. Sélectionne 'Sur l’écran d’accueil'\n" +
-                "3. Valide le nom et c’est installé !");
-        };
+
+    if (os === 'Android') {
+        if (browser === 'Chrome' || browser === 'Edge') {
+            return {
+                title: `Installation sur Android ${browser}`,
+                steps: [
+                    "Appuyez sur le menu (3 points) en haut à droite",
+                    "Sélectionnez 'Ajouter à l'écran d'accueil'",
+                    "Confirmez en appuyant sur 'Ajouter'"
+                ]
+            };
+        } else if (browser === 'Firefox') {
+            return {
+                title: "Installation sur Android Firefox",
+                steps: [
+                    "Appuyez sur le menu (3 lignes) en haut à droite",
+                    "Sélectionnez 'Installer'",
+                    "Confirmez l'installation"
+                ]
+            };
+        } else if (browser === 'Samsung Internet') {
+            return {
+                title: "Installation sur Samsung Internet",
+                steps: [
+                    "Appuyez sur le menu en bas de l'écran",
+                    "Sélectionnez 'Ajouter à l'écran d'accueil'",
+                    "Confirmez en appuyant sur 'Ajouter'"
+                ]
+            };
+        }
     }
-    else if (!window.BeforeInstallPromptEvent && !isIos() && !isInStandaloneMode()) {
-        installAppButton.onclick = () => {
-            console.log("Non-supported browser installation instructions");
-            toast("Non-supported browser installation instructions");
-            alert("ℹ️ Ton navigateur ne propose pas l’installation directe.\n\n" +
-                "👉 Ouvre ce site dans Chrome (Android) ou Safari (iOS) " +
-                "pour pouvoir l’ajouter à ton écran d’accueil.");
-        };
+
+    if (os === 'Windows') {
+        if (browser === 'Chrome' || browser === 'Edge') {
+            return {
+                title: `Installation sur Windows ${browser}`,
+                steps: [
+                    "Cliquez sur l'icône d'installation dans la barre d'adresse",
+                    "Ou utilisez le menu (3 points) > 'Installer [nom de l'app]'",
+                    "Confirmez l'installation"
+                ]
+            };
+        }
     }
-    else if(deferredPrompt && deferredPrompt?.isTrusted) {
-        deferredPrompt.prompt();
+
+    if (os === 'macOS') {
+        if (browser === 'Chrome' || browser === 'Edge') {
+            return {
+                title: `Installation sur macOS ${browser}`,
+                steps: [
+                    "Cliquez sur l'icône d'installation dans la barre d'adresse",
+                    "Ou utilisez le menu (3 points) > 'Installer [nom de l'app]'",
+                    "Confirmez l'installation"
+                ]
+            };
+        } else if (browser === 'Safari') {
+            return {
+                title: "Installation sur macOS Safari",
+                steps: [
+                    "Cliquez sur 'Fichier' dans la barre de menu",
+                    "Sélectionnez 'Ajouter au Dock'",
+                    "L'application sera accessible depuis le Dock"
+                ]
+            };
+        }
     }
-    else {
-        console.warn("Aucune méthode d'installation disponible");
-        toast("Aucune méthode d'installation disponible");
-        alert("ℹ️ Aucune méthode d'installation disponible pour ce navigateur.");
-    }
+
+    // default
+    return {
+        title: "Installation non supportée",
+        steps: [
+            `Votre navigateur ${browser} sur ${os} ne supporte pas l'installation de PWA`,
+            "Essayez d'utiliser Chrome, Edge, Firefox ou Safari",
+            "Vous pouvez toujours ajouter un marque-page pour un accès rapide"
+        ]
+    };
 }
