@@ -17,7 +17,7 @@ window.addEventListener('beforeinstallprompt', event => {
     console.log("beforeinstallprompt", event);
     if(event.isTrusted) {
         installAppButton = document.getElementById("installApp");
-        installAppButton.style.display = "";
+        if(installAppButton) installAppButton.style.display = "block";
 
         event.preventDefault();
         deferredPrompt = event;
