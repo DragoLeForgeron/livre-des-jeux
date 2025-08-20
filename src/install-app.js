@@ -28,9 +28,26 @@ async function promptAppInstallation() {
 
     if(isInStandaloneMode()) {
         toast("Application déjà installée");
+        return;
     }
-    else if(deferredPrompt && deferredPrompt?.isTrusted) {
-        deferredPrompt.prompt();
+
+    if(deferredPrompt && deferredPrompt?.isTrusted) {
+        try {
+            const result = await deferredPrompt.prompt();
+            
+            if (result.outcome === 'accepted') {
+                toast("Installation en cours...");
+            }
+            else if (result.outcome === 'dismissed') {
+                toast("Installation annulée");
+            }
+        }
+        catch (error) {
+            toast("Erreur lors de l'installation");
+
+            const instructions = getInstallInstructions(browser, os);
+            showModal(instructions.title, instructions.steps);
+        }
     }
     else {
         const instructions = getInstallInstructions(browser, os);
