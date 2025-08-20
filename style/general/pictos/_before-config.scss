@@ -90,5 +90,9 @@
     &::before {
         translate: 0 -3px;
         margin-right: 5px;
+
+        @media screen and (max-width: 640px) {
+            translate: 0 -1px;
+        }
     }
 }

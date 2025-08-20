@@ -331,6 +331,11 @@ i.small {
   translate: 0 -3px;
   margin-right: 5px;
 }
+@media screen and (max-width: 640px) {
+  .downloadApp::before {
+    translate: 0 -1px;
+  }
+}
 
 .nbPlayers::before,
 .material::before,
@@ -425,6 +430,13 @@ i.small {
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
+}
+@media screen and (max-width: 640px) {
+  .downloadApp::before {
+    width: 18px;
+    height: 18px;
+    background-size: 18px 18px;
+  }
 }
 
 .nbPlayers::before {
