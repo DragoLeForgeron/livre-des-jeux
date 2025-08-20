@@ -18,7 +18,8 @@
 .spades,
 .clover,
 .diamond,
-.heart {
+.heart,
+.downloadApp {
     &::before {
         content: "";
         display: inline-block;
@@ -82,5 +83,12 @@
 *[class*="dieT-"] {
     &::before {
         translate: 0 -1.6px;
+    }
+}
+
+.downloadApp {
+    &::before {
+        translate: 0 -3px;
+        margin-right: 5px;
     }
 }

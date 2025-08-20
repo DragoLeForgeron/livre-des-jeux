@@ -1,4 +1,10 @@
-function showModal(title, message) {
+/**
+ * Show a modal dialog with a title and message.
+ * @param {string} title Title of the modal
+ * @param {Array<string>} messages Messages to display in the modal
+ * @returns {void}
+ */
+function showModal(title, messages) {
 
     const modal = document.createElement("div");
     modal.classList.add("modal");
@@ -8,9 +14,11 @@ function showModal(title, message) {
     titleElement.innerText = title;
     modal.appendChild(titleElement);
 
-    const messageElement = document.createElement("p");
-    messageElement.innerText = message;
-    modal.appendChild(messageElement);
+    messages.forEach(message => {
+        const messageElement = document.createElement("p");
+        messageElement.innerHTML = message; // Use innerHTML to allow HTML content
+        modal.appendChild(messageElement);
+    });
 
     const closeButton = document.createElement("button");
     closeButton.innerText = "Fermer";

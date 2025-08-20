@@ -56,6 +56,24 @@ footer {
         width: 50%;
         padding-left: 25px;
 
+        >p#installApp {
+            width: fit-content;
+
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            &:hover {
+                color: $l-footer-text-color;
+            }
+
+            &:focus {
+                color: $l-p-color;
+            }
+        }
+
         >a {
             color: $l-footer-text-color;
             text-decoration: none;

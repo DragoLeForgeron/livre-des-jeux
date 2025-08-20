@@ -127,7 +127,8 @@ i.small {
 .spades,
 .clover,
 .diamond,
-.heart {
+.heart,
+.downloadApp {
   position: relative;
   /* need a child span child which contain the html content when there is a strong markup in */
 }
@@ -151,7 +152,8 @@ i.small {
 .spades.top,
 .clover.top,
 .diamond.top,
-.heart.top {
+.heart.top,
+.downloadApp.top {
   margin-left: unset;
 }
 .nbPlayers.start,
@@ -174,7 +176,8 @@ i.small {
 .spades.start,
 .clover.start,
 .diamond.start,
-.heart.start {
+.heart.start,
+.downloadApp.start {
   display: flex;
   align-items: center;
 }
@@ -231,7 +234,8 @@ i.small {
 .spades::before,
 .clover::before,
 .diamond::before,
-.heart::before {
+.heart::before,
+.downloadApp::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -256,7 +260,8 @@ i.small {
 .spades.top::before,
 .clover.top::before,
 .diamond.top::before,
-.heart.top::before {
+.heart.top::before,
+.downloadApp.top::before {
   position: unset;
   display: block;
   margin: auto;
@@ -283,7 +288,8 @@ i.small {
 .spades.start::before,
 .clover.start::before,
 .diamond.start::before,
-.heart.start::before {
+.heart.start::before,
+.downloadApp.start::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -319,6 +325,11 @@ i.small {
 *[class*=die-]::before,
 *[class*=dieT-]::before {
   translate: 0 -1.6px;
+}
+
+.downloadApp::before {
+  translate: 0 -3px;
+  margin-right: 5px;
 }
 
 .nbPlayers::before,
@@ -408,6 +419,12 @@ i.small {
   width: 30px;
   height: 40px;
   background-size: 30px 40px;
+}
+
+.downloadApp::before {
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
 }
 
 .nbPlayers::before {
@@ -595,6 +612,10 @@ i.small {
   background-image: url(../img/pictos/cards/heart.svg);
 }
 
+.downloadApp::before {
+  background-image: url(../img/pictos/download-app.svg);
+}
+
 .toast {
   position: fixed;
   bottom: 20px;
@@ -620,15 +641,22 @@ i.small {
   }
 }
 .modal {
+  box-sizing: border-box;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
   padding: 20px 30px;
   color: #000;
   background-color: #ddd;
   border-radius: 5px;
   box-shadow: #888 0 0 5px;
+}
+.modal > button {
+  margin-left: 50%;
+  transform: translate(-50%);
+  padding: 5px 10px;
 }
 
 header#navigation {
@@ -880,6 +908,20 @@ footer > div#others {
   box-sizing: border-box;
   width: 50%;
   padding-left: 25px;
+}
+footer > div#others > p#installApp {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+footer > div#others > p#installApp:hover, footer > div#others > p#installApp:focus {
+  cursor: pointer;
+  text-decoration: underline;
+}
+footer > div#others > p#installApp:hover {
+  color: #fff;
+}
+footer > div#others > p#installApp:focus {
+  color: #ff0000;
 }
 footer > div#others > a {
   color: #fff;
