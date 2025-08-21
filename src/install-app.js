@@ -62,11 +62,12 @@ function detectBrowserAndOS() {
     let os = 'Unknown';
 
     // OS detection
-    if (/Windows/i.test(userAgent)) os = 'Windows';
+    if (/iPhone|iPad|iPod/i.test(userAgent)) os = 'iOS';
+    else if (/Macintosh|Mac OS X/i.test(userAgent) && 'ontouchend' in document) os = 'iOS'; // Vérification supplémentaire pour les nouveaux iPhones qui peuvent avoir un UA desktop
+    else if (/Android/i.test(userAgent)) os = 'Android';
+    else if (/Windows/i.test(userAgent)) os = 'Windows';
     else if (/Macintosh|Mac OS X/i.test(userAgent)) os = 'macOS';
     else if (/Linux/i.test(userAgent)) os = 'Linux';
-    else if (/Android/i.test(userAgent)) os = 'Android';
-    else if (/iPhone|iPad|iPod/i.test(userAgent)) os = 'iOS';
 
     // Navigator detection
     if (/Chrome/i.test(userAgent) && !/Edge|OPR|Samsung/i.test(userAgent)) browser = 'Chrome';
