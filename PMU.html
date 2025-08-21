@@ -30,6 +30,7 @@
     <link rel="manifest" href="./Manifest.webmanifest">
 
     <script src="./src/toast.js"></script>
+    <script src="./src/modal.js"></script>
 
     <script src="./src/install-app.js"></script>
 </head>
@@ -45,9 +46,7 @@
             <a href="./index.html" title="Lien vers la page des jeux">Jeux</a>
             <a href="./RèglesGénérales.html" title="Lien vers la page des règles générales">Règles générales</a>
             <!-- <a href="./Suggestions.html">Suggestions</a> -->
-            <div id="installApp" onclick="promptAppInstallation()" style="display: none;">
-                <img src="./img/pictos/download-app.svg" alt="Logo d'installation d'application" title="Installer l'application"/>
-            </div>
+            
         </nav>
     </header>
 
@@ -146,6 +145,7 @@
             </div>
         </div>
         <div id="others">
+            <p id="installApp" class="downloadApp" onclick="promptAppInstallation()">Installer l'application</p>
             <a href="./MentionsLégales.html" title="Lien vers la page des mentions légales">Mentions légales</a>
         </div>
     </footer>
